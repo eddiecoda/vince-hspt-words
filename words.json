@@ -1,0 +1,562 @@
+[
+  {
+    "word": "ADEQUATE",
+    "type": "synonym",
+    "choices": [
+      "sufficient",
+      "superior",
+      "lacking",
+      "accurate"
+    ],
+    "answer": "sufficient",
+    "definition": "good enough for what is needed",
+    "example": "The bake sale raised an adequate amount of money for the class trip.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "BRITTLE",
+    "type": "synonym",
+    "choices": [
+      "breakable",
+      "flexible",
+      "bright",
+      "bitter"
+    ],
+    "answer": "breakable",
+    "definition": "hard but easily cracked or snapped",
+    "example": "The old leaves were so brittle that they crumbled in my hand.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "COMPEL",
+    "type": "synonym",
+    "choices": [
+      "force",
+      "compete",
+      "comfort",
+      "refuse"
+    ],
+    "answer": "force",
+    "definition": "to make someone do something",
+    "example": "The heavy rain compelled the referees to stop the game.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "CONCISE",
+    "type": "synonym",
+    "choices": [
+      "brief",
+      "wordy",
+      "confused",
+      "careless"
+    ],
+    "answer": "brief",
+    "definition": "saying a lot in few words; short and clear",
+    "example": "Mr. Ruiz asked for a concise summary of no more than three sentences.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "DEPLETE",
+    "type": "synonym",
+    "choices": [
+      "use up",
+      "refill",
+      "delay",
+      "decorate"
+    ],
+    "answer": "use up",
+    "definition": "to reduce something until little or none is left",
+    "example": "Running the heater all night can deplete the battery.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "DISMAL",
+    "type": "synonym",
+    "choices": [
+      "miserable",
+      "cheerful",
+      "distant",
+      "dizzy"
+    ],
+    "answer": "miserable",
+    "definition": "causing sadness or gloom; very poor",
+    "example": "After a dismal first half, the team rallied to win.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "ELATED",
+    "type": "synonym",
+    "choices": [
+      "overjoyed",
+      "delayed",
+      "exhausted",
+      "angry"
+    ],
+    "answer": "overjoyed",
+    "definition": "extremely happy and excited",
+    "example": "Vince was elated when his test score came back.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "FEASIBLE",
+    "type": "synonym",
+    "choices": [
+      "possible",
+      "foolish",
+      "feverish",
+      "unlikely"
+    ],
+    "answer": "possible",
+    "definition": "able to be done; practical",
+    "example": "Finishing the project by Friday is feasible if we split the work.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "FRUGAL",
+    "type": "synonym",
+    "choices": [
+      "thrifty",
+      "wasteful",
+      "fruitful",
+      "friendly"
+    ],
+    "answer": "thrifty",
+    "definition": "careful about spending money",
+    "example": "My frugal grandfather saved every rubber band and twist tie.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "HOSTILE",
+    "type": "synonym",
+    "choices": [
+      "unfriendly",
+      "welcoming",
+      "homeless",
+      "nervous"
+    ],
+    "answer": "unfriendly",
+    "definition": "showing anger or opposition; unfriendly",
+    "example": "The crowd grew hostile when the referee made a bad call.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "IMPARTIAL",
+    "type": "synonym",
+    "choices": [
+      "fair",
+      "biased",
+      "incomplete",
+      "impatient"
+    ],
+    "answer": "fair",
+    "definition": "treating all sides equally; not taking sides",
+    "example": "A good judge must stay impartial during the trial.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "INEVITABLE",
+    "type": "synonym",
+    "choices": [
+      "unavoidable",
+      "unlikely",
+      "invisible",
+      "unbelievable"
+    ],
+    "answer": "unavoidable",
+    "definition": "certain to happen",
+    "example": "With dark clouds overhead, rain seemed inevitable.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "JEOPARDY",
+    "type": "synonym",
+    "choices": [
+      "risk",
+      "jealousy",
+      "joy",
+      "protection"
+    ],
+    "answer": "risk",
+    "definition": "danger of loss or harm",
+    "example": "Skipping practice put his spot on the team in jeopardy.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "LETHARGIC",
+    "type": "synonym",
+    "choices": [
+      "sluggish",
+      "energetic",
+      "logical",
+      "lethal"
+    ],
+    "answer": "sluggish",
+    "definition": "tired and lacking energy",
+    "example": "The heat made everyone feel lethargic by the afternoon.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "MEAGER",
+    "type": "synonym",
+    "choices": [
+      "skimpy",
+      "generous",
+      "eager",
+      "angry"
+    ],
+    "answer": "skimpy",
+    "definition": "very small in amount; not enough",
+    "example": "The hikers shared a meager lunch of crackers and an apple.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "NOVICE",
+    "type": "synonym",
+    "choices": [
+      "beginner",
+      "expert",
+      "novelist",
+      "neighbor"
+    ],
+    "answer": "beginner",
+    "definition": "a person new to an activity",
+    "example": "As a novice skier, she stayed on the bunny slope.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "OBSOLETE",
+    "type": "synonym",
+    "choices": [
+      "outdated",
+      "obvious",
+      "absolute",
+      "modern"
+    ],
+    "answer": "outdated",
+    "definition": "no longer used because something newer exists",
+    "example": "Flip phones became nearly obsolete once smartphones arrived.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "PLACID",
+    "type": "synonym",
+    "choices": [
+      "calm",
+      "stormy",
+      "plastic",
+      "curious"
+    ],
+    "answer": "calm",
+    "definition": "peaceful and not easily upset",
+    "example": "The lake was placid early in the morning.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "PROFOUND",
+    "type": "synonym",
+    "choices": [
+      "deep",
+      "shallow",
+      "professional",
+      "plentiful"
+    ],
+    "answer": "deep",
+    "definition": "very great or intense; showing deep understanding",
+    "example": "The trip had a profound effect on how he viewed the world.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "RECUPERATE",
+    "type": "synonym",
+    "choices": [
+      "recover",
+      "relapse",
+      "recite",
+      "reject"
+    ],
+    "answer": "recover",
+    "definition": "to get better after illness or effort",
+    "example": "She needed a week to recuperate after the flu.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "SCRUTINIZE",
+    "type": "synonym",
+    "choices": [
+      "examine closely",
+      "ignore",
+      "scribble",
+      "scold"
+    ],
+    "answer": "examine closely",
+    "definition": "to look at or study very carefully",
+    "example": "The coach scrutinized the game film for mistakes.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "TEDIOUS",
+    "type": "synonym",
+    "choices": [
+      "boring",
+      "exciting",
+      "tidy",
+      "tender"
+    ],
+    "answer": "boring",
+    "definition": "long, slow, and dull",
+    "example": "Copying the vocabulary list by hand was tedious.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "TRIVIAL",
+    "type": "synonym",
+    "choices": [
+      "unimportant",
+      "essential",
+      "tricky",
+      "triple"
+    ],
+    "answer": "unimportant",
+    "definition": "of little value or importance",
+    "example": "Don't let a trivial mistake ruin your whole day.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "VERSATILE",
+    "type": "synonym",
+    "choices": [
+      "adaptable",
+      "limited",
+      "verbal",
+      "violent"
+    ],
+    "answer": "adaptable",
+    "definition": "able to do many different things well",
+    "example": "A versatile player, he can play guard or forward.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "VIGILANT",
+    "type": "synonym",
+    "choices": [
+      "watchful",
+      "careless",
+      "vigorous",
+      "villainous"
+    ],
+    "answer": "watchful",
+    "definition": "carefully watching for danger or problems",
+    "example": "The lifeguard stayed vigilant the whole afternoon.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "ZEALOUS",
+    "type": "synonym",
+    "choices": [
+      "enthusiastic",
+      "jealous",
+      "indifferent",
+      "zany"
+    ],
+    "answer": "enthusiastic",
+    "definition": "full of strong energy and devotion for a cause",
+    "example": "The zealous fans painted their faces in team colors.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "AUTHENTIC",
+    "type": "synonym",
+    "choices": [
+      "genuine",
+      "fake",
+      "automatic",
+      "awkward"
+    ],
+    "answer": "genuine",
+    "definition": "real; not a copy",
+    "example": "The museum confirmed the painting was authentic.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "CONSPICUOUS",
+    "type": "synonym",
+    "choices": [
+      "noticeable",
+      "hidden",
+      "suspicious",
+      "conscious"
+    ],
+    "answer": "noticeable",
+    "definition": "easy to see or notice; standing out",
+    "example": "His bright orange jacket was conspicuous in the crowd.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "HUMBLE",
+    "type": "antonym",
+    "choices": [
+      "arrogant",
+      "modest",
+      "humid",
+      "shy"
+    ],
+    "answer": "arrogant",
+    "definition": "not proud; modest about oneself",
+    "example": "Even after winning, she stayed humble and thanked her teammates.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "EXPAND",
+    "type": "antonym",
+    "choices": [
+      "shrink",
+      "enlarge",
+      "explain",
+      "spend"
+    ],
+    "answer": "shrink",
+    "definition": "to make or become larger",
+    "example": "The school plans to expand the library next year.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "RIGID",
+    "type": "antonym",
+    "choices": [
+      "flexible",
+      "stiff",
+      "ridiculous",
+      "firm"
+    ],
+    "answer": "flexible",
+    "definition": "stiff and not able to bend; strict",
+    "example": "The school has rigid rules about phones in class.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "OPTIMISTIC",
+    "type": "antonym",
+    "choices": [
+      "pessimistic",
+      "hopeful",
+      "optional",
+      "cheerful"
+    ],
+    "answer": "pessimistic",
+    "definition": "hopeful and expecting good things",
+    "example": "He was optimistic about the team's chances this season.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "GENEROUS",
+    "type": "antonym",
+    "choices": [
+      "stingy",
+      "giving",
+      "gentle",
+      "general"
+    ],
+    "answer": "stingy",
+    "definition": "happy to give or share",
+    "example": "Our generous neighbor gave us a whole basket of tomatoes.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "TRANQUIL",
+    "type": "antonym",
+    "choices": [
+      "chaotic",
+      "peaceful",
+      "tiny",
+      "quiet"
+    ],
+    "answer": "chaotic",
+    "definition": "calm and peaceful",
+    "example": "The garden was tranquil except for the sound of birds.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "OBSCURE",
+    "type": "antonym",
+    "choices": [
+      "clear",
+      "hidden",
+      "absurd",
+      "observant"
+    ],
+    "answer": "clear",
+    "definition": "not clearly seen or understood; not well known",
+    "example": "The directions were so obscure that we got lost.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "TEMPORARY",
+    "type": "antonym",
+    "choices": [
+      "permanent",
+      "brief",
+      "temperamental",
+      "tempting"
+    ],
+    "answer": "permanent",
+    "definition": "lasting only for a short time",
+    "example": "The gym is a temporary classroom while the new wing is built.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "ACCELERATE",
+    "type": "antonym",
+    "choices": [
+      "slow down",
+      "speed up",
+      "accept",
+      "celebrate"
+    ],
+    "answer": "slow down",
+    "definition": "to speed up",
+    "example": "The car accelerated as it merged onto the highway.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "DIMINISH",
+    "type": "antonym",
+    "choices": [
+      "increase",
+      "reduce",
+      "finish",
+      "admire"
+    ],
+    "answer": "increase",
+    "definition": "to make or become smaller or less",
+    "example": "The pain began to diminish after a few minutes of ice.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "REVERE",
+    "type": "antonym",
+    "choices": [
+      "despise",
+      "admire",
+      "reverse",
+      "revise"
+    ],
+    "answer": "despise",
+    "definition": "to deeply respect and honor",
+    "example": "Many students revere their favorite teacher.",
+    "addedDate": "2026-10-18"
+  },
+  {
+    "word": "REFUTE",
+    "type": "antonym",
+    "choices": [
+      "confirm",
+      "disprove",
+      "refuse",
+      "refund"
+    ],
+    "answer": "confirm",
+    "definition": "to prove that a statement is wrong",
+    "example": "The scientist used new data to refute the old theory.",
+    "addedDate": "2026-10-18"
+  }
+]

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f766e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Vince's HSPT Words</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🎓 Vince's HSPT Words</h1>
+  <p class="sub">HSPT Verbal Skills · Synonyms &amp; Antonyms</p>
+</header>
+
+<main id="app">
+  <!-- Home -->
+  <section id="home" class="screen">
+    <div class="hero card">
+      <p class="hello">Let's go, Vince! 💪</p>
+      <p id="homeSummary" class="muted">Loading words…</p>
+    </div>
+    <button class="big btn-primary" id="btnToday">📅 Today's set <span id="todayCount" class="pill"></span></button>
+    <button class="big btn-warn" id="btnReview">🔁 Review missed words <span id="reviewCount" class="pill"></span></button>
+    <button class="big btn-syn" id="btnSyn">🟰 Synonyms only <span id="synCount" class="pill"></span></button>
+    <button class="big btn-ant" id="btnAnt">↔️ Antonyms only <span id="antCount" class="pill"></span></button>
+    <button class="big btn-alt" id="btnAll">🎲 Mix of all words <span id="allCount" class="pill"></span></button>
+    <button class="big btn-ghost" id="btnStats">📊 My stats</button>
+    <p class="legend"><span class="tag synonym">SYN</span> same meaning &nbsp; <span class="tag antonym">ANT</span> opposite meaning</p>
+  </section>
+
+  <!-- Quiz -->
+  <section id="quiz" class="screen hidden">
+    <div class="topbar">
+      <button class="link" id="quitQuiz">← Home</button>
+      <span id="progressText" class="muted"></span>
+    </div>
+    <div class="bar"><div id="progressBar"></div></div>
+    <div class="card qcard">
+      <p class="mode" id="modeLabel"></p>
+      <p id="typeTag" class="qtype"></p>
+      <p class="prompt" id="prompt"></p>
+      <h2 id="stem"></h2>
+      <div id="choices" class="choices"></div>
+      <div id="feedback" class="feedback hidden">
+        <p id="verdict" class="verdict"></p>
+        <p><b>Definition:</b> <span id="definition"></span></p>
+        <p><b>Example:</b> <i id="example"></i></p>
+        <p id="wordStat" class="muted small"></p>
+        <button class="big btn-primary" id="btnNext">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Done -->
+  <section id="done" class="screen hidden">
+    <div class="card center">
+      <p class="emoji" id="doneEmoji">🎉</p>
+      <h2 id="doneTitle">Nice work!</h2>
+      <p id="doneScore" class="score"></p>
+      <p id="doneMsg" class="muted"></p>
+      <div id="doneMissed"></div>
+    </div>
+    <button class="big btn-warn" id="btnDoneReview">🔁 Review missed words</button>
+    <button class="big btn-ghost" id="btnDoneHome">🏠 Home</button>
+  </section>
+
+  <!-- Stats -->
+  <section id="stats" class="screen hidden">
+    <div class="topbar"><button class="link" id="quitStats">← Home</button></div>
+    <div class="grid">
+      <div class="tile"><span id="stAcc">–</span><small>accuracy</small></div>
+      <div class="tile"><span id="stMastered">–</span><small>mastered</small></div>
+      <div class="tile"><span id="stPracticed">–</span><small>words practiced</small></div>
+      <div class="tile"><span id="stAnswered">–</span><small>cards answered</small></div>
+      <div class="tile"><span id="stSyn">–</span><small>synonym accuracy</small></div>
+      <div class="tile"><span id="stAnt">–</span><small>antonym accuracy</small></div>
+    </div>
+    <div class="card">
+      <h3>😤 Toughest cards</h3>
+      <ol id="toughList" class="tough"></ol>
+      <p id="toughEmpty" class="muted">No misses yet. Keep going!</p>
+    </div>
+    <div class="card">
+      <h3>📚 All cards</h3>
+      <table class="words"><thead><tr><th>Word</th><th>Right</th><th>Last seen</th></tr></thead><tbody id="wordTable"></tbody></table>
+      <p class="muted small">✅ = mastered (right 3 times in a row). Mastered words come back less often.</p>
+    </div>
+    <button class="big btn-danger" id="btnReset">🗑️ Reset my progress</button>
+  </section>
+</main>
+
+<script src="srs.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
