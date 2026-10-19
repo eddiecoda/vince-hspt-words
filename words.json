@@ -558,5 +558,285 @@
     "definition": "to prove that a statement is wrong",
     "example": "The scientist used new data to refute the old theory.",
     "addedDate": "2026-10-18"
+  },
+  {
+    "word": "ADVERSARY",
+    "type": "synonym",
+    "choices": [
+      "ally",
+      "opponent",
+      "advisor",
+      "spectator"
+    ],
+    "answer": "opponent",
+    "definition": "an enemy or opponent",
+    "example": "The chess champion shook hands with her adversary before the match.",
+    "addedDate": "2026-10-19"
+  },
+  {
+    "word": "BENIGN",
+    "type": "synonym",
+    "choices": [
+      "harmless",
+      "harmful",
+      "bending",
+      "ancient"
+    ],
+    "answer": "harmless",
+    "definition": "gentle and kind; not harmful",
+    "example": "The doctor said the small bump was benign and nothing to worry about.",
+    "addedDate": "2026-10-19"
+  },
+  {
+    "word": "COHERENT",
+    "type": "synonym",
+    "choices": [
+      "confusing",
+      "sticky",
+      "logical",
+      "silent"
+    ],
+    "answer": "logical",
+    "definition": "clear, logical, and easy to follow",
+    "example": "Even though he was nervous, his speech was coherent and well organized.",
+    "addedDate": "2026-10-19"
+  },
+  {
+    "word": "DETER",
+    "type": "synonym",
+    "choices": [
+      "encourage",
+      "delay",
+      "decide",
+      "discourage"
+    ],
+    "answer": "discourage",
+    "definition": "to discourage someone from doing something",
+    "example": "The tall fence was built to deter deer from eating the garden.",
+    "addedDate": "2026-10-19"
+  },
+  {
+    "word": "ELOQUENT",
+    "type": "synonym",
+    "choices": [
+      "well-spoken",
+      "elderly",
+      "shy",
+      "loud"
+    ],
+    "answer": "well-spoken",
+    "definition": "fluent and persuasive in speaking or writing",
+    "example": "The eloquent class president convinced everyone to support the food drive.",
+    "addedDate": "2026-10-19"
+  },
+  {
+    "word": "FUTILE",
+    "type": "synonym",
+    "choices": [
+      "fertile",
+      "useless",
+      "future",
+      "helpful"
+    ],
+    "answer": "useless",
+    "definition": "having no useful result; pointless",
+    "example": "Trying to stay dry was futile once the storm hit.",
+    "addedDate": "2026-10-19"
+  },
+  {
+    "word": "HAUGHTY",
+    "type": "synonym",
+    "choices": [
+      "humble",
+      "naughty",
+      "arrogant",
+      "tall"
+    ],
+    "answer": "arrogant",
+    "definition": "acting superior to others; proud and snobbish",
+    "example": "The haughty player refused to high-five the other team.",
+    "addedDate": "2026-10-19"
+  },
+  {
+    "word": "INCESSANT",
+    "type": "synonym",
+    "choices": [
+      "occasional",
+      "innocent",
+      "loud",
+      "nonstop"
+    ],
+    "answer": "nonstop",
+    "definition": "continuing without stopping",
+    "example": "The incessant barking next door kept us awake all night.",
+    "addedDate": "2026-10-19"
+  },
+  {
+    "word": "LUCID",
+    "type": "synonym",
+    "choices": [
+      "lucky",
+      "clear",
+      "cloudy",
+      "sleepy"
+    ],
+    "answer": "clear",
+    "definition": "easy to understand; clear-thinking",
+    "example": "Her lucid explanation finally made the formula make sense.",
+    "addedDate": "2026-10-19"
+  },
+  {
+    "word": "MITIGATE",
+    "type": "synonym",
+    "choices": [
+      "lessen",
+      "worsen",
+      "migrate",
+      "measure"
+    ],
+    "answer": "lessen",
+    "definition": "to make less severe or painful",
+    "example": "Planting trees can help mitigate flooding in the neighborhood.",
+    "addedDate": "2026-10-19"
+  },
+  {
+    "word": "OMINOUS",
+    "type": "synonym",
+    "choices": [
+      "cheerful",
+      "enormous",
+      "threatening",
+      "all-knowing"
+    ],
+    "answer": "threatening",
+    "definition": "suggesting that something bad is going to happen",
+    "example": "Ominous dark clouds gathered over the stadium.",
+    "addedDate": "2026-10-19"
+  },
+  {
+    "word": "PRAGMATIC",
+    "type": "synonym",
+    "choices": [
+      "dramatic",
+      "idealistic",
+      "problematic",
+      "practical"
+    ],
+    "answer": "practical",
+    "definition": "dealing with things in a sensible, realistic way",
+    "example": "Taking the bus was the pragmatic choice since the car was in the shop.",
+    "addedDate": "2026-10-19"
+  },
+  {
+    "word": "SUCCINCT",
+    "type": "synonym",
+    "choices": [
+      "brief",
+      "lengthy",
+      "successful",
+      "sweet"
+    ],
+    "answer": "brief",
+    "definition": "expressed clearly in few words",
+    "example": "The teacher asked for a succinct summary of no more than three sentences.",
+    "addedDate": "2026-10-19"
+  },
+  {
+    "word": "VINDICTIVE",
+    "type": "synonym",
+    "choices": [
+      "forgiving",
+      "vengeful",
+      "victorious",
+      "visible"
+    ],
+    "answer": "vengeful",
+    "definition": "wanting to get revenge",
+    "example": "The vindictive villain swore he would get even with the hero.",
+    "addedDate": "2026-10-19"
+  },
+  {
+    "word": "AFFLUENT",
+    "type": "antonym",
+    "choices": [
+      "wealthy",
+      "fluent",
+      "poor",
+      "generous"
+    ],
+    "answer": "poor",
+    "definition": "wealthy; having plenty of money",
+    "example": "The affluent family donated a new library to the town.",
+    "addedDate": "2026-10-19"
+  },
+  {
+    "word": "AMPLE",
+    "type": "antonym",
+    "choices": [
+      "plenty",
+      "simple",
+      "large",
+      "insufficient"
+    ],
+    "answer": "insufficient",
+    "definition": "more than enough",
+    "example": "There was ample time to finish the test, so he checked every answer.",
+    "addedDate": "2026-10-19"
+  },
+  {
+    "word": "CONDEMN",
+    "type": "antonym",
+    "choices": [
+      "praise",
+      "blame",
+      "condense",
+      "collect"
+    ],
+    "answer": "praise",
+    "definition": "to express strong disapproval of",
+    "example": "The mayor was quick to condemn the vandalism in the park.",
+    "addedDate": "2026-10-19"
+  },
+  {
+    "word": "RECKLESS",
+    "type": "antonym",
+    "choices": [
+      "careless",
+      "cautious",
+      "restless",
+      "daring"
+    ],
+    "answer": "cautious",
+    "definition": "acting without thinking about danger",
+    "example": "The reckless skateboarder raced down the hill without a helmet.",
+    "addedDate": "2026-10-19"
+  },
+  {
+    "word": "TRANSPARENT",
+    "type": "antonym",
+    "choices": [
+      "clear",
+      "obvious",
+      "opaque",
+      "parental"
+    ],
+    "answer": "opaque",
+    "definition": "clear enough to see through; also, easy to understand",
+    "example": "The transparent container let us watch the ants build their tunnels.",
+    "addedDate": "2026-10-19"
+  },
+  {
+    "word": "HINDER",
+    "type": "antonym",
+    "choices": [
+      "obstruct",
+      "hide",
+      "delay",
+      "assist"
+    ],
+    "answer": "assist",
+    "definition": "to get in the way of; to slow down progress",
+    "example": "Heavy snow hindered the rescue team's progress up the mountain.",
+    "addedDate": "2026-10-19"
   }
 ]

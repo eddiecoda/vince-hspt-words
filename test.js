@@ -29,8 +29,8 @@ const nSyn = words.filter(w => w.type === 'synonym').length, nAnt = words.filter
 console.log('words.json OK:', words.length, 'cards,', nSyn, 'synonym,', nAnt, 'antonym');
 
 // Same word as both types is tracked separately
-const both = [{ word: 'ZEST', type: 'synonym', choices: ['a','b','c','d'], answer: 'a', definition: 'x', example: 'y', addedDate: '2026-10-19' },
-              { word: 'ZEST', type: 'antonym', choices: ['a','b','c','d'], answer: 'b', definition: 'x', example: 'y', addedDate: '2026-10-19' }];
+const both = [{ word: 'ZEST', type: 'synonym', choices: ['a','b','c','d'], answer: 'a', definition: 'x', example: 'y', addedDate: '2099-01-01' },
+              { word: 'ZEST', type: 'antonym', choices: ['a','b','c','d'], answer: 'b', definition: 'x', example: 'y', addedDate: '2099-01-01' }];
 const pz = {};
 SRS.record(pz, K(both[0]), true, 0); SRS.record(pz, K(both[1]), false, 0);
 assert.strictEqual(pz['ZEST:synonym'].correct, 1); assert.strictEqual(pz['ZEST:antonym'].correct, 0);
@@ -38,8 +38,8 @@ assert.deepStrictEqual(SRS.reviewWords(both, pz, 0).map(K), ['ZEST:antonym']);
 
 // Today's batch picks the newest date
 const extra = words.concat(both);
-assert.strictEqual(SRS.todaysWords(extra, '2026-10-25').length, 2);
-assert.strictEqual(SRS.todaysWords(words, '2026-10-18').length, words.length);
+assert.strictEqual(SRS.todaysWords(extra, '2099-06-01').length, 2);
+assert.strictEqual(SRS.todaysWords(words, '2026-10-18').length, words.filter(w => w.addedDate === '2026-10-18').length);
 
 // Spaced repetition
 const D = SRS.DAY; const t0 = Date.UTC(2026, 9, 18, 15); const p = {};
