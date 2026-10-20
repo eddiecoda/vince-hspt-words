@@ -838,5 +838,285 @@
     "definition": "to get in the way of; to slow down progress",
     "example": "Heavy snow hindered the rescue team's progress up the mountain.",
     "addedDate": "2026-10-19"
+  },
+  {
+    "word": "ABHOR",
+    "type": "synonym",
+    "choices": [
+      "adore",
+      "hate",
+      "abandon",
+      "ignore"
+    ],
+    "answer": "hate",
+    "definition": "to hate or detest something strongly",
+    "example": "My sister abhors spiders and screams whenever she sees one.",
+    "addedDate": "2026-10-20"
+  },
+  {
+    "word": "BELLIGERENT",
+    "type": "synonym",
+    "choices": [
+      "aggressive",
+      "peaceful",
+      "beautiful",
+      "belittled"
+    ],
+    "answer": "aggressive",
+    "definition": "hostile and eager to fight or argue",
+    "example": "The belligerent fan was escorted out of the stadium.",
+    "addedDate": "2026-10-20"
+  },
+  {
+    "word": "CONCUR",
+    "type": "synonym",
+    "choices": [
+      "compete",
+      "conquer",
+      "agree",
+      "object"
+    ],
+    "answer": "agree",
+    "definition": "to agree; to have the same opinion",
+    "example": "All three judges concurred that her project deserved first place.",
+    "addedDate": "2026-10-20"
+  },
+  {
+    "word": "DISCERN",
+    "type": "synonym",
+    "choices": [
+      "discard",
+      "disturb",
+      "confuse",
+      "perceive"
+    ],
+    "answer": "perceive",
+    "definition": "to notice or recognize something that is hard to see or understand",
+    "example": "In the fog it was hard to discern the shape of the boat.",
+    "addedDate": "2026-10-20"
+  },
+  {
+    "word": "EMULATE",
+    "type": "synonym",
+    "choices": [
+      "imitate",
+      "eliminate",
+      "ignore",
+      "emerge"
+    ],
+    "answer": "imitate",
+    "definition": "to copy someone you admire in hopes of matching them",
+    "example": "Young players often emulate their favorite athletes.",
+    "addedDate": "2026-10-20"
+  },
+  {
+    "word": "FERVENT",
+    "type": "synonym",
+    "choices": [
+      "indifferent",
+      "passionate",
+      "fearful",
+      "fragrant"
+    ],
+    "answer": "passionate",
+    "definition": "having or showing very strong feeling",
+    "example": "She is a fervent supporter of the animal shelter.",
+    "addedDate": "2026-10-20"
+  },
+  {
+    "word": "GREGARIOUS",
+    "type": "synonym",
+    "choices": [
+      "grumpy",
+      "greedy",
+      "sociable",
+      "solitary"
+    ],
+    "answer": "sociable",
+    "definition": "enjoying the company of others; outgoing",
+    "example": "The gregarious new student made friends on the first day.",
+    "addedDate": "2026-10-20"
+  },
+  {
+    "word": "IMPETUOUS",
+    "type": "synonym",
+    "choices": [
+      "patient",
+      "important",
+      "impossible",
+      "impulsive"
+    ],
+    "answer": "impulsive",
+    "definition": "acting quickly without thinking carefully",
+    "example": "His impetuous decision to quit the team surprised everyone.",
+    "addedDate": "2026-10-20"
+  },
+  {
+    "word": "LAMENT",
+    "type": "synonym",
+    "choices": [
+      "mourn",
+      "laminate",
+      "celebrate",
+      "explain"
+    ],
+    "answer": "mourn",
+    "definition": "(verb) to express deep sadness or regret about something",
+    "example": "The villagers lamented the loss of the old oak tree.",
+    "addedDate": "2026-10-20"
+  },
+  {
+    "word": "NONCHALANT",
+    "type": "synonym",
+    "choices": [
+      "anxious",
+      "unconcerned",
+      "nonsensical",
+      "rude"
+    ],
+    "answer": "unconcerned",
+    "definition": "calm and relaxed; not showing worry or interest",
+    "example": "He gave a nonchalant shrug even though the test was tomorrow.",
+    "addedDate": "2026-10-20"
+  },
+  {
+    "word": "PLAUSIBLE",
+    "type": "synonym",
+    "choices": [
+      "pleasant",
+      "plentiful",
+      "believable",
+      "ridiculous"
+    ],
+    "answer": "believable",
+    "definition": "seeming reasonable or likely to be true",
+    "example": "Her excuse sounded plausible, so the teacher accepted it.",
+    "addedDate": "2026-10-20"
+  },
+  {
+    "word": "RESILIENT",
+    "type": "synonym",
+    "choices": [
+      "fragile",
+      "resentful",
+      "silent",
+      "tough"
+    ],
+    "answer": "tough",
+    "definition": "able to recover quickly from difficulty",
+    "example": "The resilient team bounced back after losing the first game.",
+    "addedDate": "2026-10-20"
+  },
+  {
+    "word": "SPORADIC",
+    "type": "synonym",
+    "choices": [
+      "occasional",
+      "constant",
+      "spotted",
+      "sparkling"
+    ],
+    "answer": "occasional",
+    "definition": "happening now and then, not regularly",
+    "example": "We heard sporadic thunder throughout the afternoon.",
+    "addedDate": "2026-10-20"
+  },
+  {
+    "word": "VERBOSE",
+    "type": "synonym",
+    "choices": [
+      "brief",
+      "wordy",
+      "vertical",
+      "angry"
+    ],
+    "answer": "wordy",
+    "definition": "using more words than needed",
+    "example": "His verbose essay was twice as long as it needed to be.",
+    "addedDate": "2026-10-20"
+  },
+  {
+    "word": "TRANSIENT",
+    "type": "antonym",
+    "choices": [
+      "brief",
+      "passing",
+      "permanent",
+      "translucent"
+    ],
+    "answer": "permanent",
+    "definition": "lasting only a short time",
+    "example": "The rainbow was transient and faded within minutes.",
+    "addedDate": "2026-10-20"
+  },
+  {
+    "word": "ARROGANT",
+    "type": "antonym",
+    "choices": [
+      "conceited",
+      "ignorant",
+      "elegant",
+      "modest"
+    ],
+    "answer": "modest",
+    "definition": "acting as if you are better or more important than others",
+    "example": "The arrogant champion bragged about every win.",
+    "addedDate": "2026-10-20"
+  },
+  {
+    "word": "SCANT",
+    "type": "antonym",
+    "choices": [
+      "plentiful",
+      "meager",
+      "scattered",
+      "sacred"
+    ],
+    "answer": "plentiful",
+    "definition": "barely enough; very little",
+    "example": "There was scant evidence to prove who broke the window.",
+    "addedDate": "2026-10-20"
+  },
+  {
+    "word": "DOCILE",
+    "type": "antonym",
+    "choices": [
+      "tame",
+      "rebellious",
+      "drowsy",
+      "polite"
+    ],
+    "answer": "rebellious",
+    "definition": "calm and easy to control or teach",
+    "example": "The docile horse let the children brush its mane.",
+    "addedDate": "2026-10-20"
+  },
+  {
+    "word": "AMPLIFY",
+    "type": "antonym",
+    "choices": [
+      "enlarge",
+      "magnify",
+      "reduce",
+      "apply"
+    ],
+    "answer": "reduce",
+    "definition": "to make louder, larger, or stronger",
+    "example": "The microphone amplified her voice so the whole gym could hear.",
+    "addedDate": "2026-10-20"
+  },
+  {
+    "word": "SKEPTICAL",
+    "type": "antonym",
+    "choices": [
+      "doubtful",
+      "suspicious",
+      "skeletal",
+      "trusting"
+    ],
+    "answer": "trusting",
+    "definition": "doubting that something is true",
+    "example": "Dad was skeptical when the ad promised to make him rich overnight.",
+    "addedDate": "2026-10-20"
   }
 ]
