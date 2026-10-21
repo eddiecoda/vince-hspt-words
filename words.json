@@ -1118,5 +1118,285 @@
     "definition": "doubting that something is true",
     "example": "Dad was skeptical when the ad promised to make him rich overnight.",
     "addedDate": "2026-10-20"
+  },
+  {
+    "word": "ACQUIESCE",
+    "type": "synonym",
+    "choices": [
+      "comply",
+      "acquire",
+      "inquire",
+      "resist"
+    ],
+    "answer": "comply",
+    "definition": "to accept or agree without protest",
+    "example": "After a long debate, the coach acquiesced to the players' request.",
+    "addedDate": "2026-10-21"
+  },
+  {
+    "word": "CAPRICIOUS",
+    "type": "synonym",
+    "choices": [
+      "generous",
+      "fickle",
+      "steady",
+      "cautious"
+    ],
+    "answer": "fickle",
+    "definition": "changing mood or behavior suddenly and unpredictably",
+    "example": "The capricious weather switched from sun to hail in minutes.",
+    "addedDate": "2026-10-21"
+  },
+  {
+    "word": "DEBILITATE",
+    "type": "synonym",
+    "choices": [
+      "delay",
+      "strengthen",
+      "debate",
+      "weaken"
+    ],
+    "answer": "weaken",
+    "definition": "to make someone or something weak",
+    "example": "The flu debilitated him for a week.",
+    "addedDate": "2026-10-21"
+  },
+  {
+    "word": "EMBELLISH",
+    "type": "synonym",
+    "choices": [
+      "establish",
+      "simplify",
+      "decorate",
+      "embarrass"
+    ],
+    "answer": "decorate",
+    "definition": "to add details or decorations to make something more attractive",
+    "example": "She embellished her story to make it more exciting.",
+    "addedDate": "2026-10-21"
+  },
+  {
+    "word": "FORTITUDE",
+    "type": "synonym",
+    "choices": [
+      "fortune",
+      "wealth",
+      "weakness",
+      "courage"
+    ],
+    "answer": "courage",
+    "definition": "strength of mind to face pain or hardship",
+    "example": "The explorers showed great fortitude in the blizzard.",
+    "addedDate": "2026-10-21"
+  },
+  {
+    "word": "INNOCUOUS",
+    "type": "synonym",
+    "choices": [
+      "harmful",
+      "harmless",
+      "invisible",
+      "guilty"
+    ],
+    "answer": "harmless",
+    "definition": "not harmful or offensive",
+    "example": "The snake looked scary but was completely innocuous.",
+    "addedDate": "2026-10-21"
+  },
+  {
+    "word": "LUCRATIVE",
+    "type": "synonym",
+    "choices": [
+      "lucky",
+      "lazy",
+      "profitable",
+      "costly"
+    ],
+    "answer": "profitable",
+    "definition": "producing a lot of money",
+    "example": "His summer lawn-mowing business turned out to be lucrative.",
+    "addedDate": "2026-10-21"
+  },
+  {
+    "word": "NEGLIGENT",
+    "type": "synonym",
+    "choices": [
+      "careful",
+      "negative",
+      "careless",
+      "nervous"
+    ],
+    "answer": "careless",
+    "definition": "failing to take proper care",
+    "example": "The negligent driver forgot to check his mirrors.",
+    "addedDate": "2026-10-21"
+  },
+  {
+    "word": "OSTRACIZE",
+    "type": "synonym",
+    "choices": [
+      "admire",
+      "imitate",
+      "exclude",
+      "welcome"
+    ],
+    "answer": "exclude",
+    "definition": "to shut someone out of a group",
+    "example": "The club ostracized the member who broke the rules.",
+    "addedDate": "2026-10-21"
+  },
+  {
+    "word": "PERNICIOUS",
+    "type": "synonym",
+    "choices": [
+      "precise",
+      "helpful",
+      "harmful",
+      "persistent"
+    ],
+    "answer": "harmful",
+    "definition": "causing great harm, often gradually",
+    "example": "Rumors can have a pernicious effect on a friendship.",
+    "addedDate": "2026-10-21"
+  },
+  {
+    "word": "REPROACH",
+    "type": "synonym",
+    "choices": [
+      "approach",
+      "praise",
+      "scold",
+      "repeat"
+    ],
+    "answer": "scold",
+    "definition": "to express disapproval or disappointment",
+    "example": "The teacher reproached the class for talking during the test.",
+    "addedDate": "2026-10-21"
+  },
+  {
+    "word": "SAGACIOUS",
+    "type": "synonym",
+    "choices": [
+      "wise",
+      "foolish",
+      "brave",
+      "spacious"
+    ],
+    "answer": "wise",
+    "definition": "having good judgment and deep wisdom",
+    "example": "The sagacious old judge settled the dispute fairly.",
+    "addedDate": "2026-10-21"
+  },
+  {
+    "word": "UBIQUITOUS",
+    "type": "synonym",
+    "choices": [
+      "unique",
+      "rare",
+      "unknown",
+      "everywhere"
+    ],
+    "answer": "everywhere",
+    "definition": "present or found everywhere",
+    "example": "Smartphones are ubiquitous in middle school.",
+    "addedDate": "2026-10-21"
+  },
+  {
+    "word": "WARY",
+    "type": "synonym",
+    "choices": [
+      "cautious",
+      "tired",
+      "weary",
+      "careless"
+    ],
+    "answer": "cautious",
+    "definition": "careful and watchful about possible danger",
+    "example": "The deer was wary of the hikers.",
+    "addedDate": "2026-10-21"
+  },
+  {
+    "word": "AUSTERE",
+    "type": "antonym",
+    "choices": [
+      "luxurious",
+      "severe",
+      "plain",
+      "strict"
+    ],
+    "answer": "luxurious",
+    "definition": "severe, strict, or very plain with no comfort or decoration",
+    "example": "The monks lived in austere rooms with only a bed and a desk.",
+    "addedDate": "2026-10-21"
+  },
+  {
+    "word": "ENIGMATIC",
+    "type": "antonym",
+    "choices": [
+      "energetic",
+      "puzzling",
+      "mysterious",
+      "obvious"
+    ],
+    "answer": "obvious",
+    "definition": "mysterious and hard to understand",
+    "example": "The Mona Lisa is famous for her enigmatic smile.",
+    "addedDate": "2026-10-21"
+  },
+  {
+    "word": "MAGNANIMOUS",
+    "type": "antonym",
+    "choices": [
+      "generous",
+      "magnificent",
+      "petty",
+      "noble"
+    ],
+    "answer": "petty",
+    "definition": "generous and forgiving, especially toward a rival",
+    "example": "The magnanimous winner shook hands with every opponent.",
+    "addedDate": "2026-10-21"
+  },
+  {
+    "word": "RETICENT",
+    "type": "antonym",
+    "choices": [
+      "reserved",
+      "hesitant",
+      "talkative",
+      "quiet"
+    ],
+    "answer": "talkative",
+    "definition": "not willing to share thoughts or feelings",
+    "example": "Vince was reticent about his grade until he saw it was an A.",
+    "addedDate": "2026-10-21"
+  },
+  {
+    "word": "EPHEMERAL",
+    "type": "antonym",
+    "choices": [
+      "permanent",
+      "fleeting",
+      "ethereal",
+      "brief"
+    ],
+    "answer": "permanent",
+    "definition": "lasting a very short time",
+    "example": "The rainbow was ephemeral, gone in minutes.",
+    "addedDate": "2026-10-21"
+  },
+  {
+    "word": "EXONERATE",
+    "type": "antonym",
+    "choices": [
+      "acquit",
+      "excuse",
+      "free",
+      "blame"
+    ],
+    "answer": "blame",
+    "definition": "to officially clear someone of blame",
+    "example": "New evidence exonerated the accused man.",
+    "addedDate": "2026-10-21"
   }
 ]
