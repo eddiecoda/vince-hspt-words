@@ -1398,5 +1398,285 @@
     "definition": "to officially clear someone of blame",
     "example": "New evidence exonerated the accused man.",
     "addedDate": "2026-10-21"
+  },
+  {
+    "word": "ABRIDGE",
+    "type": "synonym",
+    "choices": [
+      "extend",
+      "connect",
+      "cross",
+      "shorten"
+    ],
+    "answer": "shorten",
+    "definition": "to shorten a text while keeping its meaning",
+    "example": "The class read an abridged version of the novel.",
+    "addedDate": "2026-10-22"
+  },
+  {
+    "word": "CORDIAL",
+    "type": "synonym",
+    "choices": [
+      "nervous",
+      "serious",
+      "friendly",
+      "rude"
+    ],
+    "answer": "friendly",
+    "definition": "warm and polite",
+    "example": "The neighbors gave us a cordial welcome.",
+    "addedDate": "2026-10-22"
+  },
+  {
+    "word": "DIVULGE",
+    "type": "synonym",
+    "choices": [
+      "indulge",
+      "reveal",
+      "divide",
+      "conceal"
+    ],
+    "answer": "reveal",
+    "definition": "to make known something secret",
+    "example": "She refused to divulge the surprise party plans.",
+    "addedDate": "2026-10-22"
+  },
+  {
+    "word": "ERRATIC",
+    "type": "synonym",
+    "choices": [
+      "unpredictable",
+      "steady",
+      "mistaken",
+      "excited"
+    ],
+    "answer": "unpredictable",
+    "definition": "irregular; not steady or predictable",
+    "example": "The car's erratic swerving worried the other drivers.",
+    "addedDate": "2026-10-22"
+  },
+  {
+    "word": "FALLACY",
+    "type": "synonym",
+    "choices": [
+      "fact",
+      "downfall",
+      "theory",
+      "misconception"
+    ],
+    "answer": "misconception",
+    "definition": "a mistaken belief or faulty reasoning",
+    "example": "It is a fallacy that lightning never strikes twice.",
+    "addedDate": "2026-10-22"
+  },
+  {
+    "word": "GULLIBLE",
+    "type": "synonym",
+    "choices": [
+      "hungry",
+      "clever",
+      "naive",
+      "suspicious"
+    ],
+    "answer": "naive",
+    "definition": "easily fooled or tricked",
+    "example": "The gullible tourist bought a fake watch.",
+    "addedDate": "2026-10-22"
+  },
+  {
+    "word": "INFAMOUS",
+    "type": "synonym",
+    "choices": [
+      "ordinary",
+      "notorious",
+      "unknown",
+      "honorable"
+    ],
+    "answer": "notorious",
+    "definition": "well known for something bad",
+    "example": "The pirate was infamous for robbing ships.",
+    "addedDate": "2026-10-22"
+  },
+  {
+    "word": "MALICIOUS",
+    "type": "synonym",
+    "choices": [
+      "spiteful",
+      "kind",
+      "sickly",
+      "careless"
+    ],
+    "answer": "spiteful",
+    "definition": "intending to do harm",
+    "example": "Spreading that rumor was a malicious act.",
+    "addedDate": "2026-10-22"
+  },
+  {
+    "word": "PROCRASTINATE",
+    "type": "synonym",
+    "choices": [
+      "hurry",
+      "predict",
+      "complete",
+      "delay"
+    ],
+    "answer": "delay",
+    "definition": "to put off doing something",
+    "example": "Don't procrastinate on your science project.",
+    "addedDate": "2026-10-22"
+  },
+  {
+    "word": "RENOVATE",
+    "type": "synonym",
+    "choices": [
+      "rent",
+      "invent",
+      "restore",
+      "demolish"
+    ],
+    "answer": "restore",
+    "definition": "to repair and improve a building",
+    "example": "They plan to renovate the old library.",
+    "addedDate": "2026-10-22"
+  },
+  {
+    "word": "TENTATIVE",
+    "type": "synonym",
+    "choices": [
+      "eager",
+      "hesitant",
+      "definite",
+      "attentive"
+    ],
+    "answer": "hesitant",
+    "definition": "not certain or fixed; unsure",
+    "example": "We made tentative plans to meet on Saturday.",
+    "addedDate": "2026-10-22"
+  },
+  {
+    "word": "VOLATILE",
+    "type": "synonym",
+    "choices": [
+      "unstable",
+      "steady",
+      "valuable",
+      "quiet"
+    ],
+    "answer": "unstable",
+    "definition": "likely to change suddenly or explode",
+    "example": "The volatile chemicals had to be stored carefully.",
+    "addedDate": "2026-10-22"
+  },
+  {
+    "word": "EXPEDITE",
+    "type": "synonym",
+    "choices": [
+      "explore",
+      "delay",
+      "export",
+      "hasten"
+    ],
+    "answer": "hasten",
+    "definition": "to speed up a process",
+    "example": "Paying extra will expedite the shipping.",
+    "addedDate": "2026-10-22"
+  },
+  {
+    "word": "ANIMOSITY",
+    "type": "synonym",
+    "choices": [
+      "animation",
+      "curiosity",
+      "hostility",
+      "friendship"
+    ],
+    "answer": "hostility",
+    "definition": "strong dislike or ill will",
+    "example": "There was animosity between the rival teams.",
+    "addedDate": "2026-10-22"
+  },
+  {
+    "word": "AUGMENT",
+    "type": "antonym",
+    "choices": [
+      "decorate",
+      "reduce",
+      "enlarge",
+      "argue"
+    ],
+    "answer": "reduce",
+    "definition": "to increase or add to",
+    "example": "She took a summer job to augment her savings.",
+    "addedDate": "2026-10-22"
+  },
+  {
+    "word": "OPAQUE",
+    "type": "antonym",
+    "choices": [
+      "clear",
+      "cloudy",
+      "solid",
+      "heavy"
+    ],
+    "answer": "clear",
+    "definition": "not see-through; blocking light",
+    "example": "The opaque curtains kept the room dark.",
+    "addedDate": "2026-10-22"
+  },
+  {
+    "word": "APATHETIC",
+    "type": "antonym",
+    "choices": [
+      "indifferent",
+      "pitiful",
+      "tired",
+      "passionate"
+    ],
+    "answer": "passionate",
+    "definition": "showing no interest or concern",
+    "example": "Apathetic voters stayed home on election day.",
+    "addedDate": "2026-10-22"
+  },
+  {
+    "word": "EXTRAVAGANT",
+    "type": "antonym",
+    "choices": [
+      "extra",
+      "wealthy",
+      "thrifty",
+      "lavish"
+    ],
+    "answer": "thrifty",
+    "definition": "spending too much; excessive",
+    "example": "They threw an extravagant party with fireworks.",
+    "addedDate": "2026-10-22"
+  },
+  {
+    "word": "TACITURN",
+    "type": "antonym",
+    "choices": [
+      "gloomy",
+      "talkative",
+      "silent",
+      "tactful"
+    ],
+    "answer": "talkative",
+    "definition": "quiet; saying very little",
+    "example": "The taciturn farmer answered with a single nod.",
+    "addedDate": "2026-10-22"
+  },
+  {
+    "word": "PROFICIENT",
+    "type": "antonym",
+    "choices": [
+      "incompetent",
+      "skilled",
+      "sufficient",
+      "profitable"
+    ],
+    "answer": "incompetent",
+    "definition": "highly skilled; expert",
+    "example": "After years of practice, he is proficient at piano.",
+    "addedDate": "2026-10-22"
   }
 ]
