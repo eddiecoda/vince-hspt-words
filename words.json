@@ -1678,5 +1678,285 @@
     "definition": "highly skilled; expert",
     "example": "After years of practice, he is proficient at piano.",
     "addedDate": "2026-10-22"
+  },
+  {
+    "word": "AMBIVALENT",
+    "type": "synonym",
+    "choices": [
+      "ambitious",
+      "undecided",
+      "enthusiastic",
+      "angry"
+    ],
+    "answer": "undecided",
+    "definition": "having mixed feelings about something",
+    "example": "She felt ambivalent about moving: excited for a new school but sad to leave friends.",
+    "addedDate": "2026-10-24"
+  },
+  {
+    "word": "BOLSTER",
+    "type": "synonym",
+    "choices": [
+      "weaken",
+      "boast",
+      "support",
+      "hide"
+    ],
+    "answer": "support",
+    "definition": "to support or strengthen",
+    "example": "The coach's speech helped bolster the team's confidence.",
+    "addedDate": "2026-10-24"
+  },
+  {
+    "word": "CASTIGATE",
+    "type": "synonym",
+    "choices": [
+      "reprimand",
+      "imitate",
+      "isolate",
+      "praise"
+    ],
+    "answer": "reprimand",
+    "definition": "to scold or criticize harshly",
+    "example": "The editor castigated the reporter for the careless error.",
+    "addedDate": "2026-10-24"
+  },
+  {
+    "word": "DILAPIDATED",
+    "type": "synonym",
+    "choices": [
+      "delayed",
+      "spacious",
+      "run-down",
+      "renovated"
+    ],
+    "answer": "run-down",
+    "definition": "falling apart from age or neglect",
+    "example": "The dilapidated barn leaned badly after the storm.",
+    "addedDate": "2026-10-24"
+  },
+  {
+    "word": "ELICIT",
+    "type": "synonym",
+    "choices": [
+      "forbid",
+      "illegal",
+      "hide",
+      "draw out"
+    ],
+    "answer": "draw out",
+    "definition": "to draw out a response or reaction",
+    "example": "The teacher's joke elicited laughter from the class.",
+    "addedDate": "2026-10-24"
+  },
+  {
+    "word": "FASTIDIOUS",
+    "type": "synonym",
+    "choices": [
+      "speedy",
+      "picky",
+      "careless",
+      "festive"
+    ],
+    "answer": "picky",
+    "definition": "very concerned with detail and cleanliness; hard to please",
+    "example": "He is so fastidious that he irons his T-shirts.",
+    "addedDate": "2026-10-24"
+  },
+  {
+    "word": "INDIGNANT",
+    "type": "synonym",
+    "choices": [
+      "resentful",
+      "poor",
+      "calm",
+      "lazy"
+    ],
+    "answer": "resentful",
+    "definition": "angry about something unfair",
+    "example": "She was indignant when she was blamed for her brother's mess.",
+    "addedDate": "2026-10-24"
+  },
+  {
+    "word": "INSINUATE",
+    "type": "synonym",
+    "choices": [
+      "insist",
+      "declare",
+      "hint",
+      "insult"
+    ],
+    "answer": "hint",
+    "definition": "to suggest something unpleasant in an indirect way",
+    "example": "Are you trying to insinuate that I cheated?",
+    "addedDate": "2026-10-24"
+  },
+  {
+    "word": "OBLIVIOUS",
+    "type": "synonym",
+    "choices": [
+      "obvious",
+      "alert",
+      "obedient",
+      "unaware"
+    ],
+    "answer": "unaware",
+    "definition": "not aware of what is happening",
+    "example": "Wearing headphones, he was oblivious to the fire alarm.",
+    "addedDate": "2026-10-24"
+  },
+  {
+    "word": "PERUSE",
+    "type": "synonym",
+    "choices": [
+      "pursue",
+      "examine",
+      "ignore",
+      "persuade"
+    ],
+    "answer": "examine",
+    "definition": "to read or look over carefully",
+    "example": "Take a minute to peruse the menu before you order.",
+    "addedDate": "2026-10-24"
+  },
+  {
+    "word": "QUELL",
+    "type": "synonym",
+    "choices": [
+      "question",
+      "provoke",
+      "suppress",
+      "swell"
+    ],
+    "answer": "suppress",
+    "definition": "to put an end to, usually by force; to calm",
+    "example": "Police arrived to quell the disturbance.",
+    "addedDate": "2026-10-24"
+  },
+  {
+    "word": "REPLENISH",
+    "type": "synonym",
+    "choices": [
+      "replace",
+      "refill",
+      "reward",
+      "empty"
+    ],
+    "answer": "refill",
+    "definition": "to fill up again",
+    "example": "Hikers stopped at the stream to replenish their water bottles.",
+    "addedDate": "2026-10-24"
+  },
+  {
+    "word": "SUBTLE",
+    "type": "synonym",
+    "choices": [
+      "underground",
+      "obvious",
+      "sudden",
+      "understated"
+    ],
+    "answer": "understated",
+    "definition": "delicate or hard to notice",
+    "example": "There was a subtle hint of lemon in the cake.",
+    "addedDate": "2026-10-24"
+  },
+  {
+    "word": "VERIFY",
+    "type": "synonym",
+    "choices": [
+      "confirm",
+      "deny",
+      "vary",
+      "glorify"
+    ],
+    "answer": "confirm",
+    "definition": "to check that something is true",
+    "example": "Please verify your answers before handing in the test.",
+    "addedDate": "2026-10-24"
+  },
+  {
+    "word": "CONCEDE",
+    "type": "antonym",
+    "choices": [
+      "admit",
+      "contest",
+      "conceal",
+      "proceed"
+    ],
+    "answer": "contest",
+    "definition": "to admit that something is true, often unwillingly; to give in",
+    "example": "The candidate refused to concede the election until every vote was counted.",
+    "addedDate": "2026-10-24"
+  },
+  {
+    "word": "JOVIAL",
+    "type": "antonym",
+    "choices": [
+      "cheerful",
+      "generous",
+      "morose",
+      "journal"
+    ],
+    "answer": "morose",
+    "definition": "cheerful and friendly",
+    "example": "Our jovial neighbor always waves and tells jokes.",
+    "addedDate": "2026-10-24"
+  },
+  {
+    "word": "PROLIFIC",
+    "type": "antonym",
+    "choices": [
+      "productive",
+      "professional",
+      "famous",
+      "unproductive"
+    ],
+    "answer": "unproductive",
+    "definition": "producing a lot of work or results",
+    "example": "The prolific author published three novels in one year.",
+    "addedDate": "2026-10-24"
+  },
+  {
+    "word": "ADAMANT",
+    "type": "antonym",
+    "choices": [
+      "stubborn",
+      "yielding",
+      "adequate",
+      "angry"
+    ],
+    "answer": "yielding",
+    "definition": "refusing to change one's mind",
+    "example": "She was adamant that she would finish the race despite the rain.",
+    "addedDate": "2026-10-24"
+  },
+  {
+    "word": "LAUD",
+    "type": "antonym",
+    "choices": [
+      "praise",
+      "laugh",
+      "criticize",
+      "honor"
+    ],
+    "answer": "criticize",
+    "definition": "to praise highly",
+    "example": "Critics lauded the young actor's performance.",
+    "addedDate": "2026-10-24"
+  },
+  {
+    "word": "DORMANT",
+    "type": "antonym",
+    "choices": [
+      "inactive",
+      "dominant",
+      "sleepy",
+      "active"
+    ],
+    "answer": "active",
+    "definition": "inactive for now, as if asleep",
+    "example": "The dormant volcano has not erupted in 500 years.",
+    "addedDate": "2026-10-24"
   }
 ]
