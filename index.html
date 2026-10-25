@@ -6,10 +6,12 @@
 <meta name="description" content="HSPT Verbal Skills synonym and antonym flashcards">
 <meta name="theme-color" content="#0f766e">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 <title>Vince's HSPT Words</title>
-<link rel="manifest" href="manifest.json">
+<link rel="manifest" href="manifest.json?v=2026-10-25-pwa1">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="icon.svg">
+<link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -100,5 +102,10 @@
 <script src="srs.js"></script>
 <script src="wordlog.js"></script>
 <script src="app.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js?v=2026-10-25-pwa1', { scope: './' }).catch(function () {}); });
+}
+</script>
 </body>
 </html>

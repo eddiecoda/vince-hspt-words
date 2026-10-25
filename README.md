@@ -17,3 +17,7 @@ Daily words log (wordlog.js): each device sends one cumulative record per day (E
 with subject `WORDS LOG <Kid> <YYYY-MM-DD> auto|button`. Auto records go out when Today's set is opened, when every card in it has a first
 answer today / a session finishes, and when the page is hidden, only if the numbers changed. The "I did my words today" button sends source=button.
 Fields: kid, date_et, time_et, source, set (newest addedDate), set_size, opened_set, answered, right (first try of the day), completed_all, button_tapped_today.
+
+Installable PWA: manifest.json (PNG icons 192/512 + maskable 512, scope/start_url = the repo subpath), apple-touch-icon.png (180), and sw.js
+(network-first for index.html and words.json; never touches POSTs or cross-origin requests such as formsubmit.co). Bump VERSION in sw.js and the ?v= in index.html when changing it.
+Icons were rendered from icon.svg with headless Chrome.
