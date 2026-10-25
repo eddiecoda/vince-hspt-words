@@ -3,6 +3,8 @@
   var K = SRS.key;
   var words = [], progress = SRS.load(localStorage), session = null, answered = false;
   var LETTERS = ['A', 'B', 'C', 'D'];
+  var wlog = WordLog.create({ kid: 'Vince', storage: localStorage, keyFn: function (w) { return K(w); },
+    setFn: function () { return SRS.todaysWords(words, todayStr()); } });
   var MODES = { today: "📅 Today's set", review: '🔁 Review missed', all: '🎲 Mix', synonym: '🟰 Synonyms', antonym: '↔️ Antonyms' };
 
   function todayStr() {
@@ -57,6 +59,7 @@
     else if (mode === 'synonym' || mode === 'antonym') list = pick(ofType(mode));
     else list = pick(words);
     if (!list.length) return;
+    if (mode === 'today') wlog.openedSet();
     session = new SRS.Session(list);
     $('modeLabel').textContent = MODES[mode];
     show('quiz');
@@ -94,7 +97,7 @@
     var ok = choice === w.answer, k = K(w);
     var first = !(k in session.firstTry);
     // Only the first attempt in a session counts toward stats.
-    if (first) { SRS.record(progress, k, ok); SRS.save(localStorage, progress); }
+    if (first) { SRS.record(progress, k, ok); SRS.save(localStorage, progress); wlog.answered(k, ok); }
     session.answer(ok);
     Array.prototype.forEach.call($('choices').children, function (b) {
       b.disabled = true;
@@ -130,6 +133,7 @@
       return '<li>' + label(w) + ' → ' + esc(w.answer) + '</li>'; }).join('') + '</ul>' : '';
     $('btnDoneReview').classList.toggle('hidden', SRS.reviewWords(words, progress).length === 0);
     show('done');
+    wlog.flush();
   }
 
   function renderStats() {
@@ -154,7 +158,24 @@
     show('stats');
   }
 
-  function home() { refreshHome(); show('home'); }
+  function renderDidWords(msg, err) {
+    var done = wlog.buttonDone();
+    $('btnDidWords').disabled = done;
+    $('btnDidWords').textContent = done ? '✅ Words done for today!' : '✅ I did my words today';
+    var m = msg || (done ? 'Thanks! Logged for ' + wlog.etDate() + '.' : '');
+    $('didWordsMsg').textContent = m;
+    $('didWordsMsg').classList.toggle('hidden', !m);
+    $('didWordsMsg').classList.toggle('err', !!err);
+  }
+  function home() { refreshHome(); renderDidWords(); show('home'); }
+  $('btnDidWords').onclick = function () {
+    $('btnDidWords').disabled = true;
+    $('didWordsMsg').classList.add('hidden');
+    wlog.button().then(function () { renderDidWords('🎉 Thanks! Logged for ' + wlog.etDate() + '.'); })
+      .catch(function () { renderDidWords("Couldn't send. Check the internet and tap again.", true); });
+  };
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'hidden') wlog.flush(); });
+  window.addEventListener('pagehide', function () { wlog.flush(); });
 
   $('btnToday').onclick = function () { start('today'); };
   $('btnReview').onclick = function () { start('review'); };

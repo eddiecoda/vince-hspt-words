@@ -73,3 +73,27 @@ assert.strictEqual(SRS.STORE_KEY, 'vince-hspt-progress-v1');
 const mem = { d: {}, getItem(k) { return this.d[k] ?? null; }, setItem(k, v) { this.d[k] = v; }, removeItem(k) { delete this.d[k]; } };
 SRS.save(mem, p); assert.deepStrictEqual(SRS.load(mem), p); SRS.reset(mem); assert.deepStrictEqual(SRS.load(mem), {});
 console.log('All SRS tests passed');
+
+// Daily words log (wordlog.js): cumulative per-day record, de-duplicated sends
+(async () => {
+  const WL = require('./wordlog.js');
+  const store = { d: {}, getItem(k) { return this.d[k] ?? null; }, setItem(k, v) { this.d[k] = v; } };
+  const sent = [];
+  const fakeFetch = (u, o) => { sent.push(JSON.parse(o.body)); return Promise.resolve({ json: () => ({ success: 'true' }) }); };
+  const set = SRS.todaysWords(words, '2099-01-01'), keyFn = SRS.key || (w => w.word);
+  const log = WL.create({ kid: 'Test', storage: store, keyFn, setFn: () => set, fetch: fakeFetch, now: () => new Date('2026-10-26T02:30:00Z') });
+  assert.strictEqual(log.etDate(), '2026-10-25', 'ET date, not UTC');
+  await log.flush(); assert.strictEqual(sent.length, 0, 'nothing sent before the set is opened');
+  log.openedSet(); await new Promise(r => setTimeout(r, 0));
+  assert.strictEqual(sent.length, 1); assert.strictEqual(sent[0].opened_set, 'yes'); assert.strictEqual(sent[0].answered, 0);
+  log.openedSet(); await log.flush(); assert.strictEqual(sent.length, 1, 'no duplicate when nothing changed');
+  set.forEach((w, i) => { log.answered(keyFn(w), i % 4 !== 0); log.answered(keyFn(w), true); });
+  await new Promise(r => setTimeout(r, 0)); await log.flush();
+  assert.strictEqual(sent.length, 2, 'one send on completing the set');
+  const last = sent[1];
+  assert.strictEqual(last.answered, set.length); assert.strictEqual(last.right, set.length - Math.ceil(set.length / 4));
+  assert.strictEqual(last.completed_all, 'yes'); assert.strictEqual(last.source, 'auto'); assert.strictEqual(last.kid, 'Test');
+  log.answered('NOT-IN-SET', true); assert(!('NOT-IN-SET' in log.state().firstTry), 'older words are not counted');
+  await log.button(); assert.strictEqual(sent[2].source, 'button'); assert(log.buttonDone());
+  console.log('Words log tests passed');
+})().catch(e => { console.error(e); process.exit(1); });

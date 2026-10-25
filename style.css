@@ -61,3 +61,6 @@ table.words{width:100%;border-collapse:collapse;font-size:.92rem}
 .legend{color:var(--muted)}
 .qtype{display:inline-block;margin:10px 0 0;padding:4px 10px;border-radius:999px;font-weight:900;font-size:.85rem;color:#fff}
 .qtype.synonym{background:#2563eb}.qtype.antonym{background:#db2777}
+.btn-done{background:var(--ok);justify-content:center}
+.didmsg{text-align:center;font-weight:700;color:var(--ok);margin:-4px 0 12px}
+.didmsg.err{color:var(--bad)}
