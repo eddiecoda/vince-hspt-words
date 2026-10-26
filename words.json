@@ -1958,5 +1958,285 @@
     "definition": "inactive for now, as if asleep",
     "example": "The dormant volcano has not erupted in 500 years.",
     "addedDate": "2026-10-24"
+  },
+  {
+    "word": "BENEFICIAL",
+    "type": "synonym",
+    "choices": [
+      "harmful",
+      "helpful",
+      "costly",
+      "ordinary"
+    ],
+    "answer": "helpful",
+    "definition": "producing good results; helpful",
+    "example": "Daily exercise is beneficial to your health.",
+    "addedDate": "2026-10-26"
+  },
+  {
+    "word": "CONTEMPT",
+    "type": "synonym",
+    "choices": [
+      "scorn",
+      "respect",
+      "confusion",
+      "patience"
+    ],
+    "answer": "scorn",
+    "definition": "a feeling that someone or something is worthless",
+    "example": "She looked at the cheater with open contempt.",
+    "addedDate": "2026-10-26"
+  },
+  {
+    "word": "DEFER",
+    "type": "synonym",
+    "choices": [
+      "refuse",
+      "explain",
+      "postpone",
+      "defend"
+    ],
+    "answer": "postpone",
+    "definition": "to put off until later",
+    "example": "The coach decided to defer the game until the rain stopped.",
+    "addedDate": "2026-10-26"
+  },
+  {
+    "word": "DILEMMA",
+    "type": "synonym",
+    "choices": [
+      "solution",
+      "rumor",
+      "celebration",
+      "predicament"
+    ],
+    "answer": "predicament",
+    "definition": "a situation requiring a hard choice between options",
+    "example": "Choosing between the two teams was a real dilemma for Jake.",
+    "addedDate": "2026-10-26"
+  },
+  {
+    "word": "ENDORSE",
+    "type": "synonym",
+    "choices": [
+      "support",
+      "oppose",
+      "invent",
+      "describe"
+    ],
+    "answer": "support",
+    "definition": "to publicly approve or back",
+    "example": "The mayor will endorse the new park project.",
+    "addedDate": "2026-10-26"
+  },
+  {
+    "word": "FLAGRANT",
+    "type": "synonym",
+    "choices": [
+      "fragrant",
+      "hidden",
+      "blatant",
+      "minor"
+    ],
+    "answer": "blatant",
+    "definition": "shockingly obvious, usually about a wrongdoing",
+    "example": "The referee called a flagrant foul on the defender.",
+    "addedDate": "2026-10-26"
+  },
+  {
+    "word": "HYPOTHETICAL",
+    "type": "synonym",
+    "choices": [
+      "proven",
+      "theoretical",
+      "careless",
+      "exaggerated"
+    ],
+    "answer": "theoretical",
+    "definition": "based on a supposed situation, not a real one",
+    "example": "Let's talk about a hypothetical trip to Mars.",
+    "addedDate": "2026-10-26"
+  },
+  {
+    "word": "INTEGRITY",
+    "type": "synonym",
+    "choices": [
+      "intelligence",
+      "wealth",
+      "stubbornness",
+      "honesty"
+    ],
+    "answer": "honesty",
+    "definition": "the quality of being honest and having strong moral principles",
+    "example": "A person of integrity tells the truth even when it's hard.",
+    "addedDate": "2026-10-26"
+  },
+  {
+    "word": "NOTORIOUS",
+    "type": "synonym",
+    "choices": [
+      "unknown",
+      "generous",
+      "disreputable",
+      "cautious"
+    ],
+    "answer": "disreputable",
+    "definition": "well known for something bad",
+    "example": "The pirate was notorious for raiding merchant ships.",
+    "addedDate": "2026-10-26"
+  },
+  {
+    "word": "PRECARIOUS",
+    "type": "synonym",
+    "choices": [
+      "unstable",
+      "precious",
+      "careful",
+      "secure"
+    ],
+    "answer": "unstable",
+    "definition": "not securely held; dangerously likely to fall or fail",
+    "example": "The vase sat in a precarious spot on the edge of the shelf.",
+    "addedDate": "2026-10-26"
+  },
+  {
+    "word": "RECIPROCATE",
+    "type": "synonym",
+    "choices": [
+      "ignore",
+      "recover",
+      "repay",
+      "request"
+    ],
+    "answer": "repay",
+    "definition": "to give or do something in return",
+    "example": "When she helped me study, I offered to reciprocate.",
+    "addedDate": "2026-10-26"
+  },
+  {
+    "word": "SUPERFLUOUS",
+    "type": "synonym",
+    "choices": [
+      "essential",
+      "superior",
+      "enormous",
+      "unnecessary"
+    ],
+    "answer": "unnecessary",
+    "definition": "more than is needed; extra",
+    "example": "Cut the superfluous words from your essay.",
+    "addedDate": "2026-10-26"
+  },
+  {
+    "word": "TENUOUS",
+    "type": "synonym",
+    "choices": [
+      "strong",
+      "weak",
+      "tense",
+      "lengthy"
+    ],
+    "answer": "weak",
+    "definition": "very thin or slight; flimsy",
+    "example": "His argument rested on a tenuous connection between the facts.",
+    "addedDate": "2026-10-26"
+  },
+  {
+    "word": "VINDICATE",
+    "type": "synonym",
+    "choices": [
+      "accuse",
+      "punish",
+      "absolve",
+      "avenge"
+    ],
+    "answer": "absolve",
+    "definition": "to clear of blame or suspicion",
+    "example": "The video footage will vindicate the player.",
+    "addedDate": "2026-10-26"
+  },
+  {
+    "word": "OPULENT",
+    "type": "antonym",
+    "choices": [
+      "luxurious",
+      "shabby",
+      "cheerful",
+      "famous"
+    ],
+    "answer": "shabby",
+    "definition": "rich and luxurious",
+    "example": "The opulent hotel lobby had gold chandeliers.",
+    "addedDate": "2026-10-26"
+  },
+  {
+    "word": "DIFFIDENT",
+    "type": "antonym",
+    "choices": [
+      "shy",
+      "different",
+      "confident",
+      "angry"
+    ],
+    "answer": "confident",
+    "definition": "shy and lacking self-confidence",
+    "example": "The diffident student rarely raised her hand.",
+    "addedDate": "2026-10-26"
+  },
+  {
+    "word": "EXACERBATE",
+    "type": "antonym",
+    "choices": [
+      "worsen",
+      "examine",
+      "exaggerate",
+      "ease"
+    ],
+    "answer": "ease",
+    "definition": "to make a problem worse",
+    "example": "Scratching will only exacerbate the itch.",
+    "addedDate": "2026-10-26"
+  },
+  {
+    "word": "PROFUSE",
+    "type": "antonym",
+    "choices": [
+      "sparse",
+      "abundant",
+      "professional",
+      "painful"
+    ],
+    "answer": "sparse",
+    "definition": "plentiful; pouring out in large amounts",
+    "example": "He offered profuse apologies for being late.",
+    "addedDate": "2026-10-26"
+  },
+  {
+    "word": "INHIBIT",
+    "type": "antonym",
+    "choices": [
+      "restrain",
+      "inhabit",
+      "encourage",
+      "observe"
+    ],
+    "answer": "encourage",
+    "definition": "to hold back or prevent",
+    "example": "Cold weather can inhibit plant growth.",
+    "addedDate": "2026-10-26"
+  },
+  {
+    "word": "LAX",
+    "type": "antonym",
+    "choices": [
+      "careless",
+      "relaxed",
+      "slow",
+      "strict"
+    ],
+    "answer": "strict",
+    "definition": "not strict or careful enough",
+    "example": "Security at the gate was lax, so anyone could walk in.",
+    "addedDate": "2026-10-26"
   }
 ]
