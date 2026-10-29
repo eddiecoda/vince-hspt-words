@@ -1,7 +1,9 @@
 /* Daily words log: sends one cumulative record per kid per ET day to FormSubmit (emails codafamily@mail.grokbot.com).
    No secrets here: the endpoint is FormSubmit's public alias for that inbox.
    source=auto  -> sent when Today's set is opened, when it's finished / all cards answered, and when the page is hidden (only if something changed).
-   source=button -> the "I did my words today" button. Works in the browser (window.WordLog) and in Node (module.exports). */
+   source=button -> the "I did my words today" button.
+   source=quiz   -> the weekly sentence quiz (subject ends in "quiz", not auto|button). Separate from the daily record.
+   Works in the browser (window.WordLog) and in Node (module.exports). */
 (function (root) {
   var ENDPOINT = 'https://formsubmit.co/ajax/a032bbfd0d3415b6a461ca7de57bdeda';
 
@@ -18,6 +20,20 @@
     setKeys.forEach(function (k) { if (k in state.firstTry) { answered++; if (state.firstTry[k]) right++; } });
     return { set_size: setKeys.length, opened_set: state.opened ? 'yes' : 'no', answered: answered, right: right,
       completed_all: setKeys.length > 0 && answered >= setKeys.length ? 'yes' : 'no' };
+  }
+
+  // result: { correct, total, missed: ['WORD', ...], weekOf: 'YYYY-MM-DD' }
+  // Subject is "WORDS LOG <Kid> <YYYY-MM-DD> quiz" — same family as the daily auto|button logs.
+  function quizRecord(kid, date, time, result) {
+    var missed = result && result.missed && result.missed.length ? result.missed.join(', ') : 'none';
+    return {
+      _subject: 'WORDS LOG ' + kid + ' ' + date + ' quiz',
+      _template: 'table', _captcha: 'false',
+      kid: kid, date_et: date, time_et: time, source: 'quiz',
+      score: (result ? result.correct : 0) + '/' + (result ? result.total : 0),
+      correct: result ? result.correct : 0, total: result ? result.total : 0,
+      missed: missed, week_of: result && result.weekOf ? result.weekOf : ''
+    };
   }
 
   function create(opts) {
@@ -77,10 +93,23 @@
       },
       flush: function () { return send('auto').catch(function () {}); },
       button: function () { return send('button'); },
-      buttonDone: function () { return load().buttonDone; }
+      buttonDone: function () { return load().buttonDone; },
+      // Weekly sentence quiz. Does not touch the daily auto/button record.
+      quizPayload: function (result) { return quizRecord(opts.kid, etDate(now()), etTime(now()), result); },
+      sendQuiz: function (result) {
+        var rec = quizRecord(opts.kid, etDate(now()), etTime(now()), result);
+        if (!doFetch) return Promise.reject(new Error('no fetch'));
+        return doFetch(ENDPOINT, { method: 'POST', keepalive: true, headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(rec) })
+          .then(function (r) { return r.json(); })
+          .then(function (j) {
+            if (String(j.success) !== 'true') throw new Error(j.message || 'send failed');
+            return rec;
+          });
+      }
     };
   }
 
-  var api = { create: create, summary: summary, etDate: etDate, ENDPOINT: ENDPOINT };
+  var api = { create: create, summary: summary, quizRecord: quizRecord, etDate: etDate, ENDPOINT: ENDPOINT };
   if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.WordLog = api;
 })(this);

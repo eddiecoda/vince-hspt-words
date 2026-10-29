@@ -8,11 +8,11 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <title>Vince's HSPT Words</title>
-<link rel="manifest" href="manifest.json?v=2026-10-25-pwa1">
+<link rel="manifest" href="manifest.json?v=2026-10-29-quiz1">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=2026-10-29-quiz1">
 </head>
 <body>
 <header>
@@ -28,6 +28,8 @@
       <p id="homeSummary" class="muted">Loading words…</p>
     </div>
     <button class="big btn-primary" id="btnToday">📅 Today's set <span id="todayCount" class="pill"></span></button>
+    <button class="big btn-quiz" id="btnSentence" type="button"><span class="qlabel">📝 Weekly sentence quiz</span> <span id="sentenceBadge" class="pill hidden"></span></button>
+    <p id="sentencePrompt" class="quizprompt hidden"></p>
     <button class="big btn-warn" id="btnReview">🔁 Review missed words <span id="reviewCount" class="pill"></span></button>
     <button class="big btn-syn" id="btnSyn">🟰 Synonyms only <span id="synCount" class="pill"></span></button>
     <button class="big btn-ant" id="btnAnt">↔️ Antonyms only <span id="antCount" class="pill"></span></button>
@@ -74,6 +76,51 @@
     <button class="big btn-ghost" id="btnDoneHome">🏠 Home</button>
   </section>
 
+  <!-- Weekly sentence quiz -->
+  <section id="sentence" class="screen hidden">
+    <div class="topbar">
+      <button class="link" type="button" id="sqQuit">← Home</button>
+      <span id="sqProgress" class="muted"></span>
+    </div>
+    <div class="bar"><div id="sqBar"></div></div>
+    <div class="card qcard" id="sqCard">
+      <p class="mode">Weekly sentence quiz</p>
+      <p class="prompt" id="sqPrompt"></p>
+      <p class="sentence" id="sqSentence"></p>
+      <p class="clue" id="sqClue"></p>
+      <p class="small muted banklabel" id="sqBankLabel">Tap a word, or type it. Capital letters don't matter.</p>
+      <div id="sqBank" class="bank"></div>
+      <input id="sqInput" class="sqinput" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" aria-label="Type the word">
+      <button class="big btn-quiz sqcheck" type="button" id="sqCheck">Check</button>
+      <div id="sqFeedback" class="feedback hidden">
+        <p id="sqVerdict" class="verdict"></p>
+        <p class="sentence" id="sqFilled"></p>
+        <p><b>Meaning:</b> <span id="sqMeaning"></span></p>
+        <p><b>Example:</b> <i id="sqExample"></i></p>
+        <button class="big btn-primary" type="button" id="sqNext">Next →</button>
+      </div>
+    </div>
+    <div class="card hidden" id="sqEmpty">
+      <p class="hello">No quiz this time</p>
+      <p id="sqEmptyMsg" class="muted"></p>
+      <button class="big btn-ghost sqcheck" type="button" id="sqEmptyHome">🏠 Home</button>
+    </div>
+  </section>
+
+  <section id="sentenceDone" class="screen hidden">
+    <div class="card center">
+      <p class="emoji" id="sqEmoji">🎉</p>
+      <h2 id="sqTitle">Nice work!</h2>
+      <p id="sqScore" class="score"></p>
+      <p id="sqMsg" class="muted"></p>
+      <div id="sqMissed"></div>
+      <p id="sqLog" class="didmsg hidden"></p>
+      <button class="big btn-ghost sqcheck hidden" type="button" id="sqResend">Send the log again</button>
+    </div>
+    <button class="big btn-warn" type="button" id="sqReview">🔁 Review missed words</button>
+    <button class="big btn-ghost" type="button" id="sqHome">🏠 Home</button>
+  </section>
+
   <!-- Stats -->
   <section id="stats" class="screen hidden">
     <div class="topbar"><button class="link" id="quitStats">← Home</button></div>
@@ -99,12 +146,13 @@
   </section>
 </main>
 
-<script src="srs.js"></script>
-<script src="wordlog.js"></script>
-<script src="app.js"></script>
+<script src="srs.js?v=2026-10-29-quiz1"></script>
+<script src="wordlog.js?v=2026-10-29-quiz1"></script>
+<script src="sentencequiz.js?v=2026-10-29-quiz1"></script>
+<script src="app.js?v=2026-10-29-quiz1"></script>
 <script>
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js?v=2026-10-25-pwa1', { scope: './' }).catch(function () {}); });
+  window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js?v=2026-10-29-quiz1', { scope: './' }).catch(function () {}); });
 }
 </script>
 </body>
