@@ -64,3 +64,23 @@ table.words{width:100%;border-collapse:collapse;font-size:.92rem}
 .btn-done{background:var(--ok);justify-content:center}
 .didmsg{text-align:center;font-weight:700;color:var(--ok);margin:-4px 0 12px}
 .didmsg.err{color:var(--bad)}
+.btn-quiz{background:#7c3aed;gap:8px}
+.btn-quiz .qlabel{text-align:left;line-height:1.25}
+.btn-quiz .pill{flex:none}
+.btn-quiz.ready{box-shadow:0 0 0 3px #ddd6fe, 0 3px 0 rgba(0,0,0,.15)}
+.quizprompt{text-align:center;font-weight:800;color:#6d28d9;margin:-4px 0 12px}
+.sentence{font-size:1.25rem;line-height:1.5;font-weight:800;overflow-wrap:break-word}
+.blank{display:inline-block;min-width:4.75rem;border-bottom:3px solid #7c3aed;margin:0 .2rem;transform:translateY(2px)}
+.clue{font-size:1.05rem;font-weight:700;margin:8px 0 0}
+.banklabel{margin:12px 0 0}
+.bank{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{border:2px solid #ddd6fe;background:#f5f3ff;border-radius:999px;padding:12px 14px;font-weight:800;color:var(--ink);font-size:1rem}
+.chip.picked{border-color:#7c3aed;background:#ede9fe}
+.chip.correct{border-color:var(--ok);background:var(--okbg)}
+.chip.wrong{border-color:var(--bad);background:var(--badbg)}
+.chip:disabled{cursor:default}
+.sqinput{display:block;width:100%;margin-top:12px;font:inherit;font-size:16px;padding:12px 14px;border-radius:14px;border:2px solid #ddd6fe;color:var(--ink);background:#fff}
+.sqcheck{justify-content:center;margin-top:12px}
+#sqNext{justify-content:center;margin:14px 0 0}
+#sqHome,#sqReview,#sqEmptyHome,#sqResend{justify-content:center}
+.sqfilled b{color:#7c3aed}
