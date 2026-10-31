@@ -249,3 +249,109 @@ console.log('Sentence quiz tests passed');
   assert.strictEqual(none.score, '10/10');
   console.log('Words log tests passed');
 })().catch(e => { console.error(e); process.exit(1); });
+
+// ---- Word sets: schema, set advance, bank exhausted, Coda Stars hook ----
+(async () => {
+  const KF = SRS.key || (w => w.word);
+  const PFX = SRS.STORE_KEY.indexOf('luke') === 0 ? 'L' : 'V';
+  const orderOf = {};
+  for (const w of words) {
+    assert(typeof w.set === 'string' && w.set, 'set id ' + w.word);
+    assert(Number.isInteger(w.order) && w.order > 0, 'order ' + w.word);
+    if (/^\d{4}-\d{2}-\d{2}$/.test(w.set)) assert.strictEqual(w.set, w.addedDate, 'old cards: set = addedDate ' + w.word);
+    if (w.set in orderOf) assert.strictEqual(orderOf[w.set], w.order, 'one order per set ' + w.set); else orderOf[w.set] = w.order;
+  }
+  const list = SRS.setList(words);
+  assert.deepStrictEqual(list.map(s => s.order), list.map((s, i) => i + 1), 'orders run 1..N');
+  const bank = list.filter(s => /^[LV]-\d{3}$/.test(s.id));
+  assert(bank.length >= 10, 'bank of upcoming sets');
+  bank.forEach((s, i) => { assert.strictEqual(s.id, PFX + '-' + String(i + 1).padStart(3, '0')); assert.strictEqual(s.cards.length, 20, '20 cards in ' + s.id); });
+  assert(list.indexOf(bank[0]) > list.findIndex(s => /^\d{4}/.test(s.id)), 'bank sets come after the dated sets');
+  console.log('Sets OK:', list.length, 'sets,', bank.length, 'in the bank (' + bank[0].id + '..' + bank[bank.length - 1].id + ')');
+
+  const mem = () => ({ d: {}, getItem(k) { return this.d[k] ?? null; }, setItem(k, v) { this.d[k] = v; }, removeItem(k) { delete this.d[k]; } });
+  // Fresh device: current set = newest dated batch (what used to be "Today's set").
+  let store = mem(), st = SRS.loadSets(store), pr = {};
+  const dated = list.filter(s => /^\d{4}/.test(s.id)), newest = dated[dated.length - 1];
+  let r = SRS.resolveCurrent(words, st, pr, KF);
+  assert.strictEqual(r.set.id, newest.id); assert(!r.exhausted);
+  assert(!SRS.unlockedWords(words, st, pr, KF).some(w => w.set === bank[0].id), 'bank sets locked until reached');
+  // Wrong first try, right on the retry: still counts as answered right once.
+  const c0 = newest.cards[0];
+  SRS.record(pr, KF(c0), false); assert.strictEqual(SRS.markSetAnswer(words, st, pr, KF, c0, false), null);
+  assert.strictEqual(SRS.markSetAnswer(words, st, pr, KF, c0, true), null);
+  assert.strictEqual(SRS.setProgress(newest, st, pr, KF).right, 1);
+  // Cards outside the current set don't count toward it.
+  assert.strictEqual(SRS.markSetAnswer(words, st, pr, KF, bank[1].cards[0], true), null);
+  let res = null;
+  newest.cards.slice(1).forEach((w, i) => { SRS.record(pr, KF(w), true); const x = SRS.markSetAnswer(words, st, pr, KF, w, true); if (x) { assert(!res, 'completes once'); res = x; assert.strictEqual(i, newest.cards.length - 2, 'completes on the last card'); } });
+  assert(res && res.completed); assert.strictEqual(res.from, newest.id); assert.strictEqual(res.to, bank[0].id); assert(!res.exhausted);
+  assert.strictEqual(res.right, newest.cards.length); assert.strictEqual(st.notice, 'unlocked');
+  SRS.saveSets(store, st); st = SRS.loadSets(store);
+  r = SRS.resolveCurrent(words, st, pr, KF);
+  assert.strictEqual(r.set.id, bank[0].id, 'advanced to ' + bank[0].id + ' and stored in localStorage');
+  assert(SRS.unlockedWords(words, st, pr, KF).some(w => w.set === bank[0].id));
+  assert(!SRS.unlockedWords(words, st, pr, KF).some(w => w.set === bank[1].id));
+  // Review of older words keeps working: the missed card is still due.
+  assert(SRS.reviewWords(SRS.unlockedWords(words, st, pr, KF), pr).some(w => KF(w) === KF(c0)), 'missed word still in review');
+  // The daily log keeps reporting the set worked today.
+  const st2 = SRS.loadSets(mem()); const pr2 = {};
+  assert.strictEqual(SRS.daySet(words, st2, pr2, KF, '2026-11-01')[0].set, newest.id);
+  newest.cards.forEach(w => SRS.markSetAnswer(words, st2, pr2, KF, w, true));
+  assert.strictEqual(SRS.resolveCurrent(words, st2, pr2, KF).set.id, bank[0].id);
+  assert.strictEqual(SRS.daySet(words, st2, pr2, KF, '2026-11-01')[0].set, newest.id, 'same day: still the finished set');
+  assert.strictEqual(SRS.daySet(words, st2, pr2, KF, '2026-11-02')[0].set, bank[0].id, 'next day: the new set');
+  // Finish every bank set: the last one reports "coming soon" and the app stays on it.
+  for (let i = 0; i < bank.length; i++) {
+    assert.strictEqual(SRS.resolveCurrent(words, st, pr, KF).set.id, bank[i].id);
+    let done = null; bank[i].cards.forEach(w => { const x = SRS.markSetAnswer(words, st, pr, KF, w, true); if (x) done = x; });
+    assert(done, 'completed ' + bank[i].id);
+    assert.strictEqual(done.to, i + 1 < bank.length ? bank[i + 1].id : null);
+    assert.strictEqual(done.exhausted, i + 1 === bank.length);
+  }
+  assert.strictEqual(st.notice, 'soon');
+  r = SRS.resolveCurrent(words, st, pr, KF);
+  assert.strictEqual(r.set.id, bank[bank.length - 1].id, 'bank exhausted: stays on the last set'); assert(r.exhausted);
+  assert.strictEqual(SRS.markSetAnswer(words, st, pr, KF, bank[bank.length - 1].cards[0], true), null, 'no second completion');
+  // A later top-up moves on automatically.
+  const extraSet = bank[0].cards.map(w => Object.assign({}, w, { word: 'TOPUP' + w.word, set: PFX + '-999', order: list.length + 1 }));
+  r = SRS.resolveCurrent(words.concat(extraSet), st, pr, KF);
+  assert.strictEqual(r.set.id, PFX + '-999'); assert(!r.exhausted);
+  console.log('Set advance + bank-exhausted tests passed');
+
+  // Coda Stars hook: fire-and-forget, never throws or rejects.
+  const calls = [];
+  const ok = await SRS.postStarsEvent((u, o) => { calls.push([u, o]); return Promise.resolve({ ok: true }); },
+    { kid: 'test', event: 'completed', set: 'X', next_set: 'Y', answered: 20, right: 20, date_et: '2026-10-31' });
+  assert.strictEqual(ok, true); assert.strictEqual(calls[0][0], 'https://coda-kids-app.vercel.app/api/vocab/event');
+  assert.strictEqual(calls[0][1].method, 'POST'); assert.strictEqual(JSON.parse(calls[0][1].body).event, 'completed');
+  assert.strictEqual(await SRS.postStarsEvent(() => Promise.resolve({ ok: false, status: 404 }), {}), false, '404 is fine');
+  assert.strictEqual(await SRS.postStarsEvent(() => Promise.reject(new TypeError('Failed to fetch')), {}), false, 'network error swallowed');
+  assert.strictEqual(await SRS.postStarsEvent(() => { throw new Error('boom'); }, {}), false, 'sync throw swallowed');
+  assert.strictEqual(await SRS.postStarsEvent(null, {}), false, 'no fetch');
+  // The daily words log now reports the set id.
+  const WL = require('./wordlog.js'); const sent = []; const s3 = mem();
+  const lg = WL.create({ kid: 'T', storage: s3, keyFn: KF, setFn: () => bank[0].cards, fetch: (u, o) => { sent.push(JSON.parse(o.body)); return Promise.resolve({ json: () => ({ success: 'true' }) }); } });
+  lg.openedSet(); await new Promise(r => setTimeout(r, 0)); assert.strictEqual(sent[0].set, bank[0].id);
+  // Service worker never handles POSTs or cross-origin requests.
+  const sw = fs.readFileSync(__dirname + '/sw.js', 'utf8');
+  assert(/if \(req\.method !== 'GET'\) return;/.test(sw) && /if \(url\.origin !== self\.location\.origin\) return;/.test(sw), 'sw ignores POST / cross-origin');
+  const ver = sw.match(/var VERSION = '([^']+)'/)[1], html = fs.readFileSync(__dirname + '/index.html', 'utf8');
+  assert(html.includes('sw.js?v=' + ver) && html.includes('manifest.json?v=' + ver), 'index.html ?v= matches sw VERSION');
+  console.log('Coda Stars hook tests passed');
+})().catch(e => { console.error(e); process.exit(1); });
+
+// Looking up the day's set (words log) must not swallow a completion; an old set already right from earlier sessions completes on next look.
+(() => {
+  const KF = SRS.key || (w => w.word);
+  const mem = () => ({ d: {}, getItem(k) { return this.d[k] ?? null; }, setItem(k, v) { this.d[k] = v; } });
+  const list = SRS.setList(words), dated = list.filter(s => /^\d{4}/.test(s.id)), newest = dated[dated.length - 1];
+  const st = SRS.loadSets(mem()), pr = {};
+  newest.cards.forEach(w => SRS.record(pr, KF(w), true));            // all right, like the app's first-try record
+  SRS.daySet(words, st, pr, KF, '2026-10-31'); SRS.resolveCurrent(words, st, pr, KF);
+  assert.strictEqual(st.current, newest.id, 'no silent advance');
+  const res = SRS.completeIfDone(words, st, pr, KF);
+  assert(res && res.from === newest.id && res.to === list[list.indexOf(newest) + 1].id, 'completion reported once');
+  assert.strictEqual(SRS.completeIfDone(words, st, pr, KF), null);
+  console.log('Completion-reporting tests passed');
+})();

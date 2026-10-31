@@ -1,6 +1,6 @@
 /* Daily words log: sends one cumulative record per kid per ET day to FormSubmit (emails codafamily@mail.grokbot.com).
    No secrets here: the endpoint is FormSubmit's public alias for that inbox.
-   source=auto  -> sent when Today's set is opened, when it's finished / all cards answered, and when the page is hidden (only if something changed).
+   source=auto  -> sent when the current set is opened, when it's finished / all cards answered, and when the page is hidden (only if something changed).
    source=button -> the "I did my words today" button.
    source=quiz   -> the weekly sentence quiz (subject ends in "quiz", not auto|button). Separate from the daily record.
    Works in the browser (window.WordLog) and in Node (module.exports). */
@@ -53,7 +53,7 @@
 
     function setInfo() {
       var set = opts.setFn() || [];
-      return { id: set.length ? set[0].addedDate : '', keys: set.map(opts.keyFn) };
+      return { id: set.length ? (set[0].set || set[0].addedDate) : '', keys: set.map(opts.keyFn) };
     }
 
     function send(source, force) {

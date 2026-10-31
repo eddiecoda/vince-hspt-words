@@ -105,8 +105,122 @@
   function save(storage, progress) { storage.setItem(STORE_KEY, JSON.stringify(progress)); }
   function reset(storage) { storage.removeItem(STORE_KEY); }
 
+  // ---- Word sets: the "current set" advances to the next set as soon as every card in it has been answered right once. ----
+  // Each card has set (string id) and order (number). Older cards use their addedDate as the set id.
+  // Bank sets have ids like L-001 / V-001; dated ids are the original daily batches.
+  var SET_KEY = STORE_KEY.replace('progress', 'sets');
+  function setId(w) { return w.set || w.addedDate; }
+  function setList(words) {
+    var by = {}, out = [];
+    words.forEach(function (w) {
+      var id = setId(w);
+      if (!by[id]) { by[id] = { id: id, order: typeof w.order === 'number' ? w.order : 0, date: w.addedDate || '', cards: [] }; out.push(by[id]); }
+      by[id].cards.push(w);
+    });
+    return out.sort(function (a, b) { return a.order - b.order || a.date.localeCompare(b.date) || a.id.localeCompare(b.id); });
+  }
+  function isDated(id) { return /^\d{4}-\d{2}-\d{2}$/.test(id); }
+  function loadSets(storage) {
+    var s; try { s = JSON.parse(storage.getItem(SET_KEY)); } catch (e) { s = null; }
+    s = s || {};
+    return { current: s.current || '', completed: s.completed || [], right: s.right || {}, opened: s.opened || {},
+      day: s.day || null, notice: s.notice || '' };
+  }
+  function saveSets(storage, st) { try { storage.setItem(SET_KEY, JSON.stringify(st)); } catch (e) {} }
+  // A card counts once it has been answered right at least once (now, or in an earlier session).
+  function cardDone(st, progress, keyFn, w) { var k = keyFn(w), p = progress[k]; return !!st.right[k] || !!(p && p.correct > 0); }
+  function setProgress(set, st, progress, keyFn) {
+    var right = 0, answered = 0;
+    set.cards.forEach(function (w) {
+      var k = keyFn(w), p = progress[k];
+      if (cardDone(st, progress, keyFn, w)) right++;
+      if ((p && p.seen > 0) || k in st.right) answered++;
+    });
+    return { total: set.cards.length, answered: answered, right: right, done: set.cards.length > 0 && right >= set.cards.length };
+  }
+  function isSetDone(set, st, progress, keyFn) { return st.completed.indexOf(set.id) >= 0 || setProgress(set, st, progress, keyFn).done; }
+  function nextSet(sets, cur, st, progress, keyFn) {
+    var i = sets.findIndex(function (s) { return s.id === cur; });
+    for (var j = i + 1; j < sets.length; j++) if (!isSetDone(sets[j], st, progress, keyFn)) return sets[j];
+    return null;
+  }
+  // Work out the current set: the stored one, else the newest dated (original daily) batch, else the first set.
+  // A finished current set moves on to the next unfinished set (e.g. after a top-up of new sets).
+  function storedCurrent(sets, st) {
+    var cur = sets.find(function (s) { return s.id === st.current; });
+    if (!cur && sets.length) {
+      var dated = sets.filter(function (s) { return isDated(s.id); });
+      cur = dated.length ? dated[dated.length - 1] : sets[0];
+      st.current = cur.id;
+    }
+    return cur || null;
+  }
+  function resolveCurrent(words, st, progress, keyFn) {
+    var sets = setList(words);
+    if (!sets.length) return { set: null, sets: sets, exhausted: true };
+    var cur = storedCurrent(sets, st);
+    // Only a set already reported as completed moves on here; an unreported finish is reported by completeIfDone / markSetAnswer.
+    if (st.completed.indexOf(cur.id) >= 0) {
+      var nx = nextSet(sets, cur.id, st, progress, keyFn);
+      if (nx) { cur = nx; st.current = nx.id; }
+    }
+    var exhausted = st.completed.indexOf(cur.id) >= 0 && !nextSet(sets, cur.id, st, progress, keyFn);
+    return { set: cur, sets: sets, exhausted: exhausted };
+  }
+  // Record an answer against the current set. Returns {completed, from, to, exhausted} when this answer finished the set.
+  function markSetAnswer(words, st, progress, keyFn, w, isCorrect) {
+    // Uses the stored current set without auto-advancing, so the answer that finishes a set is the one that reports it.
+    var sets = setList(words), cur = storedCurrent(sets, st), r = { sets: sets };
+    if (!cur || setId(w) !== cur.id) return null;
+    var k = keyFn(w);
+    if (isCorrect) st.right[k] = true; else if (!(k in st.right)) st.right[k] = false;
+    return completeIfDone(words, st, progress, keyFn);
+  }
+  // If the stored current set is finished but not yet reported, mark it completed and advance. Returns the result once.
+  function completeIfDone(words, st, progress, keyFn) {
+    var sets = setList(words), cur = storedCurrent(sets, st), r = { sets: sets };
+    if (!cur || st.completed.indexOf(cur.id) >= 0) return null;
+    var p = setProgress(cur, st, progress, keyFn);
+    if (!p.done) return null;
+    st.completed.push(cur.id);
+    var nx = nextSet(r.sets, cur.id, st, progress, keyFn);
+    if (nx) st.current = nx.id;
+    var out = { completed: true, from: cur.id, to: nx ? nx.id : null, exhausted: !nx, answered: p.answered, right: p.right };
+    st.notice = nx ? 'unlocked' : 'soon';
+    return out;
+  }
+  // Cards the kid can see in Mix / Review / Stats: sets up to and including the current one (later bank sets stay locked).
+  function unlockedWords(words, st, progress, keyFn) {
+    var r = resolveCurrent(words, st, progress, keyFn);
+    if (!r.set) return words;
+    var o = r.set.order, cid = r.set.id;
+    var open = {}; r.sets.forEach(function (s) { if (s.order <= o || s.id === cid || st.completed.indexOf(s.id) >= 0) open[s.id] = 1; });
+    return words.filter(function (w) { return open[setId(w)]; });
+  }
+  // The set the daily words log reports for today: the first set worked today (so a set finished today stays "completed_all").
+  function daySet(words, st, progress, keyFn, today) {
+    var r = resolveCurrent(words, st, progress, keyFn);
+    if (!st.day || st.day.date !== today) st.day = { date: today, id: r.set ? r.set.id : '' };
+    return (r.sets.find(function (s) { return s.id === st.day.id; }) || r.set || { cards: [] }).cards;
+  }
+
+  // Coda Stars hook: fire-and-forget POST. Every error is swallowed; never blocks the UI.
+  var STARS_URL = 'https://coda-kids-app.vercel.app/api/vocab/event';
+  function postStarsEvent(fetchFn, payload) {
+    try {
+      if (!fetchFn) return Promise.resolve(false);
+      // text/plain keeps it a "simple" cross-origin request (no CORS preflight); the body is JSON.
+      return Promise.resolve(fetchFn(STARS_URL, { method: 'POST', mode: 'cors', keepalive: true, credentials: 'omit',
+        headers: { 'Content-Type': 'text/plain;charset=UTF-8' }, body: JSON.stringify(payload) }))
+        .then(function (r) { return !!(r && r.ok); }, function () { return false; });
+    } catch (e) { return Promise.resolve(false); }
+  }
+
   var api = { key: key, DAY: DAY, INTERVALS: INTERVALS, MASTERY_STREAK: MASTERY_STREAK, STORE_KEY: STORE_KEY,
     record: record, getStat: getStat, isMastered: isMastered, todaysWords: todaysWords, reviewWords: reviewWords,
-    stats: stats, shuffle: shuffle, Session: Session, load: load, save: save, reset: reset, accuracy: accuracy };
+    stats: stats, shuffle: shuffle, Session: Session, load: load, save: save, reset: reset, accuracy: accuracy,
+    SET_KEY: SET_KEY, setId: setId, setList: setList, loadSets: loadSets, saveSets: saveSets, setProgress: setProgress, isSetDone: isSetDone,
+    nextSet: nextSet, resolveCurrent: resolveCurrent, markSetAnswer: markSetAnswer, completeIfDone: completeIfDone, unlockedWords: unlockedWords, daySet: daySet,
+    STARS_URL: STARS_URL, postStarsEvent: postStarsEvent };
   if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.SRS = api;
 })(this);

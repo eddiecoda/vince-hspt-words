@@ -64,6 +64,9 @@ table.words{width:100%;border-collapse:collapse;font-size:.92rem}
 .btn-done{background:var(--ok);justify-content:center}
 .didmsg{text-align:center;font-weight:700;color:var(--ok);margin:-4px 0 12px}
 .didmsg.err{color:var(--bad)}
+.setnotice{text-align:center;font-weight:900;color:var(--ok);background:var(--okbg);border-radius:14px;padding:10px 12px;margin:0 0 14px}
+.toast{position:fixed;left:50%;top:14px;transform:translateX(-50%);z-index:50;background:var(--ok);color:#fff;font-weight:900;padding:12px 18px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.18);max-width:92vw;text-align:center}
+.toast.hidden{display:none}
 .btn-quiz{background:#7c3aed;gap:8px}
 .btn-quiz .qlabel{text-align:left;line-height:1.25}
 .btn-quiz .pill{flex:none}

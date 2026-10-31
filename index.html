@@ -8,11 +8,11 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <title>Vince's HSPT Words</title>
-<link rel="manifest" href="manifest.json?v=2026-10-29-quiz1">
+<link rel="manifest" href="manifest.json?v=2026-10-31-sets1">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="stylesheet" href="style.css?v=2026-10-29-quiz1">
+<link rel="stylesheet" href="style.css?v=2026-10-31-sets1">
 </head>
 <body>
 <header>
@@ -20,6 +20,7 @@
   <p class="sub">HSPT Verbal Skills · Synonyms &amp; Antonyms</p>
 </header>
 
+<div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
 <main id="app">
   <!-- Home -->
   <section id="home" class="screen">
@@ -27,7 +28,8 @@
       <p class="hello">Let's go, Vince! 💪</p>
       <p id="homeSummary" class="muted">Loading words…</p>
     </div>
-    <button class="big btn-primary" id="btnToday">📅 Today's set <span id="todayCount" class="pill"></span></button>
+    <p id="setNotice" class="setnotice hidden"></p>
+    <button class="big btn-primary" id="btnToday">📅 Current set <span id="todayCount" class="pill"></span></button>
     <button class="big btn-quiz" id="btnSentence" type="button"><span class="qlabel">📝 Weekly sentence quiz</span> <span id="sentenceBadge" class="pill hidden"></span></button>
     <p id="sentencePrompt" class="quizprompt hidden"></p>
     <button class="big btn-warn" id="btnReview">🔁 Review missed words <span id="reviewCount" class="pill"></span></button>
@@ -69,6 +71,7 @@
       <p class="emoji" id="doneEmoji">🎉</p>
       <h2 id="doneTitle">Nice work!</h2>
       <p id="doneScore" class="score"></p>
+      <p id="doneSet" class="setnotice hidden"></p>
       <p id="doneMsg" class="muted"></p>
       <div id="doneMissed"></div>
     </div>
@@ -146,13 +149,13 @@
   </section>
 </main>
 
-<script src="srs.js?v=2026-10-29-quiz1"></script>
-<script src="wordlog.js?v=2026-10-29-quiz1"></script>
-<script src="sentencequiz.js?v=2026-10-29-quiz1"></script>
-<script src="app.js?v=2026-10-29-quiz1"></script>
+<script src="srs.js?v=2026-10-31-sets1"></script>
+<script src="wordlog.js?v=2026-10-31-sets1"></script>
+<script src="sentencequiz.js?v=2026-10-31-sets1"></script>
+<script src="app.js?v=2026-10-31-sets1"></script>
 <script>
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js?v=2026-10-29-quiz1', { scope: './' }).catch(function () {}); });
+  window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js?v=2026-10-31-sets1', { scope: './' }).catch(function () {}); });
 }
 </script>
 </body>
