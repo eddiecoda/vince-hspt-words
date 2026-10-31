@@ -237,7 +237,7 @@
   $('btnDoneReview').onclick = function () { start('review'); };
   $('btnNext').onclick = renderCard;
   $('btnReset').onclick = function () {
-    if (confirm("Erase all of Vince's progress on this device, including the weekly quiz? This can't be undone.")) {
+    if (confirm("Erase all of Vince's progress on this device, including the sentence quizzes? This can't be undone.")) {
       SRS.reset(localStorage);
       localStorage.removeItem(SentenceQuiz.ATTEMPT_KEY);
       localStorage.removeItem(SentenceQuiz.QUIZ_KEY);
@@ -245,8 +245,15 @@
     }
   };
 
+  // Current set, then the previous set: tops up a short sentence quiz.
+  function recentCards() {
+    var r = SRS.resolveCurrent(words, sets, progress, K); SRS.saveSets(localStorage, sets);
+    if (!r.set) return [];
+    var i = r.sets.indexOf(r.set);
+    return r.set.cards.concat(i > 0 ? r.sets[i - 1].cards : []);
+  }
   function sentenceSelection() {
-    return SentenceQuiz.selectQuiz(words, SentenceQuiz.loadAttempts(localStorage), SentenceQuiz.loadState(localStorage), Date.now(), progress);
+    return SentenceQuiz.selectQuiz(words, SentenceQuiz.loadAttempts(localStorage), SentenceQuiz.loadState(localStorage), Date.now(), progress, recentCards());
   }
 
   function updateSentenceHome() {
@@ -255,17 +262,17 @@
     if (sel.phase === 'ready') {
       badge.textContent = 'Ready';
       badge.classList.remove('hidden');
-      prompt.textContent = sel.overdue
-        ? 'Still open from last week — fill in the blanks with the words you struggled with.'
-        : (sel.built.toughCount ? "Ready — use this week's tough words in a sentence." : "Ready — use this week's words in a sentence.");
+      prompt.textContent = sel.built.toughCount
+        ? 'Ready — use your recent tough words in a sentence. It stays open until you finish it.'
+        : 'Ready — use your recent words in a sentence. It stays open until you finish it.';
     } else if (sel.phase === 'done') {
       badge.textContent = 'Done';
       badge.classList.remove('hidden');
-      prompt.textContent = 'Finished this week (' + sel.result.correct + '/' + sel.result.total + '). Next quiz opens ' + sel.dayName + '.';
+      prompt.textContent = 'Finished (' + sel.result.correct + '/' + sel.result.total + '). The next one opens ' + sel.dayName + '.';
     } else {
       badge.textContent = '';
       badge.classList.add('hidden');
-      prompt.textContent = 'Opens ' + sel.dayName + '. Words you miss, need extra tries on, or answer slowly will be on it.';
+      prompt.textContent = 'The next one opens ' + sel.dayName + '. Words you miss, need extra tries on, or answer slowly will be on it.';
     }
     prompt.classList.remove('hidden');
   }
@@ -282,8 +289,8 @@
     if (sel.phase === 'done') { renderSentenceDone(sel.result, sel.id); return; }
     if (sel.phase !== 'ready') {
       sentenceChrome(false);
-      $('sqEmptyMsg').textContent = 'Do your cards during the week. On ' + sel.dayName +
-        ', this quiz uses the words you missed, needed extra tries on, or answered slowly. Other words from that week fill in if there are not enough.';
+      $('sqEmptyMsg').textContent = 'Do your cards first. The next one opens ' + sel.dayName +
+        ' (quizzes open Monday, Wednesday and Friday) and uses the words you missed, needed extra tries on, or answered slowly. Your current and previous sets fill in if there are not enough.';
       show('sentence');
       return;
     }
@@ -443,9 +450,17 @@
       missedKeys: missed.map(function (r) { return r.key; })
     });
     if (saved.fresh) {
+      // Coda Stars: fire-and-forget; errors are swallowed inside postQuizEvent and never block the UI.
+      // Skipped in the localhost #simweek dry run so local testing never posts.
+      if (sessionStorage.getItem('sentence-quiz-dry-run') !== '1') {
+        try {
+          SentenceQuiz.postQuizEvent(typeof fetch !== 'undefined' ? fetch : null,
+            SentenceQuiz.quizEvent(KID, id, correct, results.length, WordLog.etDate())).catch(function () {});
+        } catch (e) {}
+      }
       missed.forEach(function (r) {
         SRS.record(progress, r.key, false);
-        // A quiz miss counts toward next week's tough-word list and toward Review.
+        // A quiz miss counts toward the next quiz's tough-word list and toward Review.
         SentenceQuiz.recordAttempt(localStorage, { key: r.key, ok: false, ms: 0 });
       });
       SRS.save(localStorage, progress);

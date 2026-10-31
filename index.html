@@ -8,11 +8,11 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <title>Vince's HSPT Words</title>
-<link rel="manifest" href="manifest.json?v=2026-10-31-sets1">
+<link rel="manifest" href="manifest.json?v=2026-10-31-quiz3x">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="stylesheet" href="style.css?v=2026-10-31-sets1">
+<link rel="stylesheet" href="style.css?v=2026-10-31-quiz3x">
 </head>
 <body>
 <header>
@@ -30,7 +30,7 @@
     </div>
     <p id="setNotice" class="setnotice hidden"></p>
     <button class="big btn-primary" id="btnToday">📅 Current set <span id="todayCount" class="pill"></span></button>
-    <button class="big btn-quiz" id="btnSentence" type="button"><span class="qlabel">📝 Weekly sentence quiz</span> <span id="sentenceBadge" class="pill hidden"></span></button>
+    <button class="big btn-quiz" id="btnSentence" type="button"><span class="qlabel">📝 Sentence quiz · Mon, Wed, Fri</span> <span id="sentenceBadge" class="pill hidden"></span></button>
     <p id="sentencePrompt" class="quizprompt hidden"></p>
     <button class="big btn-warn" id="btnReview">🔁 Review missed words <span id="reviewCount" class="pill"></span></button>
     <button class="big btn-syn" id="btnSyn">🟰 Synonyms only <span id="synCount" class="pill"></span></button>
@@ -79,7 +79,7 @@
     <button class="big btn-ghost" id="btnDoneHome">🏠 Home</button>
   </section>
 
-  <!-- Weekly sentence quiz -->
+  <!-- Sentence quiz (Mon, Wed, Fri) -->
   <section id="sentence" class="screen hidden">
     <div class="topbar">
       <button class="link" type="button" id="sqQuit">← Home</button>
@@ -87,7 +87,7 @@
     </div>
     <div class="bar"><div id="sqBar"></div></div>
     <div class="card qcard" id="sqCard">
-      <p class="mode">Weekly sentence quiz</p>
+      <p class="mode">Sentence quiz</p>
       <p class="prompt" id="sqPrompt"></p>
       <p class="sentence" id="sqSentence"></p>
       <p class="clue" id="sqClue"></p>
@@ -149,13 +149,13 @@
   </section>
 </main>
 
-<script src="srs.js?v=2026-10-31-sets1"></script>
-<script src="wordlog.js?v=2026-10-31-sets1"></script>
-<script src="sentencequiz.js?v=2026-10-31-sets1"></script>
-<script src="app.js?v=2026-10-31-sets1"></script>
+<script src="srs.js?v=2026-10-31-quiz3x"></script>
+<script src="wordlog.js?v=2026-10-31-quiz3x"></script>
+<script src="sentencequiz.js?v=2026-10-31-quiz3x"></script>
+<script src="app.js?v=2026-10-31-quiz3x"></script>
 <script>
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js?v=2026-10-31-sets1', { scope: './' }).catch(function () {}); });
+  window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js?v=2026-10-31-quiz3x', { scope: './' }).catch(function () {}); });
 }
 </script>
 </body>

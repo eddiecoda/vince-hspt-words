@@ -1,4 +1,4 @@
-/* Weekly "use it in a sentence" quiz.
+/* "Use it in a sentence" quiz, three times a week (Mon, Wed, Fri).
    Works in the browser (window.SentenceQuiz) and in Node (module.exports).
 
    WORD DATA
@@ -13,10 +13,14 @@
    word, the quiz uses the definition as the clue instead.
 
    WHEN IT OPENS
-   QUIZ_WEEKDAY (0 = Sunday … 6 = Saturday, Eastern Time) is the only switch
-   for the day. The quiz unlocks that morning and stays until it is finished.
-   An unfinished quiz from the previous week stays open until it is done.
-   The word list is practice from the 7 days before that unlock morning.
+   QUIZ_DAYS (0 = Sunday … 6 = Saturday, Eastern Time) is the only switch for
+   the days; [1, 3, 5] = Monday, Wednesday, Friday. A quiz unlocks at midnight
+   ET on each quiz day and stays open until it is finished. Its id (quiz_id) is
+   the date of that quiz day. If an older quiz is still unfinished when the next
+   quiz day arrives, the newer quiz replaces it.
+   The word list is practice since the previous quiz day: from midnight on the
+   previous quiz day up to this quiz day's midnight (Wednesday's quiz covers
+   Mon–Tue; Monday's covers Fri–Sun).
 
    WHAT COUNTS AS TOUGH (worst first)
    Flashcard attempts are stored under ATTEMPT_KEY, separate from SRS progress
@@ -24,12 +28,14 @@
      - missed at least once
      - several tries: 2+ wrong, or SEVERAL_TRIES attempts with at least one miss
      - slow: any answer at or above SLOW_MS
-   If fewer than QUIZ_MIN cards qualify, other words practiced that week fill in.
-   At most QUIZ_MAX. Cards with no timed attempts that week still count when
-   saved progress was updated then (a wrong last result counts as a miss).
+   If fewer than QUIZ_MIN cards qualify, other words practiced in the window
+   fill in, then recent words (the current set, then the previous set, least
+   known first). At most QUIZ_MAX. Cards with no timed attempts in the window
+   still count when saved progress was updated then (a wrong last result counts
+   as a miss).
 */
 (function (root) {
-  var QUIZ_WEEKDAY = 0; // 0 = Sunday, 1 = Monday, ... 6 = Saturday
+  var QUIZ_DAYS = [1, 3, 5]; // 0 = Sunday, 1 = Monday, ... 6 = Saturday: Monday, Wednesday, Friday
   var QUIZ_MIN = 10;
   var QUIZ_MAX = 15;
   var SLOW_MS = 20000;
@@ -76,17 +82,65 @@
     return Date.UTC(y, m - 1, d, 5, 0, 0);
   }
 
+  function isQuizDay(wd) { return QUIZ_DAYS.indexOf(wd) >= 0; }
+
+  function weekdayOf(ymdStr) {
+    var p = ymdStr.split('-');
+    return new Date(Date.UTC(+p[0], +p[1] - 1, +p[2])).getUTCDay();
+  }
+
+  // The quiz id: the ET date of the most recent quiz day on or before `now`.
   function unlockId(now) {
     var p = etParts(new Date(now));
     var today = p.year + '-' + p.month + '-' + p.day;
     var wd = WD[p.weekday];
     if (wd == null) wd = 0;
-    var back = (wd - QUIZ_WEEKDAY + 7) % 7;
-    return addDays(today, -back);
+    for (var back = 0; back < 7; back++) {
+      if (isQuizDay((wd - back + 7) % 7)) return addDays(today, -back);
+    }
+    return today;
   }
 
-  function weekWindow(quizId) {
-    return { id: quizId, start: etMidnight(addDays(quizId, -7)), end: etMidnight(quizId) };
+  // The quiz day before quizId.
+  function prevQuizId(quizId) {
+    var wd = weekdayOf(quizId);
+    for (var back = 1; back <= 7; back++) {
+      if (isQuizDay((wd - back + 7) % 7)) return addDays(quizId, -back);
+    }
+    return addDays(quizId, -7);
+  }
+
+  // The next quiz day strictly after `now` (ET): { id, dayName }.
+  function nextQuizDay(now) {
+    var p = etParts(new Date(now));
+    var today = p.year + '-' + p.month + '-' + p.day;
+    var wd = WD[p.weekday] || 0;
+    for (var fwd = 1; fwd <= 7; fwd++) {
+      var d = (wd + fwd) % 7;
+      if (isQuizDay(d)) return { id: addDays(today, fwd), dayName: DAY_NAMES[d] };
+    }
+    return { id: addDays(today, 7), dayName: DAY_NAMES[wd] };
+  }
+
+  // Tough-word window: midnight ET on the previous quiz day up to midnight ET on this quiz day.
+  function quizWindow(quizId) {
+    return { id: quizId, start: etMidnight(prevQuizId(quizId)), end: etMidnight(quizId) };
+  }
+  var weekWindow = quizWindow; // old name
+
+  // Coda Stars hook for a finished quiz. Fire-and-forget: every error is swallowed; never blocks the UI.
+  // text/plain keeps it a "simple" cross-origin request (no CORS preflight); the body is JSON.
+  var STARS_URL = 'https://coda-kids-app.vercel.app/api/vocab/event';
+  function quizEvent(kid, quizId, correct, total, dateEt) {
+    return { kid: kid, event: 'quiz_completed', quiz_id: quizId, correct: correct | 0, total: total | 0, date_et: dateEt };
+  }
+  function postQuizEvent(fetchFn, payload) {
+    try {
+      if (!fetchFn) return Promise.resolve(false);
+      return Promise.resolve(fetchFn(STARS_URL, { method: 'POST', mode: 'cors', keepalive: true, credentials: 'omit',
+        headers: { 'Content-Type': 'text/plain;charset=UTF-8' }, body: JSON.stringify(payload) }))
+        .then(function (r) { return !!(r && r.ok); }, function () { return false; });
+    } catch (e) { return Promise.resolve(false); }
   }
 
   function loadAttempts(storage) {
@@ -168,7 +222,7 @@
   }
 
   function gatherAttempts(words, attempts, progress, quizId) {
-    var win = weekWindow(quizId);
+    var win = quizWindow(quizId);
     var byKey = {};
     (words || []).forEach(function (w) { if (w && w.word) byKey[key(w)] = w; });
     var logged = (attempts || []).filter(function (a) {
@@ -190,7 +244,8 @@
     return { win: win, byKey: byKey, attempts: logged.concat(extra) };
   }
 
-  function buildQuiz(words, attempts, quizId, progress) {
+  // recent: optional cards (current set, then previous set) that top up a short quiz, least known first.
+  function buildQuiz(words, attempts, quizId, progress, recent) {
     var g = gatherAttempts(words, attempts, progress, quizId);
     var groups = {};
     g.attempts.forEach(function (a) {
@@ -221,6 +276,20 @@
     var other = rows.filter(function (r) { return !r.tough; });
     var picked = tough.slice(0, QUIZ_MAX);
     if (picked.length < QUIZ_MIN) picked = picked.concat(other.slice(0, QUIZ_MIN - picked.length));
+    if (picked.length < QUIZ_MIN && recent && recent.length) {
+      var boxOf = function (k) { var s = progress && progress[k]; return s && s.box != null ? s.box : -1; };
+      recent.map(function (w, i) { return { w: w, i: i }; })
+        .filter(function (x) { return x.w && x.w.word && g.byKey[key(x.w)]; })
+        .sort(function (a, b) { return boxOf(key(a.w)) - boxOf(key(b.w)) || a.i - b.i; })
+        .forEach(function (x) {
+          if (picked.length >= QUIZ_MIN) return;
+          var lw = x.w.word.toLowerCase();
+          if (seenWord[lw]) return;
+          seenWord[lw] = true;
+          var k = key(x.w);
+          picked.push({ key: k, card: g.byKey[k], score: 0, tough: false, recent: true });
+        });
+    }
     return {
       id: quizId,
       start: g.win.start,
@@ -246,33 +315,32 @@
     };
   }
 
-  function selectQuiz(words, attempts, state, now, progress) {
+  // The open quiz is always the one for the most recent quiz day. An older unfinished quiz is replaced by it.
+  // recent: current set, then previous set (top-up for a short quiz).
+  function selectQuiz(words, attempts, state, now, progress, recent) {
     now = now || Date.now();
     var completed = (state && state.byWeek) || {};
     var current = unlockId(now);
-    var prev = addDays(current, -7);
-    var prevBuilt = buildQuiz(words, attempts, prev, progress);
-    if (!completed[prev] && prevBuilt.items.length) {
-      return { phase: 'ready', id: prev, built: prevBuilt, overdue: true, dayName: DAY_NAMES[QUIZ_WEEKDAY] };
-    }
-    var built = buildQuiz(words, attempts, current, progress);
+    var next = nextQuizDay(now).dayName;
+    var built = buildQuiz(words, attempts, current, progress, recent);
     if (completed[current]) {
-      return { phase: 'done', id: current, built: built, result: completed[current], overdue: false, dayName: DAY_NAMES[QUIZ_WEEKDAY] };
+      return { phase: 'done', id: current, built: built, result: completed[current], overdue: false, dayName: next };
     }
     if (!built.items.length) {
+      var prev = prevQuizId(current);
       if (completed[prev]) {
-        return { phase: 'done', id: prev, built: prevBuilt, result: completed[prev], overdue: false, dayName: DAY_NAMES[QUIZ_WEEKDAY] };
+        return { phase: 'done', id: prev, built: buildQuiz(words, attempts, prev, progress, recent), result: completed[prev], overdue: false, dayName: next };
       }
-      return { phase: 'empty', id: current, built: built, overdue: false, dayName: DAY_NAMES[QUIZ_WEEKDAY] };
+      return { phase: 'empty', id: current, built: built, overdue: false, dayName: next };
     }
-    return { phase: 'ready', id: current, built: built, overdue: false, dayName: DAY_NAMES[QUIZ_WEEKDAY] };
+    return { phase: 'ready', id: current, built: built, overdue: false, dayName: next };
   }
 
-  // A fixed sample week so the quiz can be tried on localhost without waiting for Sunday.
+  // A fixed sample window so the quiz can be tried on localhost without waiting for a quiz day.
   function demoWeekAttempts(words, now) {
     var byWord = {};
     (words || []).forEach(function (w) { byWord[w.word] = w; });
-    var win = weekWindow(unlockId(now || Date.now()));
+    var win = quizWindow(unlockId(now || Date.now()));
     var plan = [
       { word: 'TEDIOUS', events: [{ ok: false, ms: 4000 }, { ok: false, ms: 5000 }, { ok: false, ms: 6000 }] },
       { word: 'CONCISE', events: [{ ok: false, ms: 4000 }, { ok: false, ms: 4500 }, { ok: true, ms: 3000 }] },
@@ -299,16 +367,17 @@
         attempts.push({ t: t, key: key(card), ok: ev.ok, ms: ev.ms });
         t += 60 * 1000;
       });
-      t += 3 * 60 * 60 * 1000;
+      t += 2 * 60 * 60 * 1000;
     });
     return attempts;
   }
 
   var api = {
-    QUIZ_WEEKDAY: QUIZ_WEEKDAY, QUIZ_MIN: QUIZ_MIN, QUIZ_MAX: QUIZ_MAX, SLOW_MS: SLOW_MS,
+    QUIZ_DAYS: QUIZ_DAYS, QUIZ_MIN: QUIZ_MIN, QUIZ_MAX: QUIZ_MAX, SLOW_MS: SLOW_MS,
     SEVERAL_TRIES: SEVERAL_TRIES, BLANK: BLANK, TZ: TZ, ATTEMPT_KEY: ATTEMPT_KEY, QUIZ_KEY: QUIZ_KEY,
-    DAY_NAME: DAY_NAMES[QUIZ_WEEKDAY], key: key, etParts: etParts, addDays: addDays, etMidnight: etMidnight,
-    unlockId: unlockId, weekWindow: weekWindow, loadAttempts: loadAttempts, recordAttempt: recordAttempt,
+    DAY_NAMES: DAY_NAMES, key: key, etParts: etParts, addDays: addDays, etMidnight: etMidnight,
+    unlockId: unlockId, prevQuizId: prevQuizId, nextQuizDay: nextQuizDay, quizWindow: quizWindow, weekWindow: weekWindow,
+    STARS_URL: STARS_URL, quizEvent: quizEvent, postQuizEvent: postQuizEvent, loadAttempts: loadAttempts, recordAttempt: recordAttempt,
     loadState: loadState, saveState: saveState, markComplete: markComplete, setEmailed: setEmailed,
     normalizeAnswer: normalizeAnswer, answersMatch: answersMatch, usableSentence: usableSentence,
     buildQuiz: buildQuiz, selectQuiz: selectQuiz, demoWeekAttempts: demoWeekAttempts

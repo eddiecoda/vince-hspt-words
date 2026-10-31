@@ -83,26 +83,39 @@ const mem = { d: {}, getItem(k) { return this.d[k] ?? null; }, setItem(k, v) { t
 SRS.save(mem, p); assert.deepStrictEqual(SRS.load(mem), p); SRS.reset(mem); assert.deepStrictEqual(SRS.load(mem), {});
 console.log('All SRS tests passed');
 
-// Weekly sentence quiz
+// Sentence quiz: Mon, Wed, Fri (ET)
 const SQ = require('./sentencequiz.js');
-assert.strictEqual(SQ.QUIZ_WEEKDAY, 0, 'Sunday is the default; change QUIZ_WEEKDAY and these comments together');
-assert.strictEqual(SQ.DAY_NAME, 'Sunday');
+assert.deepStrictEqual(SQ.QUIZ_DAYS, [1, 3, 5], 'Mon, Wed, Fri; change QUIZ_DAYS and these comments together');
 assert.ok(SQ.QUIZ_MIN >= 10 && SQ.QUIZ_MAX <= 15 && SQ.QUIZ_MIN <= SQ.QUIZ_MAX);
 words.forEach(w => assert.strictEqual(SQ.key(w), K(w), 'quiz keys match SRS ' + w.word));
 
-// Unlock day follows QUIZ_WEEKDAY in Eastern Time, and the window is the 7 days before it.
+// Quiz id = the most recent quiz day in Eastern Time; the window is since the previous quiz day.
 const thu = Date.parse('2026-10-29T15:00:00Z'); // Thu Oct 29, 2026, 11:00 ET
-assert.strictEqual(SQ.unlockId(thu), '2026-10-25');
-assert.strictEqual(SQ.etParts(new Date(SQ.etMidnight('2026-10-25'))).weekday, 'Sun');
-assert.strictEqual(SQ.unlockId(SQ.etMidnight('2026-10-25') - 1000), '2026-10-18', 'just before Sunday is the previous quiz');
-assert.strictEqual(SQ.unlockId(SQ.etMidnight('2026-10-25') + 30 * 60 * 1000), '2026-10-25');
-const win = SQ.weekWindow('2026-10-25');
-assert.strictEqual(win.start, SQ.etMidnight('2026-10-18'));
-assert.strictEqual(win.end, SQ.etMidnight('2026-10-25'));
+assert.strictEqual(SQ.unlockId(thu), '2026-10-28', 'Thursday belongs to Wednesday\'s quiz');
+assert.strictEqual(SQ.unlockId(Date.parse('2026-10-26T15:00:00Z')), '2026-10-26', 'Monday');
+assert.strictEqual(SQ.unlockId(Date.parse('2026-10-27T15:00:00Z')), '2026-10-26', 'Tuesday is still Monday\'s quiz');
+assert.strictEqual(SQ.unlockId(Date.parse('2026-10-30T15:00:00Z')), '2026-10-30', 'Friday');
+assert.strictEqual(SQ.unlockId(Date.parse('2026-10-31T15:00:00Z')), '2026-10-30', 'Saturday is Friday\'s quiz');
+assert.strictEqual(SQ.unlockId(Date.parse('2026-11-01T15:00:00Z')), '2026-10-30', 'Sunday is Friday\'s quiz');
+assert.strictEqual(SQ.etParts(new Date(SQ.etMidnight('2026-10-28'))).weekday, 'Wed');
+assert.strictEqual(SQ.unlockId(SQ.etMidnight('2026-10-28') - 1000), '2026-10-26', 'just before Wednesday is Monday\'s quiz');
+assert.strictEqual(SQ.unlockId(SQ.etMidnight('2026-10-28') + 30 * 60 * 1000), '2026-10-28');
+assert.strictEqual(SQ.prevQuizId('2026-10-28'), '2026-10-26');
+assert.strictEqual(SQ.prevQuizId('2026-10-30'), '2026-10-28');
+assert.strictEqual(SQ.prevQuizId('2026-11-02'), '2026-10-30', 'Monday looks back to Friday');
+assert.deepStrictEqual(SQ.nextQuizDay(Date.parse('2026-10-26T15:00:00Z')), { id: '2026-10-28', dayName: 'Wednesday' });
+assert.deepStrictEqual(SQ.nextQuizDay(thu), { id: '2026-10-30', dayName: 'Friday' });
+assert.deepStrictEqual(SQ.nextQuizDay(Date.parse('2026-10-31T15:00:00Z')), { id: '2026-11-02', dayName: 'Monday' });
+const win = SQ.quizWindow('2026-10-28');
+assert.strictEqual(win.start, SQ.etMidnight('2026-10-26'), 'window starts at the previous quiz day');
+assert.strictEqual(win.end, SQ.etMidnight('2026-10-28'));
+assert.strictEqual(SQ.weekWindow, SQ.quizWindow, 'old name kept');
+const monWin = SQ.quizWindow('2026-11-02');
+assert.strictEqual(monWin.start, SQ.etMidnight('2026-10-30'), 'Monday\'s window starts Friday');
 // DST ends Nov 1, 2026; midnight Eastern is still a real instant.
-assert.strictEqual(SQ.etParts(new Date(SQ.etMidnight('2026-11-01'))).hour, '00');
-assert.strictEqual(SQ.unlockId(Date.parse('2026-11-01T03:30:00Z')), '2026-10-25', 'Saturday night before the DST change');
-assert.strictEqual(SQ.unlockId(Date.parse('2026-11-01T06:30:00Z')), '2026-11-01');
+assert.strictEqual(SQ.etParts(new Date(SQ.etMidnight('2026-11-02'))).hour, '00');
+assert.strictEqual(SQ.unlockId(Date.parse('2026-11-02T04:30:00Z')), '2026-10-30', 'Sunday 11:30 PM EST is still Friday\'s quiz');
+assert.strictEqual(SQ.unlockId(Date.parse('2026-11-02T05:30:00Z')), '2026-11-02', 'Monday 12:30 AM EST');
 
 assert.strictEqual(SQ.answersMatch('  Elated ', 'ELATED'), true);
 assert.strictEqual(SQ.answersMatch('elated', 'ELATED'), true);
@@ -116,11 +129,11 @@ const bare = { word: 'ZEST', type: 'synonym', definition: 'lively energy', examp
 assert.strictEqual(SQ.usableSentence(bare), '');
 assert.strictEqual(SQ.usableSentence(Object.assign({}, bare, { sentence: 'Full of _____ after the win.' })), 'Full of _____ after the win.');
 assert.strictEqual(SQ.usableSentence(Object.assign({}, bare, { sentence: 'Full of zest _____.' })), '');
-const builtBare = SQ.buildQuiz([bare], [{ t: win.start + 1000, key: 'ZEST:synonym', ok: false, ms: 1000 }], '2026-10-25');
+const builtBare = SQ.buildQuiz([bare], [{ t: win.start + 1000, key: 'ZEST:synonym', ok: false, ms: 1000 }], '2026-10-28');
 assert.strictEqual(builtBare.items[0].fallback, true);
 assert.strictEqual(builtBare.items[0].clue, 'lively energy');
 
-// Simulated week: misses, several tries, and a slow answer, then top-up from the other words.
+// Simulated window: misses, several tries, and a slow answer, then top-up from the other words.
 const demoStore = { d: {}, getItem(k) { return this.d[k] ?? null; }, setItem(k, v) { this.d[k] = v; }, removeItem(k) { delete this.d[k]; } };
 const before = JSON.stringify(SRS.load(demoStore));
 const demoAttempts = SQ.demoWeekAttempts(words, thu);
@@ -128,11 +141,11 @@ demoAttempts.forEach(a => SQ.recordAttempt(demoStore, a, thu));
 assert.strictEqual(JSON.stringify(SRS.load(demoStore)), before, 'attempt log does not touch SRS progress');
 assert.notStrictEqual(SQ.ATTEMPT_KEY, SRS.STORE_KEY);
 assert.strictEqual(SQ.loadAttempts(demoStore).length, demoAttempts.length);
-// Just outside the week must not change this quiz. (The earlier one belongs to the previous week.)
+// Just outside the window must not change this quiz. (The earlier one belongs to the previous quiz.)
 const demo = SQ.buildQuiz(words, SQ.loadAttempts(demoStore).concat([
   { t: win.start - 1, key: K(words[0]), ok: false, ms: 1000 },
   { t: win.end, key: K(words[1]), ok: false, ms: 1000 }
-]), '2026-10-25');
+]), '2026-10-28');
 assert.deepStrictEqual(demo.items.map(i => i.word), [
   'TEDIOUS', 'CONCISE', 'HUMBLE', 'BRITTLE', 'ELATED', 'FEASIBLE', 'HOSTILE', 'ADEQUATE', 'DISMAL', 'FRUGAL'
 ]);
@@ -143,70 +156,123 @@ assert.strictEqual(demo.items.every(i => i.sentence && !i.fallback), true);
 // 20 tough words cap at 15; 4 tough words get topped up to 10; slow boundary is inclusive.
 function attempt(word, ok, ms, t) { return { t: t, key: K(words.find(w => w.word === word)), ok: ok, ms: ms }; }
 const many = words.slice(0, 20).map(w => attempt(w.word, false, 1000, win.start + 5000));
-assert.strictEqual(SQ.buildQuiz(words, many, '2026-10-25').items.length, 15);
+assert.strictEqual(SQ.buildQuiz(words, many, '2026-10-28').items.length, 15);
 const fewTough = [attempt('TEDIOUS', false, 1000, win.start + 5000), attempt('ADEQUATE', true, 1000, win.start + 6000),
   attempt('BRITTLE', true, 1000, win.start + 7000), attempt('DISMAL', true, 1000, win.start + 8000)];
-assert.strictEqual(SQ.buildQuiz(words, fewTough, '2026-10-25').items[0].word, 'TEDIOUS');
-assert.strictEqual(SQ.buildQuiz(words, fewTough, '2026-10-25').items.length, 4);
+assert.strictEqual(SQ.buildQuiz(words, fewTough, '2026-10-28').items[0].word, 'TEDIOUS');
+assert.strictEqual(SQ.buildQuiz(words, fewTough, '2026-10-28').items.length, 4);
 const topped = fewTough.concat(words.slice(2, 12).map(w => attempt(w.word, true, 1000, win.start + 9000)));
-const toppedQuiz = SQ.buildQuiz(words, topped, '2026-10-25');
+const toppedQuiz = SQ.buildQuiz(words, topped, '2026-10-28');
 assert.strictEqual(toppedQuiz.items.length, 10);
 assert.strictEqual(toppedQuiz.items[0].word, 'TEDIOUS');
 assert.strictEqual(toppedQuiz.toughCount, 1);
-assert.strictEqual(SQ.buildQuiz(words, [attempt('HOSTILE', true, SQ.SLOW_MS, win.start + 5000)], '2026-10-25').items[0].tough, true);
-assert.strictEqual(SQ.buildQuiz(words, [attempt('HOSTILE', true, SQ.SLOW_MS - 1, win.start + 5000)], '2026-10-25').items[0].tough, false);
+assert.strictEqual(SQ.buildQuiz(words, [attempt('HOSTILE', true, SQ.SLOW_MS, win.start + 5000)], '2026-10-28').items[0].tough, true);
+assert.strictEqual(SQ.buildQuiz(words, [attempt('HOSTILE', true, SQ.SLOW_MS - 1, win.start + 5000)], '2026-10-28').items[0].tough, false);
 // Three correct showings are not "several tries". Three attempts with a miss are.
 const calm = [1, 1, 1].map((ok, i) => attempt('PLACID', true, 1000, win.start + 1000 * (i + 1)));
-assert.strictEqual(SQ.buildQuiz(words, calm, '2026-10-25').items[0].tough, false);
+assert.strictEqual(SQ.buildQuiz(words, calm, '2026-10-28').items[0].tough, false);
 const several = [attempt('PLACID', false, 1000, win.start + 1000), attempt('PLACID', false, 1000, win.start + 2000), attempt('PLACID', true, 1000, win.start + 3000)];
-assert.strictEqual(SQ.buildQuiz(words, several, '2026-10-25').items[0].tough, true);
+assert.strictEqual(SQ.buildQuiz(words, several, '2026-10-28').items[0].tough, true);
 
-// Backfill from existing progress when that card was touched during the week but has no timed attempts.
+// Backfill from existing progress when that card was touched in the window but has no timed attempts.
 const backProgress = {};
 SRS.record(backProgress, K(words.find(w => w.word === 'RIGID')), false, win.start + 8000);
 SRS.record(backProgress, K(words.find(w => w.word === 'PLACID')), true, win.start + 9000);
 SRS.record(backProgress, K(words.find(w => w.word === 'ZEALOUS')), false, win.start - 10);
-const back = SQ.buildQuiz(words, [], '2026-10-25', backProgress);
+const back = SQ.buildQuiz(words, [], '2026-10-28', backProgress);
 assert.deepStrictEqual(back.items.map(i => i.word), ['RIGID', 'PLACID']);
 assert.strictEqual(back.items[0].tough, true);
 assert.strictEqual(back.items[1].tough, false);
 // A timed attempt wins over the saved last result so a later correct answer does not hide an earlier miss.
-const mixed = SQ.buildQuiz(words, [attempt('RIGID', false, 1000, win.start + 1000), attempt('RIGID', true, 1000, win.start + 2000)], '2026-10-25', backProgress);
+const mixed = SQ.buildQuiz(words, [attempt('RIGID', false, 1000, win.start + 1000), attempt('RIGID', true, 1000, win.start + 2000)], '2026-10-28', backProgress);
 assert.strictEqual(mixed.items[0].tough, true);
 
-// Available on the unlock day until finished; the previous week stays open if it was never finished.
+// Short window: fewer than 10 tough words tops up with recent words (current set, then previous set), least known first.
+const curSet = words.slice(40, 60), prevSet = words.slice(20, 40);
+const recentP = {};
+SRS.record(recentP, K(curSet[2]), true, win.start - 5 * 86400000); SRS.record(recentP, K(curSet[2]), true, win.start - 4 * 86400000);
+const shortQ = SQ.buildQuiz(words, [attempt('TEDIOUS', false, 1000, win.start + 5000)], '2026-10-28', recentP, curSet.concat(prevSet));
+assert.strictEqual(shortQ.items.length, 10);
+assert.strictEqual(shortQ.items[0].word, 'TEDIOUS');
+assert.strictEqual(shortQ.toughCount, 1);
+const expectRecent = curSet.filter((w, i) => i !== 2 && w.word !== 'TEDIOUS').slice(0, 9).map(w => w.word);
+assert.deepStrictEqual(shortQ.items.slice(1).map(i => i.word), expectRecent, 'current set first, known card pushed back');
+assert.strictEqual(new Set(shortQ.items.map(i => i.word.toLowerCase())).size, 10, 'no duplicate words');
+const tinyQ = SQ.buildQuiz(words, [], '2026-10-28', {}, curSet.slice(0, 3).concat(prevSet));
+assert.deepStrictEqual(tinyQ.items.map(i => i.key), curSet.slice(0, 3).concat(prevSet).filter((w, i, arr) => arr.findIndex(x => x.word.toLowerCase() === w.word.toLowerCase()) === i).slice(0, 10).map(K), 'previous set fills in after the current set');
+assert.strictEqual(SQ.buildQuiz(words, [], '2026-10-28', {}).items.length, 0, 'no recent words, no practice: empty');
+
+// Opens on each quiz day and stays open until finished. A newer quiz day replaces an unfinished older quiz.
 const emptyState = { byWeek: {} };
 const ready = SQ.selectQuiz(words, SQ.loadAttempts(demoStore), emptyState, thu);
 assert.strictEqual(ready.phase, 'ready');
-assert.strictEqual(ready.id, '2026-10-25');
-assert.strictEqual(ready.items ? ready.built.items.length : ready.built.items.length, 10);
-const doneState = { byWeek: { '2026-10-25': { correct: 8, total: 10, missed: ['TEDIOUS'], emailed: true } } };
-assert.strictEqual(SQ.selectQuiz(words, SQ.loadAttempts(demoStore), doneState, thu).phase, 'done');
+assert.strictEqual(ready.id, '2026-10-28');
+assert.strictEqual(ready.built.items.length, 10);
+assert.strictEqual(ready.dayName, 'Friday');
+const doneState = { byWeek: { '2026-10-28': { correct: 8, total: 10, missed: ['TEDIOUS'], emailed: true } } };
+const doneSel = SQ.selectQuiz(words, SQ.loadAttempts(demoStore), doneState, thu);
+assert.strictEqual(doneSel.phase, 'done');
+assert.strictEqual(doneSel.dayName, 'Friday', 'The next one opens Friday');
 assert.strictEqual(SQ.selectQuiz(words, [], emptyState, thu).phase, 'empty');
-// Previous week still waiting, even after the next unlock morning.
-const prevAttempts = [attempt('LAX', false, 1000, SQ.etMidnight('2026-10-18') - 5000)];
-const overdue = SQ.selectQuiz(words, prevAttempts, emptyState, SQ.etMidnight('2026-10-25') + 60 * 1000);
-assert.strictEqual(overdue.phase, 'ready');
-assert.strictEqual(overdue.id, '2026-10-18');
-assert.strictEqual(overdue.overdue, true);
-const afterPrev = SQ.selectQuiz(words, prevAttempts, { byWeek: { '2026-10-18': { correct: 0, total: 1, missed: ['LAX'] } } }, SQ.etMidnight('2026-10-25') + 60 * 1000);
-assert.strictEqual(afterPrev.phase, 'done', 'finished last week stays done until the new week has words');
-assert.strictEqual(afterPrev.id, '2026-10-18');
+assert.strictEqual(SQ.selectQuiz(words, [], emptyState, thu, {}, curSet).phase, 'ready', 'recent words keep a quiet window from being empty');
+// Monday's quiz still open on Tuesday.
+const monAttempts = [attempt('LAX', false, 1000, SQ.etMidnight('2026-10-23') + 5000)];
+const tue = SQ.selectQuiz(words, monAttempts, emptyState, Date.parse('2026-10-27T15:00:00Z'));
+assert.strictEqual(tue.phase, 'ready'); assert.strictEqual(tue.id, '2026-10-26');
+// Unfinished Monday quiz is replaced on Wednesday by Wednesday's quiz.
+const wedAttempts = monAttempts.concat([attempt('HUMBLE', false, 1000, SQ.etMidnight('2026-10-27') + 5000)]);
+const wed = SQ.selectQuiz(words, wedAttempts, emptyState, SQ.etMidnight('2026-10-28') + 60 * 1000);
+assert.strictEqual(wed.phase, 'ready');
+assert.strictEqual(wed.id, '2026-10-28', 'newer quiz replaces the unfinished one');
+assert.strictEqual(wed.overdue, false);
+assert.deepStrictEqual(wed.built.items.map(i => i.word), ['HUMBLE'], 'only the Mon–Tue window');
+// Finished Monday, nothing new yet on Wednesday: stays done, says Friday next.
+const afterPrev = SQ.selectQuiz(words, monAttempts, { byWeek: { '2026-10-26': { correct: 0, total: 1, missed: ['LAX'] } } }, SQ.etMidnight('2026-10-28') + 60 * 1000);
+assert.strictEqual(afterPrev.phase, 'done', 'finished quiz stays done until the new window has words');
+assert.strictEqual(afterPrev.id, '2026-10-26');
+assert.strictEqual(afterPrev.dayName, 'Friday');
 assert.strictEqual(afterPrev.result.missed[0], 'LAX');
+// Old weekly state (a Sunday id) does not block the new quiz.
+assert.strictEqual(SQ.selectQuiz(words, SQ.loadAttempts(demoStore), { byWeek: { '2026-10-25': { correct: 9, total: 10 } } }, thu).phase, 'ready');
 
 // Quiz miss feeds review weighting, and completion is stored once.
 const quizMem = { d: {}, getItem(k) { return this.d[k] ?? null; }, setItem(k, v) { this.d[k] = v; }, removeItem(k) { delete this.d[k]; } };
 const qp = {};
 const tedious = words.find(w => w.word === 'TEDIOUS');
-const marked = SQ.markComplete(quizMem, '2026-10-25', { correct: 0, total: 1, missed: ['TEDIOUS'], missedKeys: [K(tedious)], at: thu });
+const marked = SQ.markComplete(quizMem, '2026-10-28', { correct: 0, total: 1, missed: ['TEDIOUS'], missedKeys: [K(tedious)], at: thu });
 assert.strictEqual(marked.fresh, true);
 SRS.record(qp, K(tedious), false, thu);
 assert.strictEqual(qp[K(tedious)].lastResult, 'wrong');
 assert.deepStrictEqual(SRS.reviewWords([tedious], qp, thu).map(K), [K(tedious)]);
-assert.strictEqual(SQ.markComplete(quizMem, '2026-10-25', { correct: 1, total: 1, missed: [] }).fresh, false, 'finishing twice does not reset the score');
-SQ.setEmailed(quizMem, '2026-10-25', true);
-assert.strictEqual(SQ.loadState(quizMem).byWeek['2026-10-25'].emailed, true);
+assert.strictEqual(SQ.markComplete(quizMem, '2026-10-28', { correct: 1, total: 1, missed: [] }).fresh, false, 'finishing twice does not reset the score');
+SQ.setEmailed(quizMem, '2026-10-28', true);
+assert.strictEqual(SQ.loadState(quizMem).byWeek['2026-10-28'].emailed, true);
 console.log('Sentence quiz tests passed');
+
+// Coda Stars quiz_completed POST: payload shape, text/plain, fire-and-forget (fetch is mocked; no real network).
+(async () => {
+  const ev = SQ.quizEvent('vince', '2026-10-28', 8, 10, '2026-10-29');
+  assert.deepStrictEqual(ev, { kid: 'vince', event: 'quiz_completed', quiz_id: '2026-10-28', correct: 8, total: 10, date_et: '2026-10-29' });
+  const calls = [];
+  assert.strictEqual(await SQ.postQuizEvent((u, o) => { calls.push([u, o]); return Promise.resolve({ ok: true }); }, ev), true);
+  assert.strictEqual(calls.length, 1);
+  assert.strictEqual(calls[0][0], 'https://coda-kids-app.vercel.app/api/vocab/event');
+  assert.strictEqual(calls[0][1].method, 'POST');
+  assert.strictEqual(calls[0][1].headers['Content-Type'].split(';')[0], 'text/plain');
+  assert.deepStrictEqual(JSON.parse(calls[0][1].body), ev);
+  assert.strictEqual(await SQ.postQuizEvent(() => Promise.resolve({ ok: false, status: 400 }), ev), false, '400 until the server deploys is fine');
+  assert.strictEqual(await SQ.postQuizEvent(() => Promise.reject(new TypeError('Failed to fetch')), ev), false, 'network error swallowed');
+  assert.strictEqual(await SQ.postQuizEvent(() => { throw new Error('boom'); }, ev), false, 'sync throw swallowed');
+  assert.strictEqual(await SQ.postQuizEvent(null, ev), false, 'no fetch');
+  const appSrc = fs.readFileSync(__dirname + '/app.js', 'utf8');
+  assert(/SentenceQuiz\.postQuizEvent\([\s\S]{0,120}SentenceQuiz\.quizEvent\(KID, id, correct, results\.length, WordLog\.etDate\(\)\)\)\.catch\(/.test(appSrc), 'app posts quiz_completed fire-and-forget');
+  assert(!/await\s+SentenceQuiz\.postQuizEvent/.test(appSrc));
+  const fin = appSrc.slice(appSrc.indexOf('function finishSentence'));
+  assert(fin.indexOf('if (saved.fresh)') < fin.indexOf('postQuizEvent('), 'posted once, on the first finish');
+  assert(fin.indexOf('sentence-quiz-dry-run') < fin.indexOf('postQuizEvent('), 'dry run skips the post');
+  assert(fin.indexOf('renderSentenceDone(saved.row, id)') > fin.indexOf('postQuizEvent('), 'FormSubmit quiz log still sent after');
+  console.log('Quiz Coda Stars event tests passed');
+})().catch(e => { console.error(e); process.exit(1); });
 
 // Daily words log (wordlog.js): cumulative per-day record, de-duplicated sends
 (async () => {

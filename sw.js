@@ -2,7 +2,7 @@
    Only same-origin GET requests inside this app's folder are handled. Everything else (formsubmit.co, any cross-origin
    request, POSTs) is never intercepted or cached, so the daily words log goes straight to the network as before.
    index.html / words.json (and other HTML) are network-first so new words always come through; other app files are cache-first. */
-var VERSION = '2026-10-31-sets1';
+var VERSION = '2026-10-31-quiz3x';
 var CACHE = 'vince-hspt-words-' + VERSION;
 var SHELL = ['./', 'index.html', 'style.css', 'app.js', 'srs.js', 'wordlog.js', 'sentencequiz.js', 'words.json', 'manifest.json',
   'icon.svg', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 'apple-touch-icon.png'];
