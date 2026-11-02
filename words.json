@@ -6118,5 +6118,345 @@
     "addedDate": "2026-10-31",
     "set": "V-010",
     "order": 17
+  },
+  {
+    "word": "AMEND",
+    "type": "synonym",
+    "choices": [
+      "revise",
+      "praise",
+      "admit",
+      "extend"
+    ],
+    "answer": "revise",
+    "definition": "to change in order to improve or correct",
+    "example": "Congress voted to amend the law.",
+    "sentence": "The class voted to _____ its rules so that everyone got a turn at recess.",
+    "addedDate": "2026-11-02",
+    "set": "V-011",
+    "order": 18
+  },
+  {
+    "word": "DISCLOSE",
+    "type": "synonym",
+    "choices": [
+      "conceal",
+      "reveal",
+      "enclose",
+      "discuss"
+    ],
+    "answer": "reveal",
+    "definition": "to make known; uncover",
+    "example": "The company refused to disclose how much the deal cost.",
+    "sentence": "The magician would never _____ how his tricks actually work.",
+    "addedDate": "2026-11-02",
+    "set": "V-011",
+    "order": 18
+  },
+  {
+    "word": "FEIGN",
+    "type": "synonym",
+    "choices": [
+      "pretend",
+      "faint",
+      "refuse",
+      "admit"
+    ],
+    "answer": "pretend",
+    "definition": "to fake a feeling or condition",
+    "example": "He tried to feign illness to stay home from school.",
+    "sentence": "She tried to _____ a stomachache so she could skip the math test.",
+    "addedDate": "2026-11-02",
+    "set": "V-011",
+    "order": 18
+  },
+  {
+    "word": "IMPLORE",
+    "type": "synonym",
+    "choices": [
+      "ignore",
+      "beg",
+      "explore",
+      "imply"
+    ],
+    "answer": "beg",
+    "definition": "to ask urgently and with strong feeling",
+    "example": "I implore you to drive carefully in the snow.",
+    "sentence": "Every year the children _____ their parents to let them get a puppy.",
+    "addedDate": "2026-11-02",
+    "set": "V-011",
+    "order": 18
+  },
+  {
+    "word": "INTEGRAL",
+    "type": "synonym",
+    "choices": [
+      "optional",
+      "essential",
+      "intrusive",
+      "external"
+    ],
+    "answer": "essential",
+    "definition": "necessary to make something whole",
+    "example": "Teamwork is an integral part of winning.",
+    "sentence": "The goalie is an _____ part of the team; without her, we can't win.",
+    "addedDate": "2026-11-02",
+    "set": "V-011",
+    "order": 18
+  },
+  {
+    "word": "LETHAL",
+    "type": "synonym",
+    "choices": [
+      "lively",
+      "deadly",
+      "lazy",
+      "legal"
+    ],
+    "answer": "deadly",
+    "definition": "able to cause death",
+    "example": "Some mushrooms contain a lethal poison.",
+    "sentence": "The bite of this snake can be _____, so hikers must stay far away.",
+    "addedDate": "2026-11-02",
+    "set": "V-011",
+    "order": 18
+  },
+  {
+    "word": "NOMADIC",
+    "type": "synonym",
+    "choices": [
+      "settled",
+      "wandering",
+      "nameless",
+      "noisy"
+    ],
+    "answer": "wandering",
+    "definition": "moving from place to place with no permanent home",
+    "example": "Nomadic herders move their animals with the seasons.",
+    "sentence": "The _____ tribe moved its tents to a new grazing spot every few weeks.",
+    "addedDate": "2026-11-02",
+    "set": "V-011",
+    "order": 18
+  },
+  {
+    "word": "RIGOROUS",
+    "type": "synonym",
+    "choices": [
+      "careless",
+      "demanding",
+      "ruined",
+      "gorgeous"
+    ],
+    "answer": "demanding",
+    "definition": "very strict, thorough, or hard",
+    "example": "The school has a rigorous honors program.",
+    "sentence": "Pilots go through _____ training with hours of tests before they can fly.",
+    "addedDate": "2026-11-02",
+    "set": "V-011",
+    "order": 18
+  },
+  {
+    "word": "SUPPRESS",
+    "type": "synonym",
+    "choices": [
+      "release",
+      "restrain",
+      "surprise",
+      "support"
+    ],
+    "answer": "restrain",
+    "definition": "to hold back or put an end to by force",
+    "example": "She had to suppress a laugh during the serious speech.",
+    "sentence": "During the quiet ceremony, he tried hard to _____ a sneeze.",
+    "addedDate": "2026-11-02",
+    "set": "V-011",
+    "order": 18
+  },
+  {
+    "word": "VENERATE",
+    "type": "synonym",
+    "choices": [
+      "hate",
+      "honor",
+      "ventilate",
+      "vary"
+    ],
+    "answer": "honor",
+    "definition": "to regard with deep respect",
+    "example": "Many cultures venerate their elders.",
+    "sentence": "Fans _____ the old coach and even built a statue of him outside the stadium.",
+    "addedDate": "2026-11-02",
+    "set": "V-011",
+    "order": 18
+  },
+  {
+    "word": "ADVERSE",
+    "type": "synonym",
+    "choices": [
+      "favorable",
+      "harmful",
+      "clumsy",
+      "ancient"
+    ],
+    "answer": "harmful",
+    "definition": "working against; unfavorable or harmful",
+    "example": "The medicine had no adverse side effects.",
+    "sentence": "The race was canceled because of _____ weather conditions, including ice and high winds.",
+    "addedDate": "2026-11-02",
+    "set": "V-011",
+    "order": 18
+  },
+  {
+    "word": "COMPLY",
+    "type": "synonym",
+    "choices": [
+      "refuse",
+      "obey",
+      "complain",
+      "compete"
+    ],
+    "answer": "obey",
+    "definition": "to act as asked or required",
+    "example": "Drivers must comply with the speed limit.",
+    "sentence": "All visitors must _____ with the museum's rules and keep their hands off the art.",
+    "addedDate": "2026-11-02",
+    "set": "V-011",
+    "order": 18
+  },
+  {
+    "word": "DIVERSE",
+    "type": "synonym",
+    "choices": [
+      "uniform",
+      "varied",
+      "divided",
+      "difficult"
+    ],
+    "answer": "varied",
+    "definition": "made up of many different kinds",
+    "example": "Our school has a diverse group of students from many countries.",
+    "sentence": "The city's restaurants are _____, offering food from Mexico, India, Japan, and more.",
+    "addedDate": "2026-11-02",
+    "set": "V-011",
+    "order": 18
+  },
+  {
+    "word": "EVOKE",
+    "type": "synonym",
+    "choices": [
+      "awaken",
+      "avoid",
+      "erase",
+      "evolve"
+    ],
+    "answer": "awaken",
+    "definition": "to bring a feeling or memory to mind",
+    "example": "The smell of pine trees evokes memories of camp.",
+    "sentence": "The old song seemed to _____ happy memories of summers at the beach.",
+    "addedDate": "2026-11-02",
+    "set": "V-011",
+    "order": 18
+  },
+  {
+    "word": "HOMOGENEOUS",
+    "type": "antonym",
+    "choices": [
+      "uniform",
+      "mixed",
+      "humble",
+      "honest"
+    ],
+    "answer": "mixed",
+    "definition": "all of the same kind",
+    "example": "The milk is homogeneous, so the cream doesn't separate.",
+    "sentence": "Stir the paint until it is _____ all the way through, with no streaks of a different color.",
+    "addedDate": "2026-11-02",
+    "set": "V-011",
+    "order": 18
+  },
+  {
+    "word": "ENHANCE",
+    "type": "antonym",
+    "choices": [
+      "improve",
+      "worsen",
+      "entrance",
+      "hasten"
+    ],
+    "answer": "worsen",
+    "definition": "to make better or greater",
+    "example": "A little salt can enhance the flavor of food.",
+    "sentence": "A fresh coat of paint will _____ the look of the old fence.",
+    "addedDate": "2026-11-02",
+    "set": "V-011",
+    "order": 18
+  },
+  {
+    "word": "HUMANE",
+    "type": "antonym",
+    "choices": [
+      "kind",
+      "cruel",
+      "human",
+      "hurried"
+    ],
+    "answer": "cruel",
+    "definition": "showing kindness and mercy",
+    "example": "The shelter treats every animal in a humane way.",
+    "sentence": "The farm is known for its _____ treatment of animals, with plenty of space and care.",
+    "addedDate": "2026-11-02",
+    "set": "V-011",
+    "order": 18
+  },
+  {
+    "word": "CONTEMPORARY",
+    "type": "antonym",
+    "choices": [
+      "modern",
+      "old-fashioned",
+      "temporary",
+      "permanent"
+    ],
+    "answer": "old-fashioned",
+    "definition": "belonging to the present time; modern",
+    "example": "The museum shows contemporary art made in the last few years.",
+    "sentence": "The gallery features _____ artists whose work was created within the last decade.",
+    "addedDate": "2026-11-02",
+    "set": "V-011",
+    "order": 18
+  },
+  {
+    "word": "RELENTLESS",
+    "type": "antonym",
+    "choices": [
+      "persistent",
+      "yielding",
+      "restless",
+      "fearless"
+    ],
+    "answer": "yielding",
+    "definition": "never stopping or giving up",
+    "example": "The relentless rain lasted for five days.",
+    "sentence": "The team's _____ defense never let up for a single minute of the game.",
+    "addedDate": "2026-11-02",
+    "set": "V-011",
+    "order": 18
+  },
+  {
+    "word": "INTROVERTED",
+    "type": "antonym",
+    "choices": [
+      "shy",
+      "outgoing",
+      "inverted",
+      "intelligent"
+    ],
+    "answer": "outgoing",
+    "definition": "quiet and focused inward; shy",
+    "example": "The introverted girl preferred reading alone to going to parties.",
+    "sentence": "Being _____, he preferred a quiet night with a book over a big party.",
+    "addedDate": "2026-11-02",
+    "set": "V-011",
+    "order": 18
   }
 ]
