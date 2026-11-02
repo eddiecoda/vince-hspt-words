@@ -6124,9 +6124,9 @@
     "type": "synonym",
     "choices": [
       "revise",
-      "praise",
       "admit",
-      "extend"
+      "extend",
+      "praise"
     ],
     "answer": "revise",
     "definition": "to change in order to improve or correct",
@@ -6140,10 +6140,10 @@
     "word": "DISCLOSE",
     "type": "synonym",
     "choices": [
-      "conceal",
-      "reveal",
       "enclose",
-      "discuss"
+      "discuss",
+      "reveal",
+      "conceal"
     ],
     "answer": "reveal",
     "definition": "to make known; uncover",
@@ -6157,10 +6157,10 @@
     "word": "FEIGN",
     "type": "synonym",
     "choices": [
-      "pretend",
-      "faint",
       "refuse",
-      "admit"
+      "pretend",
+      "admit",
+      "faint"
     ],
     "answer": "pretend",
     "definition": "to fake a feeling or condition",
@@ -6174,10 +6174,10 @@
     "word": "IMPLORE",
     "type": "synonym",
     "choices": [
-      "ignore",
-      "beg",
+      "imply",
       "explore",
-      "imply"
+      "ignore",
+      "beg"
     ],
     "answer": "beg",
     "definition": "to ask urgently and with strong feeling",
@@ -6191,10 +6191,10 @@
     "word": "INTEGRAL",
     "type": "synonym",
     "choices": [
-      "optional",
-      "essential",
       "intrusive",
-      "external"
+      "optional",
+      "external",
+      "essential"
     ],
     "answer": "essential",
     "definition": "necessary to make something whole",
@@ -6208,10 +6208,10 @@
     "word": "LETHAL",
     "type": "synonym",
     "choices": [
-      "lively",
-      "deadly",
+      "legal",
       "lazy",
-      "legal"
+      "deadly",
+      "lively"
     ],
     "answer": "deadly",
     "definition": "able to cause death",
@@ -6225,10 +6225,10 @@
     "word": "NOMADIC",
     "type": "synonym",
     "choices": [
+      "noisy",
       "settled",
       "wandering",
-      "nameless",
-      "noisy"
+      "nameless"
     ],
     "answer": "wandering",
     "definition": "moving from place to place with no permanent home",
@@ -6244,8 +6244,8 @@
     "choices": [
       "careless",
       "demanding",
-      "ruined",
-      "gorgeous"
+      "gorgeous",
+      "ruined"
     ],
     "answer": "demanding",
     "definition": "very strict, thorough, or hard",
@@ -6259,10 +6259,10 @@
     "word": "SUPPRESS",
     "type": "synonym",
     "choices": [
-      "release",
-      "restrain",
       "surprise",
-      "support"
+      "release",
+      "support",
+      "restrain"
     ],
     "answer": "restrain",
     "definition": "to hold back or put an end to by force",
@@ -6277,9 +6277,9 @@
     "type": "synonym",
     "choices": [
       "hate",
-      "honor",
+      "vary",
       "ventilate",
-      "vary"
+      "honor"
     ],
     "answer": "honor",
     "definition": "to regard with deep respect",
@@ -6310,10 +6310,10 @@
     "word": "COMPLY",
     "type": "synonym",
     "choices": [
-      "refuse",
       "obey",
-      "complain",
-      "compete"
+      "refuse",
+      "compete",
+      "complain"
     ],
     "answer": "obey",
     "definition": "to act as asked or required",
@@ -6329,8 +6329,8 @@
     "choices": [
       "uniform",
       "varied",
-      "divided",
-      "difficult"
+      "difficult",
+      "divided"
     ],
     "answer": "varied",
     "definition": "made up of many different kinds",
@@ -6361,10 +6361,10 @@
     "word": "HOMOGENEOUS",
     "type": "antonym",
     "choices": [
-      "uniform",
       "mixed",
-      "humble",
-      "honest"
+      "uniform",
+      "honest",
+      "humble"
     ],
     "answer": "mixed",
     "definition": "all of the same kind",
@@ -6378,10 +6378,10 @@
     "word": "ENHANCE",
     "type": "antonym",
     "choices": [
-      "improve",
       "worsen",
       "entrance",
-      "hasten"
+      "hasten",
+      "improve"
     ],
     "answer": "worsen",
     "definition": "to make better or greater",
@@ -6397,8 +6397,8 @@
     "choices": [
       "kind",
       "cruel",
-      "human",
-      "hurried"
+      "hurried",
+      "human"
     ],
     "answer": "cruel",
     "definition": "showing kindness and mercy",
@@ -6412,10 +6412,10 @@
     "word": "CONTEMPORARY",
     "type": "antonym",
     "choices": [
-      "modern",
-      "old-fashioned",
       "temporary",
-      "permanent"
+      "permanent",
+      "old-fashioned",
+      "modern"
     ],
     "answer": "old-fashioned",
     "definition": "belonging to the present time; modern",
@@ -6429,10 +6429,10 @@
     "word": "RELENTLESS",
     "type": "antonym",
     "choices": [
-      "persistent",
-      "yielding",
       "restless",
-      "fearless"
+      "persistent",
+      "fearless",
+      "yielding"
     ],
     "answer": "yielding",
     "definition": "never stopping or giving up",
@@ -6446,10 +6446,10 @@
     "word": "INTROVERTED",
     "type": "antonym",
     "choices": [
+      "intelligent",
       "shy",
       "outgoing",
-      "inverted",
-      "intelligent"
+      "inverted"
     ],
     "answer": "outgoing",
     "definition": "quiet and focused inward; shy",
