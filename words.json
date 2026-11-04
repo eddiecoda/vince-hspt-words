@@ -6458,5 +6458,2385 @@
     "addedDate": "2026-11-02",
     "set": "V-011",
     "order": 18
+  },
+  {
+    "word": "AGRONOMY",
+    "type": "synonym",
+    "choices": [
+      "crop science",
+      "urban design",
+      "astronomy",
+      "geology"
+    ],
+    "answer": "crop science",
+    "definition": "the science of farming and soil management",
+    "example": "She studied agronomy to help farmers grow better crops.",
+    "sentence": "A degree in _____ helps researchers figure out how to grow food in dry climates.",
+    "addedDate": "2026-11-04",
+    "set": "V-012",
+    "order": 19
+  },
+  {
+    "word": "AGROCHEMICAL",
+    "type": "synonym",
+    "choices": [
+      "farm chemical",
+      "natural soil",
+      "agronomy",
+      "appliances"
+    ],
+    "answer": "farm chemical",
+    "definition": "a chemical used in farming, like fertilizer or bug spray",
+    "example": "The farmer bought a new agrochemical to protect the wheat crop.",
+    "sentence": "The store sells every kind of _____ needed to keep insects off the crops.",
+    "addedDate": "2026-11-04",
+    "set": "V-012",
+    "order": 19
+  },
+  {
+    "word": "AGRARIAN",
+    "type": "antonym",
+    "choices": [
+      "urban",
+      "farming",
+      "agronomic",
+      "aquatic"
+    ],
+    "answer": "urban",
+    "definition": "related to farming or country life",
+    "example": "The county remained an agrarian community focused on growing corn.",
+    "sentence": "Small rural towns depend heavily on an _____ way of life to survive.",
+    "addedDate": "2026-11-04",
+    "set": "V-012",
+    "order": 19
+  },
+  {
+    "word": "ANTEDATE",
+    "type": "synonym",
+    "choices": [
+      "come before",
+      "follow after",
+      "antidote",
+      "calculate"
+    ],
+    "answer": "come before",
+    "definition": "to exist or happen earlier than something else",
+    "example": "Ancient stone tools antedate the invention of written language.",
+    "sentence": "The old wooden cabin seems to _____ the town itself by fifty years.",
+    "addedDate": "2026-11-04",
+    "set": "V-012",
+    "order": 19
+  },
+  {
+    "word": "ANTECEDENT",
+    "type": "antonym",
+    "choices": [
+      "following",
+      "prior",
+      "antique",
+      "accidental"
+    ],
+    "answer": "following",
+    "definition": "coming or happening before",
+    "example": "The antecedent events led directly to the team's championship win.",
+    "sentence": "The detective looked for any _____ clues that occurred before the crime.",
+    "addedDate": "2026-11-04",
+    "set": "V-012",
+    "order": 19
+  },
+  {
+    "word": "ANTERIOR",
+    "type": "antonym",
+    "choices": [
+      "rear",
+      "front",
+      "interior",
+      "clever"
+    ],
+    "answer": "rear",
+    "definition": "located near or toward the front",
+    "example": "The dentist checked the anterior teeth near the front of his mouth.",
+    "sentence": "The swimmer noticed a long mark near the shark's _____ fin.",
+    "addedDate": "2026-11-04",
+    "set": "V-012",
+    "order": 19
+  },
+  {
+    "word": "ANTHROPOID",
+    "type": "synonym",
+    "choices": [
+      "ape",
+      "reptile",
+      "anthropology",
+      "android"
+    ],
+    "answer": "ape",
+    "definition": "a large ape that resembles a human",
+    "example": "The zoo built a large outdoor climbing area for the anthropoids.",
+    "sentence": "Researchers watched how the smart _____ learned to open the wooden box.",
+    "addedDate": "2026-11-04",
+    "set": "V-012",
+    "order": 19
+  },
+  {
+    "word": "MISANTHROPE",
+    "type": "antonym",
+    "choices": [
+      "humanitarian",
+      "hater",
+      "anthropologist",
+      "microscope"
+    ],
+    "answer": "humanitarian",
+    "definition": "a person who hates or avoids human society",
+    "example": "The old misanthrope preferred the company of cats over people.",
+    "sentence": "Nobody was surprised when the town _____ refused to join the block party.",
+    "addedDate": "2026-11-04",
+    "set": "V-012",
+    "order": 19
+  },
+  {
+    "word": "PHILANTHROPY",
+    "type": "antonym",
+    "choices": [
+      "selfishness",
+      "charity",
+      "philosophy",
+      "photograph"
+    ],
+    "answer": "selfishness",
+    "definition": "giving money or help to make life better for others",
+    "example": "The billionaire devoted her wealth to philanthropy and building schools.",
+    "sentence": "Her generous gift to the hospital was another act of _____ for the city.",
+    "addedDate": "2026-11-04",
+    "set": "V-012",
+    "order": 19
+  },
+  {
+    "word": "AQUACULTURE",
+    "type": "synonym",
+    "choices": [
+      "fish farming",
+      "dry farming",
+      "aquarium",
+      "sculpture"
+    ],
+    "answer": "fish farming",
+    "definition": "the raising of water animals and plants for food",
+    "example": "Salmon raised through aquaculture help restock grocery store supplies.",
+    "sentence": "Modern _____ allows businesses to raise fish in clean artificial tanks.",
+    "addedDate": "2026-11-04",
+    "set": "V-012",
+    "order": 19
+  },
+  {
+    "word": "AQUIFER",
+    "type": "synonym",
+    "choices": [
+      "underground water",
+      "dry desert sand",
+      "aquarium tank",
+      "mountain peak"
+    ],
+    "answer": "underground water",
+    "definition": "an underground layer of rock or sand that holds water",
+    "example": "The farm pumps water from a deep aquifer to irrigate its crops.",
+    "sentence": "The town gets all of its fresh drinking water from a deep _____.",
+    "addedDate": "2026-11-04",
+    "set": "V-012",
+    "order": 19
+  },
+  {
+    "word": "AQUARIUS",
+    "type": "synonym",
+    "choices": [
+      "water bearer",
+      "fire dragon",
+      "aquarium",
+      "centaur"
+    ],
+    "answer": "water bearer",
+    "definition": "a constellation or star sign pictured as a man pouring water",
+    "example": "People born in February often say their star sign is Aquarius.",
+    "sentence": "He looked up at the night sky to find the constellation named _____.",
+    "addedDate": "2026-11-04",
+    "set": "V-012",
+    "order": 19
+  },
+  {
+    "word": "ARTIFICE",
+    "type": "synonym",
+    "choices": [
+      "trickery",
+      "honesty",
+      "artifact",
+      "altitude"
+    ],
+    "answer": "trickery",
+    "definition": "clever skill or a sneaky trick",
+    "example": "The magician used clever artifice to make the rabbit disappear.",
+    "sentence": "The villain relied on sly _____ to trick the hero into handing over the key.",
+    "addedDate": "2026-11-04",
+    "set": "V-012",
+    "order": 19
+  },
+  {
+    "word": "ARTIFACT",
+    "type": "synonym",
+    "choices": [
+      "historical object",
+      "natural rock",
+      "artifice",
+      "factory"
+    ],
+    "answer": "historical object",
+    "definition": "an object made by humans long ago",
+    "example": "Archaeologists discovered an ancient clay artifact inside the cave.",
+    "sentence": "Museum visitors marveled at the golden _____ dug up from the tomb.",
+    "addedDate": "2026-11-04",
+    "set": "V-012",
+    "order": 19
+  },
+  {
+    "word": "ARTISAN",
+    "type": "synonym",
+    "choices": [
+      "craftsperson",
+      "customer",
+      "artistry",
+      "soldier"
+    ],
+    "answer": "craftsperson",
+    "definition": "a skilled person who makes things by hand",
+    "example": "The local artisan carved beautiful wooden bowls in his shop.",
+    "sentence": "Every leather bag in the market was handmade by a skilled _____.",
+    "addedDate": "2026-11-04",
+    "set": "V-012",
+    "order": 19
+  },
+  {
+    "word": "BENEDICTION",
+    "type": "synonym",
+    "choices": [
+      "blessing",
+      "curse",
+      "benefactor",
+      "prediction"
+    ],
+    "answer": "blessing",
+    "definition": "a spoken blessing or prayer of thanks",
+    "example": "The minister offered a short benediction at the end of the service.",
+    "sentence": "The priest gave a final _____ to the crowd before everyone went home.",
+    "addedDate": "2026-11-04",
+    "set": "V-012",
+    "order": 19
+  },
+  {
+    "word": "BENEFICENT",
+    "type": "antonym",
+    "choices": [
+      "harmful",
+      "kind",
+      "beneficial",
+      "magnificent"
+    ],
+    "answer": "harmful",
+    "definition": "doing good or showing kindness",
+    "example": "The beneficent leader donated food to families affected by the flood.",
+    "sentence": "Everyone loved the _____ ruler because he always helped people in need.",
+    "addedDate": "2026-11-04",
+    "set": "V-012",
+    "order": 19
+  },
+  {
+    "word": "BIONIC",
+    "type": "synonym",
+    "choices": [
+      "robotic",
+      "natural",
+      "biology",
+      "heroic"
+    ],
+    "answer": "robotic",
+    "definition": "made stronger or better by electronic parts",
+    "example": "The scientist built a bionic arm that could lift heavy objects easily.",
+    "sentence": "After his injury, he was fitted with a _____ leg that helped him walk.",
+    "addedDate": "2026-11-04",
+    "set": "V-012",
+    "order": 19
+  },
+  {
+    "word": "BIOPSY",
+    "type": "synonym",
+    "choices": [
+      "tissue test",
+      "full recovery",
+      "biography",
+      "treatment"
+    ],
+    "answer": "tissue test",
+    "definition": "removing a small piece of body tissue to test it",
+    "example": "The doctor ordered a skin biopsy to see if the spot was dangerous.",
+    "sentence": "The doctor said the results of the _____ would come back tomorrow.",
+    "addedDate": "2026-11-04",
+    "set": "V-012",
+    "order": 19
+  },
+  {
+    "word": "SYMBIOSIS",
+    "type": "synonym",
+    "choices": [
+      "partnership",
+      "conflict",
+      "symbolism",
+      "isolation"
+    ],
+    "answer": "partnership",
+    "definition": "a close relationship where two living things help each other",
+    "example": "The clownfish and sea anemone live together in perfect symbiosis.",
+    "sentence": "The clownfish and the anemone share a helpful _____, protecting and feeding each other.",
+    "addedDate": "2026-11-04",
+    "set": "V-012",
+    "order": 19
+  },
+  {
+    "word": "ANACHRONISM",
+    "type": "synonym",
+    "choices": [
+      "time mistake",
+      "modern trend",
+      "anagram",
+      "mystery"
+    ],
+    "answer": "time mistake",
+    "definition": "something placed in the wrong time period",
+    "example": "Seeing a smartphone in a movie set in the 1800s was an obvious anachronism.",
+    "sentence": "A modern computer in a story about medieval knights is a total _____.",
+    "addedDate": "2026-11-04",
+    "set": "V-013",
+    "order": 20
+  },
+  {
+    "word": "CHRONOLOGY",
+    "type": "synonym",
+    "choices": [
+      "timeline",
+      "random order",
+      "chronic",
+      "geography"
+    ],
+    "answer": "timeline",
+    "definition": "an arrangement of events in the order they happened",
+    "example": "The history teacher listed the chronology of the American Revolution on the board.",
+    "sentence": "Our history project had to show the exact _____ of events, from the first battle to the peace treaty.",
+    "addedDate": "2026-11-04",
+    "set": "V-013",
+    "order": 20
+  },
+  {
+    "word": "CIRCUMVENT",
+    "type": "synonym",
+    "choices": [
+      "bypass",
+      "confront",
+      "circumscribe",
+      "destroy"
+    ],
+    "answer": "bypass",
+    "definition": "to get around or avoid by cleverness",
+    "example": "The hackers tried to circumvent the security system to get into the files.",
+    "sentence": "Smart drivers will find a shortcut to _____ the heavy traffic on the highway.",
+    "addedDate": "2026-11-04",
+    "set": "V-013",
+    "order": 20
+  },
+  {
+    "word": "CIRCUMSTANTIAL",
+    "type": "synonym",
+    "choices": [
+      "indirect",
+      "direct",
+      "circulatory",
+      "substantial"
+    ],
+    "answer": "indirect",
+    "definition": "based on clues or hints rather than direct proof",
+    "example": "Without witnesses, the detective had only circumstantial evidence against the suspect.",
+    "sentence": "The police had no direct witnesses, only _____ evidence linking him to the scene.",
+    "addedDate": "2026-11-04",
+    "set": "V-013",
+    "order": 20
+  },
+  {
+    "word": "COSMOPOLITAN",
+    "type": "antonym",
+    "choices": [
+      "small-town",
+      "worldly",
+      "cosmic",
+      "crowded"
+    ],
+    "answer": "small-town",
+    "definition": "worldly, sophisticated, or comfortable in many cultures",
+    "example": "New York City is a cosmopolitan hub filled with people from across the globe.",
+    "sentence": "Living in major cities all her life made her very _____, comfortable anywhere in the world.",
+    "addedDate": "2026-11-04",
+    "set": "V-013",
+    "order": 20
+  },
+  {
+    "word": "COSMOLOGY",
+    "type": "synonym",
+    "choices": [
+      "space science",
+      "ocean study",
+      "cosmetics",
+      "geology"
+    ],
+    "answer": "space science",
+    "definition": "the branch of science studying the origin and structure of the universe",
+    "example": "Her interest in astronomy led her to read several books about cosmology.",
+    "sentence": "Scientists who study _____ use powerful telescopes to learn how the universe began.",
+    "addedDate": "2026-11-04",
+    "set": "V-013",
+    "order": 20
+  },
+  {
+    "word": "MICROCOSM",
+    "type": "synonym",
+    "choices": [
+      "small model",
+      "giant world",
+      "microscope",
+      "playground"
+    ],
+    "answer": "small model",
+    "definition": "a smaller version that represents something much larger",
+    "example": "Our school cafeteria during lunch is a microcosm of the whole community.",
+    "sentence": "The tiny summer camp served as a _____ of the entire nation's culture.",
+    "addedDate": "2026-11-04",
+    "set": "V-013",
+    "order": 20
+  },
+  {
+    "word": "CREDENCE",
+    "type": "antonym",
+    "choices": [
+      "disbelief",
+      "belief",
+      "credit",
+      "respect"
+    ],
+    "answer": "disbelief",
+    "definition": "acceptance that something is real or true",
+    "example": "You should not give any credence to silly rumors shared online.",
+    "sentence": "Nobody gave any _____ to the wild rumor that school was canceled on Monday.",
+    "addedDate": "2026-11-04",
+    "set": "V-013",
+    "order": 20
+  },
+  {
+    "word": "CREED",
+    "type": "synonym",
+    "choices": [
+      "guiding belief",
+      "doubt",
+      "cradle",
+      "action"
+    ],
+    "answer": "guiding belief",
+    "definition": "a statement or system of core beliefs",
+    "example": "Treating everyone with kindness was the main creed of her family.",
+    "sentence": "The student council follows a simple _____: always be honest, helpful, and fair.",
+    "addedDate": "2026-11-04",
+    "set": "V-013",
+    "order": 20
+  },
+  {
+    "word": "DISARMING",
+    "type": "antonym",
+    "choices": [
+      "hostile",
+      "charming",
+      "disarmed",
+      "careless"
+    ],
+    "answer": "hostile",
+    "definition": "removing hostility or suspicion; winning over",
+    "example": "The new student had a disarming smile that made everyone feel at ease.",
+    "sentence": "Her warm smile and _____ manner made it easy for people to trust her right away.",
+    "addedDate": "2026-11-04",
+    "set": "V-013",
+    "order": 20
+  },
+  {
+    "word": "DISBURSE",
+    "type": "antonym",
+    "choices": [
+      "collect",
+      "distribute",
+      "disperse",
+      "borrow"
+    ],
+    "answer": "collect",
+    "definition": "to pay out money or distribute funds",
+    "example": "The club treasurer will disburse the money to pay for our bus tickets.",
+    "sentence": "The school treasurer will _____ the funds to pay for our field trip buses.",
+    "addedDate": "2026-11-04",
+    "set": "V-013",
+    "order": 20
+  },
+  {
+    "word": "DISCREDIT",
+    "type": "antonym",
+    "choices": [
+      "praise",
+      "disgrace",
+      "discrete",
+      "forget"
+    ],
+    "answer": "praise",
+    "definition": "to harm the reputation or believability of someone or something",
+    "example": "The rival team tried to discredit our coach by spreading fake stories.",
+    "sentence": "The false news article was written to _____ the scientist and ruin his career.",
+    "addedDate": "2026-11-04",
+    "set": "V-013",
+    "order": 20
+  },
+  {
+    "word": "DYNAMO",
+    "type": "synonym",
+    "choices": [
+      "powerhouse",
+      "sluggard",
+      "dynamic",
+      "building"
+    ],
+    "answer": "powerhouse",
+    "definition": "an energetic, forceful person or power generator",
+    "example": "She was a complete dynamo on the soccer field, running non-stop all game.",
+    "sentence": "Maria is a real _____ who manages three school clubs and plays two varsity sports.",
+    "addedDate": "2026-11-04",
+    "set": "V-013",
+    "order": 20
+  },
+  {
+    "word": "DYNASTY",
+    "type": "synonym",
+    "choices": [
+      "ruling family",
+      "single leader",
+      "dynamite",
+      "country"
+    ],
+    "answer": "ruling family",
+    "definition": "a series of powerful rulers from the same family",
+    "example": "The powerful dynasty ruled the ancient kingdom for nearly three hundred years.",
+    "sentence": "The championship basketball team built a sports _____ after winning five titles in a row.",
+    "addedDate": "2026-11-04",
+    "set": "V-013",
+    "order": 20
+  },
+  {
+    "word": "HYDRODYNAMIC",
+    "type": "synonym",
+    "choices": [
+      "streamlined",
+      "boxy",
+      "hydrophobic",
+      "stationary"
+    ],
+    "answer": "streamlined",
+    "definition": "designed to move easily through water or liquids",
+    "example": "The new race boat has a hydrodynamic hull that cuts through waves effortlessly.",
+    "sentence": "A dolphin has a smooth, _____ body that helps it glide quickly through ocean currents.",
+    "addedDate": "2026-11-04",
+    "set": "V-013",
+    "order": 20
+  },
+  {
+    "word": "DYSLEXIA",
+    "type": "synonym",
+    "choices": [
+      "reading difficulty",
+      "fluent reading",
+      "dynamite",
+      "vision loss"
+    ],
+    "answer": "reading difficulty",
+    "definition": "a learning difficulty that affects reading and spelling",
+    "example": "With extra tutoring, students with dyslexia can improve their reading skills greatly.",
+    "sentence": "He used audiobooks and special fonts to help manage his _____ during English class.",
+    "addedDate": "2026-11-04",
+    "set": "V-013",
+    "order": 20
+  },
+  {
+    "word": "DYSENTERY",
+    "type": "synonym",
+    "choices": [
+      "bowel infection",
+      "healthy digestion",
+      "dystopia",
+      "headache"
+    ],
+    "answer": "bowel infection",
+    "definition": "a serious intestinal infection that causes severe pain and diarrhea",
+    "example": "Campers purified their river water to prevent getting dysentery.",
+    "sentence": "Travelers were warned not to drink unboiled water to prevent catching severe _____.",
+    "addedDate": "2026-11-04",
+    "set": "V-013",
+    "order": 20
+  },
+  {
+    "word": "DYSTROPHY",
+    "type": "synonym",
+    "choices": [
+      "muscle wasting",
+      "muscle growth",
+      "dystopia",
+      "bone fracture"
+    ],
+    "answer": "muscle wasting",
+    "definition": "a condition causing the gradual weakening of body tissues",
+    "example": "The charity run helps raise money for research into muscular dystrophy.",
+    "sentence": "The patient was diagnosed with muscular _____, which gradually weakened his leg muscles.",
+    "addedDate": "2026-11-04",
+    "set": "V-013",
+    "order": 20
+  },
+  {
+    "word": "EPITHET",
+    "type": "synonym",
+    "choices": [
+      "nickname",
+      "compliment",
+      "epidemic",
+      "blanket"
+    ],
+    "answer": "nickname",
+    "definition": "a descriptive name or nickname",
+    "example": "The coach earned the epithet 'Iron Mike' for his tough workouts.",
+    "sentence": "The king was known by the _____ 'the Great' because of his many victories.",
+    "addedDate": "2026-11-04",
+    "set": "V-013",
+    "order": 20
+  },
+  {
+    "word": "EPIGRAPH",
+    "type": "synonym",
+    "choices": [
+      "inscription",
+      "conclusion",
+      "autograph",
+      "mountain"
+    ],
+    "answer": "inscription",
+    "definition": "a short quote or carving at the start of a book",
+    "example": "The author chose a poem for the epigraph of her new novel.",
+    "sentence": "Before the first chapter begins, there is a short _____ from a famous poet.",
+    "addedDate": "2026-11-04",
+    "set": "V-013",
+    "order": 20
+  },
+  {
+    "word": "EPILOGUE",
+    "type": "antonym",
+    "choices": [
+      "introduction",
+      "conclusion",
+      "episode",
+      "vacation"
+    ],
+    "answer": "introduction",
+    "definition": "a section at the end of a book or play",
+    "example": "The epilogue explained what happened to the characters ten years later.",
+    "sentence": "After the story ended, the _____ gave us a final update on the hero.",
+    "addedDate": "2026-11-04",
+    "set": "V-014",
+    "order": 21
+  },
+  {
+    "word": "EXTRAPOLATE",
+    "type": "synonym",
+    "choices": [
+      "predict",
+      "ignore",
+      "extra",
+      "wander"
+    ],
+    "answer": "predict",
+    "definition": "to use known facts to guess what might happen",
+    "example": "Scientists extrapolate future temperatures using current weather data.",
+    "sentence": "Based on how much we sold today, we can _____ how much we need for tomorrow.",
+    "addedDate": "2026-11-04",
+    "set": "V-014",
+    "order": 21
+  },
+  {
+    "word": "EXTROVERT",
+    "type": "antonym",
+    "choices": [
+      "introvert",
+      "socialite",
+      "extra",
+      "athlete"
+    ],
+    "answer": "introvert",
+    "definition": "a person who is very outgoing and social",
+    "example": "Being an extrovert, Maya loved meeting new people at the party.",
+    "sentence": "A true _____ feels energized by being in a large crowd of friends.",
+    "addedDate": "2026-11-04",
+    "set": "V-014",
+    "order": 21
+  },
+  {
+    "word": "EXTRANEOUS",
+    "type": "antonym",
+    "choices": [
+      "essential",
+      "needless",
+      "extra",
+      "colorful"
+    ],
+    "answer": "essential",
+    "definition": "not necessary or relevant to the subject",
+    "example": "The teacher told us to remove extraneous details from our essays.",
+    "sentence": "Please delete any _____ info that doesn't help explain your main point.",
+    "addedDate": "2026-11-04",
+    "set": "V-014",
+    "order": 21
+  },
+  {
+    "word": "FIDUCIARY",
+    "type": "synonym",
+    "choices": [
+      "trust-based",
+      "dishonest",
+      "fixed",
+      "heavy"
+    ],
+    "answer": "trust-based",
+    "definition": "relating to a position of trust with money",
+    "example": "The lawyer had a fiduciary duty to protect his client's money.",
+    "sentence": "A banker has a _____ role to keep your savings safe and secure.",
+    "addedDate": "2026-11-04",
+    "set": "V-014",
+    "order": 21
+  },
+  {
+    "word": "CONFIDANTE",
+    "type": "synonym",
+    "choices": [
+      "trusted friend",
+      "enemy",
+      "confidence",
+      "dancer"
+    ],
+    "answer": "trusted friend",
+    "definition": "a person you tell your secrets to",
+    "example": "Sarah told her best friend everything because she was her closest confidante.",
+    "sentence": "Every hero in a movie usually has a _____ to talk to about their plans.",
+    "addedDate": "2026-11-04",
+    "set": "V-014",
+    "order": 21
+  },
+  {
+    "word": "FIDELITY",
+    "type": "antonym",
+    "choices": [
+      "disloyalty",
+      "loyalty",
+      "field",
+      "speed"
+    ],
+    "answer": "disloyalty",
+    "definition": "being faithful or loyal to something",
+    "example": "The dog's fidelity to its owner was clear when it waited by the door.",
+    "sentence": "The knight swore his _____ to the king and promised never to leave.",
+    "addedDate": "2026-11-04",
+    "set": "V-014",
+    "order": 21
+  },
+  {
+    "word": "GEOPOLITICAL",
+    "type": "synonym",
+    "choices": [
+      "world politics",
+      "local news",
+      "geometry",
+      "weather"
+    ],
+    "answer": "world politics",
+    "definition": "how geography affects relations between nations",
+    "example": "The oil shortage caused a major geopolitical crisis between the two countries.",
+    "sentence": "Leaders must consider the _____ impact of closing the border.",
+    "addedDate": "2026-11-04",
+    "set": "V-014",
+    "order": 21
+  },
+  {
+    "word": "GEOSYNCHRONOUS",
+    "type": "synonym",
+    "choices": [
+      "fixed orbit",
+      "moving fast",
+      "geographic",
+      "shiny"
+    ],
+    "answer": "fixed orbit",
+    "definition": "having an orbit that stays over the same spot on Earth",
+    "example": "The weather satellite stays in a geosynchronous orbit to watch one region.",
+    "sentence": "A _____ satellite is perfect for beaming TV signals to the same area.",
+    "addedDate": "2026-11-04",
+    "set": "V-014",
+    "order": 21
+  },
+  {
+    "word": "GEOTHERMAL",
+    "type": "synonym",
+    "choices": [
+      "earth heat",
+      "ice cold",
+      "geology",
+      "solar"
+    ],
+    "answer": "earth heat",
+    "definition": "using the natural heat from inside the Earth",
+    "example": "The power plant uses geothermal energy from the nearby volcano.",
+    "sentence": "People in Iceland use _____ power to heat their homes with steam.",
+    "addedDate": "2026-11-04",
+    "set": "V-014",
+    "order": 21
+  },
+  {
+    "word": "SPECTROGRAPHY",
+    "type": "synonym",
+    "choices": [
+      "light analysis",
+      "darkness",
+      "spectrum",
+      "drawing"
+    ],
+    "answer": "light analysis",
+    "definition": "the study of light to see what things are made of",
+    "example": "Astronomers use spectrography to see which gases are on distant planets.",
+    "sentence": "Through _____, we can tell a star's temperature just by looking at its light.",
+    "addedDate": "2026-11-04",
+    "set": "V-014",
+    "order": 21
+  },
+  {
+    "word": "SEISMOGRAPH",
+    "type": "synonym",
+    "choices": [
+      "quake sensor",
+      "wind vane",
+      "size",
+      "clock"
+    ],
+    "answer": "quake sensor",
+    "definition": "a tool that measures and records earthquakes",
+    "example": "The seismograph showed a small wiggle when the truck drove by.",
+    "sentence": "Scientists watched the _____ to see how strong the earthquake was.",
+    "addedDate": "2026-11-04",
+    "set": "V-014",
+    "order": 21
+  },
+  {
+    "word": "TOPOGRAPHY",
+    "type": "synonym",
+    "choices": [
+      "land features",
+      "flat surface",
+      "topic",
+      "history"
+    ],
+    "answer": "land features",
+    "definition": "the physical features and shape of the land",
+    "example": "The topography of the region includes many steep hills and deep valleys.",
+    "sentence": "Hikers check the _____ of the trail to see how many hills they must climb.",
+    "addedDate": "2026-11-04",
+    "set": "V-014",
+    "order": 21
+  },
+  {
+    "word": "GRATIFY",
+    "type": "antonym",
+    "choices": [
+      "disappoint",
+      "please",
+      "gravity",
+      "ignore"
+    ],
+    "answer": "disappoint",
+    "definition": "to please or satisfy someone",
+    "example": "It will gratify the teacher if everyone turns in their homework on time.",
+    "sentence": "Winning the championship would _____ the players after a long season.",
+    "addedDate": "2026-11-04",
+    "set": "V-014",
+    "order": 21
+  },
+  {
+    "word": "INGRATIATE",
+    "type": "antonym",
+    "choices": [
+      "offend",
+      "flatter",
+      "ingrown",
+      "study"
+    ],
+    "answer": "offend",
+    "definition": "to try to get someone to like you",
+    "example": "The new student tried to ingratiate himself by bringing cookies.",
+    "sentence": "He tried to _____ himself with the boss by always staying late.",
+    "addedDate": "2026-11-04",
+    "set": "V-014",
+    "order": 21
+  },
+  {
+    "word": "GRATUITOUS",
+    "type": "antonym",
+    "choices": [
+      "necessary",
+      "needless",
+      "grateful",
+      "heavy"
+    ],
+    "answer": "necessary",
+    "definition": "not needed or given without a good reason",
+    "example": "The movie had too much gratuitous violence that didn't help the story.",
+    "sentence": "Adding _____ insults to the argument only made things much worse.",
+    "addedDate": "2026-11-04",
+    "set": "V-014",
+    "order": 21
+  },
+  {
+    "word": "HYDRAULIC",
+    "type": "synonym",
+    "choices": [
+      "liquid-powered",
+      "air-driven",
+      "hydrant",
+      "metal"
+    ],
+    "answer": "liquid-powered",
+    "definition": "moved or operated by the pressure of liquid",
+    "example": "The heavy dump truck used a hydraulic lift to tilt its bed.",
+    "sentence": "The mechanic checked the _____ brakes to make sure the fluid was full.",
+    "addedDate": "2026-11-04",
+    "set": "V-014",
+    "order": 21
+  },
+  {
+    "word": "DEHYDRATE",
+    "type": "antonym",
+    "choices": [
+      "moisten",
+      "dry out",
+      "detour",
+      "decorate"
+    ],
+    "answer": "moisten",
+    "definition": "to lose water or remove moisture",
+    "example": "If you run in the sun without water, you will quickly dehydrate.",
+    "sentence": "The sun will _____ the grapes until they turn into raisins.",
+    "addedDate": "2026-11-04",
+    "set": "V-014",
+    "order": 21
+  },
+  {
+    "word": "HYDROELECTRIC",
+    "type": "synonym",
+    "choices": [
+      "water-powered",
+      "solar-powered",
+      "hydrogen",
+      "electric"
+    ],
+    "answer": "water-powered",
+    "definition": "using water to make electricity",
+    "example": "The city gets its energy from a massive hydroelectric dam.",
+    "sentence": "The town built a _____ plant near the waterfall to generate clean energy.",
+    "addedDate": "2026-11-04",
+    "set": "V-014",
+    "order": 21
+  },
+  {
+    "word": "HYPERBOLE",
+    "type": "antonym",
+    "choices": [
+      "understatement",
+      "exaggeration",
+      "hyperactive",
+      "hyphen"
+    ],
+    "answer": "understatement",
+    "definition": "a huge exaggeration",
+    "example": "Saying you're starving after missing one snack is a hyperbole.",
+    "sentence": "I knew his claim was a _____ because no one can actually run a mile in ten seconds.",
+    "addedDate": "2026-11-04",
+    "set": "V-014",
+    "order": 21
+  },
+  {
+    "word": "HYPERTENSION",
+    "type": "synonym",
+    "choices": [
+      "high blood pressure",
+      "low blood pressure",
+      "hyperactive",
+      "headache"
+    ],
+    "answer": "high blood pressure",
+    "definition": "high blood pressure",
+    "example": "Doctors recommend a low-salt diet to help manage hypertension.",
+    "sentence": "The nurse checked his vitals to see if his _____ was under control.",
+    "addedDate": "2026-11-04",
+    "set": "V-015",
+    "order": 22
+  },
+  {
+    "word": "HYPERVENTILATE",
+    "type": "synonym",
+    "choices": [
+      "breathe fast",
+      "breathe slow",
+      "hyperactive",
+      "exercise"
+    ],
+    "answer": "breathe fast",
+    "definition": "to breathe too fast and deep",
+    "example": "If you start to hyperventilate during the race, try to slow your breathing.",
+    "sentence": "When she gets nervous, she tends to _____ and needs to sit down.",
+    "addedDate": "2026-11-04",
+    "set": "V-015",
+    "order": 22
+  },
+  {
+    "word": "HYPOCHONDRIAC",
+    "type": "synonym",
+    "choices": [
+      "health worrier",
+      "healthy person",
+      "hypocrite",
+      "doctor"
+    ],
+    "answer": "health worrier",
+    "definition": "someone who worries too much about being sick",
+    "example": "My uncle is such a hypochondriac that he goes to the ER for every sneeze.",
+    "sentence": "Because he is a _____, he is convinced that every headache is a major brain tumor.",
+    "addedDate": "2026-11-04",
+    "set": "V-015",
+    "order": 22
+  },
+  {
+    "word": "HYPOTHERMIA",
+    "type": "synonym",
+    "choices": [
+      "low body heat",
+      "high fever",
+      "hypothesis",
+      "sunburn"
+    ],
+    "answer": "low body heat",
+    "definition": "dangerously low body temperature",
+    "example": "The hikers were treated for hypothermia after being stuck in the snow.",
+    "sentence": "You must wear a warm coat in the arctic to prevent _____ from setting in.",
+    "addedDate": "2026-11-04",
+    "set": "V-015",
+    "order": 22
+  },
+  {
+    "word": "INTERCEDE",
+    "type": "synonym",
+    "choices": [
+      "mediate",
+      "ignore",
+      "intercept",
+      "argue"
+    ],
+    "answer": "mediate",
+    "definition": "to step in to help settle a dispute",
+    "example": "The teacher had to intercede when the two students started arguing.",
+    "sentence": "My older brother had to _____ when my sister and I couldn't agree on a movie.",
+    "addedDate": "2026-11-04",
+    "set": "V-015",
+    "order": 22
+  },
+  {
+    "word": "INTERDICT",
+    "type": "antonym",
+    "choices": [
+      "allow",
+      "forbid",
+      "internal",
+      "destroy"
+    ],
+    "answer": "allow",
+    "definition": "to block or stop something",
+    "example": "The coast guard worked to interdict the illegal shipment.",
+    "sentence": "The general ordered the troops to _____ the supply lines of the enemy.",
+    "addedDate": "2026-11-04",
+    "set": "V-015",
+    "order": 22
+  },
+  {
+    "word": "INTERFACE",
+    "type": "synonym",
+    "choices": [
+      "connection",
+      "separation",
+      "interfere",
+      "computer"
+    ],
+    "answer": "connection",
+    "definition": "the place where two systems meet",
+    "example": "The new software has a very simple user interface.",
+    "sentence": "The touch screen is the main _____ between the user and the tablet.",
+    "addedDate": "2026-11-04",
+    "set": "V-015",
+    "order": 22
+  },
+  {
+    "word": "PERJURY",
+    "type": "synonym",
+    "choices": [
+      "lying in court",
+      "telling truth",
+      "jury",
+      "stealing"
+    ],
+    "answer": "lying in court",
+    "definition": "lying while under oath in court",
+    "example": "The witness was charged with perjury after she lied to the judge.",
+    "sentence": "You can go to jail for _____ if you don't tell the truth on the witness stand.",
+    "addedDate": "2026-11-04",
+    "set": "V-015",
+    "order": 22
+  },
+  {
+    "word": "JURISPRUDENCE",
+    "type": "synonym",
+    "choices": [
+      "legal system",
+      "lawlessness",
+      "jurisdiction",
+      "medicine"
+    ],
+    "answer": "legal system",
+    "definition": "the study or system of laws",
+    "example": "He spent years studying jurisprudence before becoming a judge.",
+    "sentence": "American _____ is based on the idea that everyone is innocent until proven guilty.",
+    "addedDate": "2026-11-04",
+    "set": "V-015",
+    "order": 22
+  },
+  {
+    "word": "ABJURE",
+    "type": "antonym",
+    "choices": [
+      "embrace",
+      "reject",
+      "adjust",
+      "ignore"
+    ],
+    "answer": "embrace",
+    "definition": "to give up or reject a belief",
+    "example": "The knight was forced to abjure his loyalty to the king.",
+    "sentence": "To join the new club, he had to _____ his membership in the old one.",
+    "addedDate": "2026-11-04",
+    "set": "V-015",
+    "order": 22
+  },
+  {
+    "word": "MALIGN",
+    "type": "antonym",
+    "choices": [
+      "praise",
+      "insult",
+      "alignment",
+      "ignore"
+    ],
+    "answer": "praise",
+    "definition": "to say harmful things about someone",
+    "example": "It is unfair to malign his character just because you disagree with him.",
+    "sentence": "The bully tried to _____ the new student by spreading false rumors.",
+    "addedDate": "2026-11-04",
+    "set": "V-015",
+    "order": 22
+  },
+  {
+    "word": "MALPRACTICE",
+    "type": "synonym",
+    "choices": [
+      "professional error",
+      "good service",
+      "practice",
+      "injury"
+    ],
+    "answer": "professional error",
+    "definition": "bad or neglectful work by a professional",
+    "example": "The surgeon was sued for malpractice after the operation went wrong.",
+    "sentence": "The lawyer lost his license because of _____ and poor treatment of his clients.",
+    "addedDate": "2026-11-04",
+    "set": "V-015",
+    "order": 22
+  },
+  {
+    "word": "MARITIME",
+    "type": "synonym",
+    "choices": [
+      "nautical",
+      "inland",
+      "marriage",
+      "military"
+    ],
+    "answer": "nautical",
+    "definition": "related to the sea or ships",
+    "example": "The museum has a great collection of maritime history.",
+    "sentence": "The city has a long _____ history because of its busy shipping port.",
+    "addedDate": "2026-11-04",
+    "set": "V-015",
+    "order": 22
+  },
+  {
+    "word": "MARINA",
+    "type": "synonym",
+    "choices": [
+      "boat dock",
+      "desert",
+      "marine",
+      "park"
+    ],
+    "answer": "boat dock",
+    "definition": "a place where boats are parked",
+    "example": "We kept our sailboat at the local marina during the summer.",
+    "sentence": "We walked down to the _____ to see the yachts tied up at the pier.",
+    "addedDate": "2026-11-04",
+    "set": "V-015",
+    "order": 22
+  },
+  {
+    "word": "MARINER",
+    "type": "synonym",
+    "choices": [
+      "sailor",
+      "landlubber",
+      "marine",
+      "miner"
+    ],
+    "answer": "sailor",
+    "definition": "a person who sails a ship",
+    "example": "The ancient mariner told stories of giant sea monsters.",
+    "sentence": "Every experienced _____ knows how to read the stars to find their way home.",
+    "addedDate": "2026-11-04",
+    "set": "V-015",
+    "order": 22
+  },
+  {
+    "word": "AMORPHOUS",
+    "type": "antonym",
+    "choices": [
+      "shaped",
+      "shapeless",
+      "more",
+      "liquid"
+    ],
+    "answer": "shaped",
+    "definition": "having no definite shape",
+    "example": "The cloud was just an amorphous blob in the sky.",
+    "sentence": "The ghost appeared as an _____ mist that drifted through the hallway.",
+    "addedDate": "2026-11-04",
+    "set": "V-015",
+    "order": 22
+  },
+  {
+    "word": "METAMORPHOSIS",
+    "type": "synonym",
+    "choices": [
+      "transformation",
+      "stability",
+      "metaphor",
+      "growth"
+    ],
+    "answer": "transformation",
+    "definition": "a complete change in form",
+    "example": "The caterpillar underwent a metamorphosis to become a butterfly.",
+    "sentence": "The old warehouse went through a complete _____ to become a modern art gallery.",
+    "addedDate": "2026-11-04",
+    "set": "V-015",
+    "order": 22
+  },
+  {
+    "word": "MORPHOLOGY",
+    "type": "synonym",
+    "choices": [
+      "study of form",
+      "study of mind",
+      "morphing",
+      "math"
+    ],
+    "answer": "study of form",
+    "definition": "the study of the form of living things",
+    "example": "In biology class, we studied the morphology of different leaf types.",
+    "sentence": "Scientists look at the _____ of fossils to see how animals changed over time.",
+    "addedDate": "2026-11-04",
+    "set": "V-015",
+    "order": 22
+  },
+  {
+    "word": "MORIBUND",
+    "type": "antonym",
+    "choices": [
+      "thriving",
+      "dying",
+      "morning",
+      "heavy"
+    ],
+    "answer": "thriving",
+    "definition": "dying or becoming inactive",
+    "example": "The moribund mall had only two stores left open.",
+    "sentence": "The coach hoped to save the _____ team by hiring new players.",
+    "addedDate": "2026-11-04",
+    "set": "V-015",
+    "order": 22
+  },
+  {
+    "word": "MORTIFY",
+    "type": "synonym",
+    "choices": [
+      "embarrass",
+      "praise",
+      "modify",
+      "simplify"
+    ],
+    "answer": "embarrass",
+    "definition": "to embarrass or humiliate",
+    "example": "It would mortify him if his mom showed his baby pictures to his friends.",
+    "sentence": "I didn't want to _____ my sister by pointing out the food on her face.",
+    "addedDate": "2026-11-04",
+    "set": "V-015",
+    "order": 22
+  },
+  {
+    "word": "MORTALITY",
+    "type": "synonym",
+    "choices": [
+      "death",
+      "eternity",
+      "morality",
+      "speed"
+    ],
+    "answer": "death",
+    "definition": "the state of being able to die",
+    "example": "Seeing the old tree fall reminded us of our own mortality.",
+    "sentence": "The doctor studied the _____ rate of the new flu virus.",
+    "addedDate": "2026-11-04",
+    "set": "V-016",
+    "order": 23
+  },
+  {
+    "word": "PERMUTATION",
+    "type": "synonym",
+    "choices": [
+      "arrangement",
+      "sameness",
+      "permission",
+      "vacation"
+    ],
+    "answer": "arrangement",
+    "definition": "a different way to order or arrange things",
+    "example": "There is a different permutation for every way you can seat the five students.",
+    "sentence": "We tried every possible _____ of the lock code, but it still wouldn't open.",
+    "addedDate": "2026-11-04",
+    "set": "V-016",
+    "order": 23
+  },
+  {
+    "word": "TRANSMUTE",
+    "type": "synonym",
+    "choices": [
+      "transform",
+      "keep",
+      "transport",
+      "believe"
+    ],
+    "answer": "transform",
+    "definition": "to change into something else",
+    "example": "Legends say alchemists tried to transmute lead into gold.",
+    "sentence": "The artist wanted to _____ the scrap metal into a beautiful sculpture.",
+    "addedDate": "2026-11-04",
+    "set": "V-016",
+    "order": 23
+  },
+  {
+    "word": "NEOCLASSICAL",
+    "type": "synonym",
+    "choices": [
+      "traditional style",
+      "modern",
+      "necklace",
+      "colorful"
+    ],
+    "answer": "traditional style",
+    "definition": "a style that copies ancient greek or roman art",
+    "example": "The museum was built in a neoclassical style with tall white columns.",
+    "sentence": "The bank's _____ design made it look like an ancient Roman temple.",
+    "addedDate": "2026-11-04",
+    "set": "V-016",
+    "order": 23
+  },
+  {
+    "word": "NEOLITHIC",
+    "type": "synonym",
+    "choices": [
+      "stone age",
+      "futuristic",
+      "neon",
+      "heavy"
+    ],
+    "answer": "stone age",
+    "definition": "relating to the late stone age",
+    "example": "Neolithic people were among the first to start farming.",
+    "sentence": "Archaeologists found _____ tools made of polished flint in the cave.",
+    "addedDate": "2026-11-04",
+    "set": "V-016",
+    "order": 23
+  },
+  {
+    "word": "NEOPLASM",
+    "type": "synonym",
+    "choices": [
+      "tumor",
+      "health",
+      "plasma",
+      "plastic"
+    ],
+    "answer": "tumor",
+    "definition": "a new and abnormal growth in the body",
+    "example": "The vet removed a small neoplasm from the dog's leg.",
+    "sentence": "A _____ can be harmless, but doctors usually check them anyway.",
+    "addedDate": "2026-11-04",
+    "set": "V-016",
+    "order": 23
+  },
+  {
+    "word": "OMNIBUS",
+    "type": "synonym",
+    "choices": [
+      "all-inclusive",
+      "specific",
+      "omen",
+      "fast"
+    ],
+    "answer": "all-inclusive",
+    "definition": "covering many things at once",
+    "example": "The school board passed an omnibus rule that changed lunch and recess.",
+    "sentence": "The author released an _____ edition containing all three books in the series.",
+    "addedDate": "2026-11-04",
+    "set": "V-016",
+    "order": 23
+  },
+  {
+    "word": "OMNIPOTENT",
+    "type": "antonym",
+    "choices": [
+      "weak",
+      "all-powerful",
+      "important",
+      "orange"
+    ],
+    "answer": "weak",
+    "definition": "having unlimited power",
+    "example": "In many myths, the king of the gods is seen as omnipotent.",
+    "sentence": "No ruler is truly _____, as they all must answer to someone.",
+    "addedDate": "2026-11-04",
+    "set": "V-016",
+    "order": 23
+  },
+  {
+    "word": "OMNISCIENT",
+    "type": "antonym",
+    "choices": [
+      "ignorant",
+      "all-knowing",
+      "science",
+      "quiet"
+    ],
+    "answer": "ignorant",
+    "definition": "knowing everything",
+    "example": "The book is told by an omniscient narrator who knows every character's secrets.",
+    "sentence": "Since I am not _____, I have to study for the test like everyone else.",
+    "addedDate": "2026-11-04",
+    "set": "V-016",
+    "order": 23
+  },
+  {
+    "word": "ORTHODOX",
+    "type": "antonym",
+    "choices": [
+      "unusual",
+      "traditional",
+      "oxygen",
+      "purple"
+    ],
+    "answer": "unusual",
+    "definition": "following traditional or established rules",
+    "example": "The scientist used orthodox methods to prove his theory.",
+    "sentence": "Her _____ approach to solving the math problem followed the textbook exactly.",
+    "addedDate": "2026-11-04",
+    "set": "V-016",
+    "order": 23
+  },
+  {
+    "word": "ORTHOPEDIST",
+    "type": "synonym",
+    "choices": [
+      "bone doctor",
+      "patient",
+      "orchestra",
+      "teacher"
+    ],
+    "answer": "bone doctor",
+    "definition": "a doctor who fixes bones and joints",
+    "example": "After I broke my arm, the orthopedist put it in a cast.",
+    "sentence": "The _____ checked the athlete's knee to see if surgery was needed.",
+    "addedDate": "2026-11-04",
+    "set": "V-016",
+    "order": 23
+  },
+  {
+    "word": "ORTHODONTIC",
+    "type": "synonym",
+    "choices": [
+      "teeth-straightening",
+      "crooked",
+      "ordinary",
+      "painful"
+    ],
+    "answer": "teeth-straightening",
+    "definition": "relating to straightening teeth",
+    "example": "Braces are the most common type of orthodontic treatment.",
+    "sentence": "My _____ appointment was moved because the dentist was on vacation.",
+    "addedDate": "2026-11-04",
+    "set": "V-016",
+    "order": 23
+  },
+  {
+    "word": "PANACEA",
+    "type": "synonym",
+    "choices": [
+      "cure-all",
+      "poison",
+      "pancake",
+      "ocean"
+    ],
+    "answer": "cure-all",
+    "definition": "a cure for all problems",
+    "example": "Money is not a panacea that will solve every life struggle.",
+    "sentence": "Some people think a new phone is a _____ for boredom, but the feeling soon returns.",
+    "addedDate": "2026-11-04",
+    "set": "V-016",
+    "order": 23
+  },
+  {
+    "word": "PANOPLY",
+    "type": "synonym",
+    "choices": [
+      "collection",
+      "shortage",
+      "canopy",
+      "simple"
+    ],
+    "answer": "collection",
+    "definition": "an impressive or complete display",
+    "example": "The museum displayed a panoply of ancient armor.",
+    "sentence": "The graduation ceremony featured a _____ of flags from many different countries.",
+    "addedDate": "2026-11-04",
+    "set": "V-016",
+    "order": 23
+  },
+  {
+    "word": "PANTHEON",
+    "type": "synonym",
+    "choices": [
+      "elite group",
+      "nobodies",
+      "panther",
+      "building"
+    ],
+    "answer": "elite group",
+    "definition": "a group of famous or important people",
+    "example": "Michael Jordan has a permanent place in the pantheon of basketball legends.",
+    "sentence": "Many consider her to be part of the _____ of great American poets.",
+    "addedDate": "2026-11-04",
+    "set": "V-016",
+    "order": 23
+  },
+  {
+    "word": "PHONETIC",
+    "type": "synonym",
+    "choices": [
+      "sound-based",
+      "silent",
+      "phone",
+      "bright"
+    ],
+    "answer": "sound-based",
+    "definition": "relating to the sounds of speech",
+    "example": "The teacher used phonetic spelling to help the kids learn to read.",
+    "sentence": "English is not always a _____ language because many words are not spelled how they sound.",
+    "addedDate": "2026-11-04",
+    "set": "V-016",
+    "order": 23
+  },
+  {
+    "word": "POLYPHONIC",
+    "type": "synonym",
+    "choices": [
+      "multi-melodic",
+      "single-toned",
+      "polygon",
+      "loud"
+    ],
+    "answer": "multi-melodic",
+    "definition": "music with many melodies at once",
+    "example": "The choir performed a polyphonic piece where four groups sang different parts.",
+    "sentence": "The _____ sound of the orchestra filled the hall with complex harmonies.",
+    "addedDate": "2026-11-04",
+    "set": "V-016",
+    "order": 23
+  },
+  {
+    "word": "PHOTON",
+    "type": "synonym",
+    "choices": [
+      "light particle",
+      "shadow",
+      "photo",
+      "heavy"
+    ],
+    "answer": "light particle",
+    "definition": "a tiny particle of light",
+    "example": "A photon has no mass but carries energy from the sun.",
+    "sentence": "Scientists use lasers to track the movement of a single _____ in the lab.",
+    "addedDate": "2026-11-04",
+    "set": "V-016",
+    "order": 23
+  },
+  {
+    "word": "PHOTOSYNTHESIS",
+    "type": "synonym",
+    "choices": [
+      "plant food production",
+      "plant decay",
+      "photograph",
+      "cellular respiration"
+    ],
+    "answer": "plant food production",
+    "definition": "process where plants use light to make food",
+    "example": "Plants use photosynthesis to turn sunlight into sugar.",
+    "sentence": "Without _____, green plants could not make energy from sunlight.",
+    "addedDate": "2026-11-04",
+    "set": "V-016",
+    "order": 23
+  },
+  {
+    "word": "PHOTOELECTRIC",
+    "type": "synonym",
+    "choices": [
+      "light-powered",
+      "dark-powered",
+      "photographic",
+      "chemical"
+    ],
+    "answer": "light-powered",
+    "definition": "generating electricity using light",
+    "example": "The solar panel relies on a photoelectric effect to produce power.",
+    "sentence": "The streetlight uses a _____ sensor to turn on automatically at nightfall.",
+    "addedDate": "2026-11-04",
+    "set": "V-016",
+    "order": 23
+  },
+  {
+    "word": "POSTERIOR",
+    "type": "antonym",
+    "choices": [
+      "front",
+      "rear",
+      "post office",
+      "interior"
+    ],
+    "answer": "front",
+    "definition": "located at the back or rear",
+    "example": "The dog had a small white spot on its posterior side.",
+    "sentence": "The doctor examined the spine on the _____ side of the patient.",
+    "addedDate": "2026-11-04",
+    "set": "V-017",
+    "order": 24
+  },
+  {
+    "word": "POSTHUMOUS",
+    "type": "synonym",
+    "choices": [
+      "after death",
+      "before birth",
+      "postcard",
+      "famous"
+    ],
+    "answer": "after death",
+    "definition": "happening or given after someone has died",
+    "example": "The fallen soldier received a posthumous award for bravery.",
+    "sentence": "The author received a _____ award long after his passing.",
+    "addedDate": "2026-11-04",
+    "set": "V-017",
+    "order": 24
+  },
+  {
+    "word": "POSTMORTEM",
+    "type": "synonym",
+    "choices": [
+      "autopsy",
+      "birth",
+      "postman",
+      "forecast"
+    ],
+    "answer": "autopsy",
+    "definition": "done or happening after death",
+    "example": "The doctor conducted a postmortem examination to find the cause of death.",
+    "sentence": "The medical examiner performed a _____ exam to find out how the victim died.",
+    "addedDate": "2026-11-04",
+    "set": "V-017",
+    "order": 24
+  },
+  {
+    "word": "PREREQUISITE",
+    "type": "synonym",
+    "choices": [
+      "requirement",
+      "option",
+      "request",
+      "answer"
+    ],
+    "answer": "requirement",
+    "definition": "something required beforehand",
+    "example": "Algebra is a prerequisite for taking physics class.",
+    "sentence": "Passing middle school math is a _____ for taking high school geometry.",
+    "addedDate": "2026-11-04",
+    "set": "V-017",
+    "order": 24
+  },
+  {
+    "word": "PREDISPOSED",
+    "type": "synonym",
+    "choices": [
+      "inclined",
+      "resistant",
+      "deposed",
+      "distracted"
+    ],
+    "answer": "inclined",
+    "definition": "likely to think or act a certain way beforehand",
+    "example": "She was predisposed to like the puppy because of her love for dogs.",
+    "sentence": "People who eat well are less _____ to getting sick in winter.",
+    "addedDate": "2026-11-04",
+    "set": "V-017",
+    "order": 24
+  },
+  {
+    "word": "PRIMAL",
+    "type": "synonym",
+    "choices": [
+      "basic",
+      "modern",
+      "prism",
+      "secondary"
+    ],
+    "answer": "basic",
+    "definition": "basic, essential, or existing from early times",
+    "example": "A mother's desire to protect her child is a primal instinct.",
+    "sentence": "Fear of dark spaces is a _____ human instinct.",
+    "addedDate": "2026-11-04",
+    "set": "V-017",
+    "order": 24
+  },
+  {
+    "word": "PRIMORDIAL",
+    "type": "antonym",
+    "choices": [
+      "modern",
+      "ancient",
+      "primary",
+      "complex"
+    ],
+    "answer": "modern",
+    "definition": "existing from the very beginning of time",
+    "example": "Life began in the primordial soup billions of years ago.",
+    "sentence": "Scientists study ancient fossils to learn about _____ life on Earth.",
+    "addedDate": "2026-11-04",
+    "set": "V-017",
+    "order": 24
+  },
+  {
+    "word": "PRIMATE",
+    "type": "synonym",
+    "choices": [
+      "monkey or ape",
+      "reptile",
+      "primary",
+      "bird species"
+    ],
+    "answer": "monkey or ape",
+    "definition": "member of the mammal group including humans, apes, and monkeys",
+    "example": "The zoo added a new primate exhibit featuring chimpanzees.",
+    "sentence": "A monkey is a type of _____ that lives in trees.",
+    "addedDate": "2026-11-04",
+    "set": "V-017",
+    "order": 24
+  },
+  {
+    "word": "RECTITUDE",
+    "type": "antonym",
+    "choices": [
+      "dishonesty",
+      "honesty",
+      "rectangle",
+      "magnitude"
+    ],
+    "answer": "dishonesty",
+    "definition": "moral integrity and correctness",
+    "example": "The judge was admired for her unshakeable rectitude.",
+    "sentence": "The leader was known for her moral _____ and truthfulness.",
+    "addedDate": "2026-11-04",
+    "set": "V-017",
+    "order": 24
+  },
+  {
+    "word": "RECTILINEAR",
+    "type": "synonym",
+    "choices": [
+      "straight-lined",
+      "curved",
+      "rectangle",
+      "circular"
+    ],
+    "answer": "straight-lined",
+    "definition": "characterized by or moving in straight lines",
+    "example": "Modern buildings often have a clean, rectilinear design.",
+    "sentence": "The path ran in a _____ pattern through the modern city grid.",
+    "addedDate": "2026-11-04",
+    "set": "V-017",
+    "order": 24
+  },
+  {
+    "word": "RETROACTIVE",
+    "type": "synonym",
+    "choices": [
+      "backdated",
+      "future",
+      "active",
+      "modern"
+    ],
+    "answer": "backdated",
+    "definition": "taking effect from a date in the past",
+    "example": "The pay raise was retroactive to the start of the year.",
+    "sentence": "The new salary increase will be _____ to January first.",
+    "addedDate": "2026-11-04",
+    "set": "V-017",
+    "order": 24
+  },
+  {
+    "word": "RETROFIT",
+    "type": "synonym",
+    "choices": [
+      "upgrade",
+      "strip",
+      "outfit",
+      "resize"
+    ],
+    "answer": "upgrade",
+    "definition": "to equip something with new parts or technology",
+    "example": "They decided to retrofit the old school with modern air conditioning.",
+    "sentence": "We will _____ the old building with solar panels to save energy.",
+    "addedDate": "2026-11-04",
+    "set": "V-017",
+    "order": 24
+  },
+  {
+    "word": "RETROSPECTIVE",
+    "type": "antonym",
+    "choices": [
+      "forward-looking",
+      "reflective",
+      "retroactive",
+      "quiet"
+    ],
+    "answer": "forward-looking",
+    "definition": "looking back on past events",
+    "example": "The museum hosted a retrospective exhibit of the artist's work.",
+    "sentence": "Taking a _____ look at the past year helped us plan for the future.",
+    "addedDate": "2026-11-04",
+    "set": "V-017",
+    "order": 24
+  },
+  {
+    "word": "CIRCUMSCRIBE",
+    "type": "synonym",
+    "choices": [
+      "limit",
+      "expand",
+      "circus",
+      "describe"
+    ],
+    "answer": "limit",
+    "definition": "to restrict or set limits around something",
+    "example": "Rules circumscribe what students are allowed to do during exams.",
+    "sentence": "Tight budgets will _____ what projects the club can start.",
+    "addedDate": "2026-11-04",
+    "set": "V-017",
+    "order": 24
+  },
+  {
+    "word": "INSCRIBE",
+    "type": "synonym",
+    "choices": [
+      "engrave",
+      "erase",
+      "script",
+      "describe"
+    ],
+    "answer": "engrave",
+    "definition": "to write, print, or engrave words on a surface",
+    "example": "He asked the jeweler to inscribe his initials inside the ring.",
+    "sentence": "The jeweler will _____ her name inside the gold ring.",
+    "addedDate": "2026-11-04",
+    "set": "V-017",
+    "order": 24
+  },
+  {
+    "word": "PROSCRIBE",
+    "type": "antonym",
+    "choices": [
+      "permit",
+      "forbid",
+      "prescribe",
+      "protect"
+    ],
+    "answer": "permit",
+    "definition": "to forbid or ban officially",
+    "example": "School policies proscribe bringing cell phones to class.",
+    "sentence": "The new school rules will _____ texting during class.",
+    "addedDate": "2026-11-04",
+    "set": "V-017",
+    "order": 24
+  },
+  {
+    "word": "SUBJUGATE",
+    "type": "antonym",
+    "choices": [
+      "liberate",
+      "conquer",
+      "subject",
+      "submerge"
+    ],
+    "answer": "liberate",
+    "definition": "to bring under control or conquer",
+    "example": "The invaders tried to subjugate the local population.",
+    "sentence": "The tyrant attempted to _____ neighboring countries through war.",
+    "addedDate": "2026-11-04",
+    "set": "V-017",
+    "order": 24
+  },
+  {
+    "word": "SUBLIMINAL",
+    "type": "antonym",
+    "choices": [
+      "obvious",
+      "hidden",
+      "sublime",
+      "slippery"
+    ],
+    "answer": "obvious",
+    "definition": "below the level of conscious awareness",
+    "example": "The movie included a subliminal message about eating popcorn.",
+    "sentence": "The ad flashed a _____ message too quickly for viewers to notice it.",
+    "addedDate": "2026-11-04",
+    "set": "V-017",
+    "order": 24
+  },
+  {
+    "word": "SUBVERSIVE",
+    "type": "antonym",
+    "choices": [
+      "loyal",
+      "rebellious",
+      "submarine",
+      "destructive"
+    ],
+    "answer": "loyal",
+    "definition": "intended to undermine or overthrow authority",
+    "example": "The king punished anyone who printed subversive pamphlets.",
+    "sentence": "The government blocked the publication of _____ websites.",
+    "addedDate": "2026-11-04",
+    "set": "V-017",
+    "order": 24
+  },
+  {
+    "word": "SYNTHESIS",
+    "type": "synonym",
+    "choices": [
+      "combination",
+      "separation",
+      "synthetic",
+      "analysis"
+    ],
+    "answer": "combination",
+    "definition": "combining different parts into a whole",
+    "example": "Her essay was a synthesis of several historical viewpoints.",
+    "sentence": "The final report was a _____ of three different scientific studies.",
+    "addedDate": "2026-11-04",
+    "set": "V-017",
+    "order": 24
+  },
+  {
+    "word": "SYNOPSIS",
+    "type": "synonym",
+    "choices": [
+      "summary",
+      "full text",
+      "syntax",
+      "novel"
+    ],
+    "answer": "summary",
+    "definition": "short outline or summary",
+    "example": "Read the synopsis on the back of the book before buying it.",
+    "sentence": "The back cover of the book provides a brief _____ of the plot.",
+    "addedDate": "2026-11-04",
+    "set": "V-018",
+    "order": 25
+  },
+  {
+    "word": "SYNDROME",
+    "type": "synonym",
+    "choices": [
+      "set of symptoms",
+      "cure",
+      "synonym",
+      "single disease"
+    ],
+    "answer": "set of symptoms",
+    "definition": "group of symptoms that occur together",
+    "example": "Doctors recognized the condition as a rare medical syndrome.",
+    "sentence": "Carpal tunnel _____ causes pain and weakness in the hand and wrist.",
+    "addedDate": "2026-11-04",
+    "set": "V-018",
+    "order": 25
+  },
+  {
+    "word": "TELEOLOGICAL",
+    "type": "synonym",
+    "choices": [
+      "purpose-driven",
+      "random",
+      "telephone",
+      "biological"
+    ],
+    "answer": "purpose-driven",
+    "definition": "related to design, purpose, or ultimate cause",
+    "example": "Teleological arguments claim that nature shows clear evidence of design.",
+    "sentence": "The philosopher offered a _____ explanation for why living things adapt.",
+    "addedDate": "2026-11-04",
+    "set": "V-018",
+    "order": 25
+  },
+  {
+    "word": "TELEPATHIC",
+    "type": "synonym",
+    "choices": [
+      "mind-reading",
+      "speaking",
+      "telephone",
+      "physical"
+    ],
+    "answer": "mind-reading",
+    "definition": "communicating directly from mind to mind",
+    "example": "The twins seemed almost telepathic because they knew each other's thoughts.",
+    "sentence": "In science fiction stories, aliens often use _____ powers to talk.",
+    "addedDate": "2026-11-04",
+    "set": "V-018",
+    "order": 25
+  },
+  {
+    "word": "TELEMETRY",
+    "type": "synonym",
+    "choices": [
+      "remote data sending",
+      "manual measuring",
+      "telescope",
+      "static"
+    ],
+    "answer": "remote data sending",
+    "definition": "sending measurements by radio or signal to a distant receiver",
+    "example": "Spacecraft use telemetry to send diagnostic information back to Earth.",
+    "sentence": "The satellite relies on _____ to send temperature readings back to Earth.",
+    "addedDate": "2026-11-04",
+    "set": "V-018",
+    "order": 25
+  },
+  {
+    "word": "SUBTERRANEAN",
+    "type": "antonym",
+    "choices": [
+      "above-ground",
+      "underground",
+      "submarine",
+      "celestial"
+    ],
+    "answer": "above-ground",
+    "definition": "located or living under the surface of the earth",
+    "example": "A subterranean river flowed deep beneath the cave system.",
+    "sentence": "Worms live in a _____ world beneath the soil.",
+    "addedDate": "2026-11-04",
+    "set": "V-018",
+    "order": 25
+  },
+  {
+    "word": "TERRESTRIAL",
+    "type": "synonym",
+    "choices": [
+      "land-based",
+      "aquatic",
+      "territory",
+      "cosmic"
+    ],
+    "answer": "land-based",
+    "definition": "related to the earth or living on land",
+    "example": "Deer are terrestrial animals that cannot live in water.",
+    "sentence": "Most mammals are _____ creatures that live on dry ground.",
+    "addedDate": "2026-11-04",
+    "set": "V-018",
+    "order": 25
+  },
+  {
+    "word": "TERRAIN",
+    "type": "synonym",
+    "choices": [
+      "landscape",
+      "ocean",
+      "terrarium",
+      "sky"
+    ],
+    "answer": "landscape",
+    "definition": "physical surface features of an area of land",
+    "example": "The hikers struggled to cross the rocky mountain terrain.",
+    "sentence": "The mountain bike was designed to handle rough _____ with ease.",
+    "addedDate": "2026-11-04",
+    "set": "V-018",
+    "order": 25
+  },
+  {
+    "word": "THERMAL",
+    "type": "synonym",
+    "choices": [
+      "heat-related",
+      "freezing",
+      "thermometer",
+      "electric"
+    ],
+    "answer": "heat-related",
+    "definition": "related to or caused by heat",
+    "example": "She wore thermal underwear to stay warm on the ski trip.",
+    "sentence": "Geysers shoot out hot water powered by _____ energy deep underground.",
+    "addedDate": "2026-11-04",
+    "set": "V-018",
+    "order": 25
+  },
+  {
+    "word": "THERMODYNAMIC",
+    "type": "synonym",
+    "choices": [
+      "heat physics",
+      "cold dynamics",
+      "thermometer",
+      "chemical"
+    ],
+    "answer": "heat physics",
+    "definition": "relating to the physics of heat and energy",
+    "example": "Engineers studied the thermodynamic properties of the engine.",
+    "sentence": "Scientists studied the _____ laws that govern how engines generate power.",
+    "addedDate": "2026-11-04",
+    "set": "V-018",
+    "order": 25
+  },
+  {
+    "word": "THERMONUCLEAR",
+    "type": "synonym",
+    "choices": [
+      "high-heat nuclear",
+      "wind powered",
+      "thermal",
+      "chemical"
+    ],
+    "answer": "high-heat nuclear",
+    "definition": "involving nuclear reactions caused by extremely high heat",
+    "example": "The sun produces energy through thermonuclear reactions.",
+    "sentence": "The sun creates vast energy using a powerful _____ process.",
+    "addedDate": "2026-11-04",
+    "set": "V-018",
+    "order": 25
+  },
+  {
+    "word": "TRANSCENDENT",
+    "type": "antonym",
+    "choices": [
+      "ordinary",
+      "superior",
+      "translucent",
+      "mystery"
+    ],
+    "answer": "ordinary",
+    "definition": "going beyond normal limits; extraordinary",
+    "example": "Listening to the orchestra perform was a transcendent experience.",
+    "sentence": "The pianist gave a _____ performance that left the whole audience in stunned silence.",
+    "addedDate": "2026-11-04",
+    "set": "V-018",
+    "order": 25
+  },
+  {
+    "word": "TRANSFUSION",
+    "type": "synonym",
+    "choices": [
+      "blood transfer",
+      "blockage",
+      "transition",
+      "surgery"
+    ],
+    "answer": "blood transfer",
+    "definition": "transfer of blood or fluid into a vein",
+    "example": "The accident victim needed an emergency blood transfusion.",
+    "sentence": "The injured patient needed a blood _____ to survive the surgery.",
+    "addedDate": "2026-11-04",
+    "set": "V-018",
+    "order": 25
+  },
+  {
+    "word": "UNICAMERAL",
+    "type": "synonym",
+    "choices": [
+      "one-chambered",
+      "multi-housed",
+      "camera",
+      "small"
+    ],
+    "answer": "one-chambered",
+    "definition": "having a single legislative house or chamber",
+    "example": "Nebraska has a unicameral legislature instead of two houses.",
+    "sentence": "A government with just one legislative house is called _____.",
+    "addedDate": "2026-11-04",
+    "set": "V-018",
+    "order": 25
+  },
+  {
+    "word": "UNILATERAL",
+    "type": "antonym",
+    "choices": [
+      "mutual",
+      "one-sided",
+      "unique",
+      "unlimited"
+    ],
+    "answer": "mutual",
+    "definition": "done or decided by one side only",
+    "example": "The country made a unilateral decision to cancel the contract.",
+    "sentence": "The treaty was not a _____ decision because all countries signed it.",
+    "addedDate": "2026-11-04",
+    "set": "V-018",
+    "order": 25
+  },
+  {
+    "word": "UNISON",
+    "type": "antonym",
+    "choices": [
+      "conflict",
+      "harmony",
+      "unique",
+      "season"
+    ],
+    "answer": "conflict",
+    "definition": "complete agreement or sound produced together",
+    "example": "The choir sang in perfect unison.",
+    "sentence": "The students shouted the pledge in _____ together as one voice.",
+    "addedDate": "2026-11-04",
+    "set": "V-018",
+    "order": 25
+  },
+  {
+    "word": "VIVACIOUS",
+    "type": "antonym",
+    "choices": [
+      "dull",
+      "lively",
+      "vivid",
+      "vicious"
+    ],
+    "answer": "dull",
+    "definition": "full of life, lively, and energetic",
+    "example": "Her vivacious personality made her popular at school events.",
+    "sentence": "The host had a _____ personality that cheered up everyone in the room.",
+    "addedDate": "2026-11-04",
+    "set": "V-018",
+    "order": 25
+  },
+  {
+    "word": "VIVISECTION",
+    "type": "synonym",
+    "choices": [
+      "animal surgery",
+      "plant growth",
+      "section",
+      "election"
+    ],
+    "answer": "animal surgery",
+    "definition": "operation or experiment on a living animal",
+    "example": "Animal rights groups protest against vivisection in labs.",
+    "sentence": "Scientists looked for alternative methods to avoid using _____ in research.",
+    "addedDate": "2026-11-04",
+    "set": "V-018",
+    "order": 25
+  },
+  {
+    "word": "CONVIVIAL",
+    "type": "antonym",
+    "choices": [
+      "gloomy",
+      "festive",
+      "vivid",
+      "convenient"
+    ],
+    "answer": "gloomy",
+    "definition": "friendly, lively, and enjoyable",
+    "example": "The party had a convivial atmosphere full of laughter.",
+    "sentence": "The dinner party was a warm, _____ event enjoyed by all the guests.",
+    "addedDate": "2026-11-04",
+    "set": "V-018",
+    "order": 25
+  },
+  {
+    "word": "BELLICOSE",
+    "type": "antonym",
+    "choices": [
+      "warlike",
+      "peaceful",
+      "beautiful",
+      "careful"
+    ],
+    "answer": "peaceful",
+    "definition": "eager to fight or argue",
+    "example": "The bellicose king was always looking for a new war to start.",
+    "sentence": "The _____ hockey player got into a fight in nearly every game.",
+    "addedDate": "2026-11-04",
+    "set": "V-018",
+    "order": 25
   }
 ]
