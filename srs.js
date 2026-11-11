@@ -48,7 +48,7 @@
     return words.filter(function (w) {
       var s = progress[key(w)];
       if (!s || !s.seen) return false;
-      return s.lastResult === 'wrong' || s.due <= now;
+      return !isMastered(s) && (s.lastResult === 'wrong' || s.due <= now);
     }).sort(function (a, b) {
       var sa = progress[key(a)], sb = progress[key(b)];
       if (sa.box !== sb.box) return sa.box - sb.box;
@@ -201,7 +201,7 @@
   function daySet(words, st, progress, keyFn, today) {
     var r = resolveCurrent(words, st, progress, keyFn);
     if (!st.day || st.day.date !== today) st.day = { date: today, id: r.set ? r.set.id : '' };
-    return (r.sets.find(function (s) { return s.id === st.day.id; }) || r.set || { cards: [] }).cards;
+    return (r.sets.find(function (s) { return s.id === st.day.id; }) || r.set || { cards: [] }).cards.filter(function (w) { return !isMastered(progress[keyFn(w)]); });
   }
 
   // Coda Stars hook: fire-and-forget POST. Every error is swallowed; never blocks the UI.
