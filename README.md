@@ -27,7 +27,7 @@ preflight) to https://coda-kids-app.vercel.app/api/vocab/event: {kid: 'vince', e
 errors are swallowed and never block the UI.
 
 Spaced repetition: a miss sends a card to box 0, so it's due again right away and also comes back 3 cards later in the same session.
-Each right answer moves it up a box: due again in 1, 2, 4, 8, then 16 days. Right 3 times in a row counts as mastered.
+Each right answer moves it up a box: due again in 1, 2, 4, 8, then 16 days. Right 2 times in a row counts as mastered, and mastered words drop out of practice.
 
 Daily words log (wordlog.js): each device sends one cumulative record per day (ET) to FormSubmit, which emails codafamily@mail.grokbot.com
 with subject `WORDS LOG <Kid> <YYYY-MM-DD> auto|button`. Auto records go out when the current set is opened, when every card in it has a first
