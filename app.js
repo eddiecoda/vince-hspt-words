@@ -58,11 +58,11 @@
   function byKey(k) { return words.find(function (x) { return K(x) === k; }); }
   function ofType(t) { return visible().filter(function (w) { return w.type === t; }); }
 
-  // Pick up to 20 cards from a pool: not-yet-mastered first, plus a few mastered ones.
+  // Pick up to 20 cards from a pool: not-yet-mastered words only; mastered words have dropped out.
   function pick(pool) {
     var notM = pool.filter(function (w) { return !SRS.isMastered(progress[K(w)]); });
-    var m = pool.filter(function (w) { return SRS.isMastered(progress[K(w)]); });
-    return SRS.shuffle(SRS.shuffle(notM).concat(SRS.shuffle(m).slice(0, 3)).slice(0, 20));
+    // Mastered words have dropped out; they are not added back in.
+    return SRS.shuffle(notM).slice(0, 20);
   }
 
   function refreshHome() {
@@ -90,7 +90,7 @@
   function start(mode) {
     var list;
     var c = cur(), vis = visible();
-    if (mode === 'today') list = SRS.shuffle(c.set ? c.set.cards : []);
+    if (mode === 'today') list = SRS.shuffle((c.set ? c.set.cards : []).filter(function (w) { return !SRS.isMastered(progress[K(w)]); }));
     else if (mode === 'review') list = SRS.reviewWords(vis, progress).slice(0, 20);
     else if (mode === 'synonym' || mode === 'antonym') list = pick(ofType(mode));
     else list = pick(vis);
