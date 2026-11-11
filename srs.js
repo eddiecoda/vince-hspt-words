@@ -3,7 +3,7 @@
   var DAY = 24 * 60 * 60 * 1000;
   // Leitner boxes: a miss sends a word to box 0 (due right away); each right answer moves it up one box.
   var INTERVALS = [0, 1 * DAY, 2 * DAY, 4 * DAY, 8 * DAY, 16 * DAY];
-  var MASTERY_STREAK = 3; // right 3 times in a row = mastered
+  var MASTERY_STREAK = 2; // right 2 times in a row = mastered
   var STORE_KEY = 'vince-hspt-progress-v1';
 
   // A card is a word + question type, so the same word can be both a synonym and an antonym card.
